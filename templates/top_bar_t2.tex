@@ -1,0 +1,138 @@
+\documentclass[12pt]{amsart}
+
+\addtolength{\hoffset}{-2.25cm}
+\addtolength{\textwidth}{4.5cm}
+\addtolength{\voffset}{-2.5cm}
+\addtolength{\textheight}{5cm}
+\setlength{\parskip}{0pt}
+\setlength{\parindent}{15pt}
+
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[colorlinks = true, linkcolor = black, citecolor = black, final]{hyperref}
+
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{ marvosym }
+\usepackage{wasysym}
+\usepackage{tikz}
+\usetikzlibrary{patterns}
+
+\newcommand{\ds}{\displaystyle}
+\DeclareMathOperator{\sech}{sech}
+
+
+\setlength{\parindent}{0in}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\thispagestyle{empty}
+
+{\scshape Math 2400} \hfill {\scshape \large Fractals} \hfill {\scshape Project \#5}
+ 
+\smallskip
+
+\hrule
+
+\bigskip
+
+This project may be completed in pairs or individually.  You will upload something to the Project \#5 Assignment.  Please follow all the specifications for a written report project that are outlined in the Specifications document.
+
+\bigskip
+
+\bigskip
+
+The Koch Snowflake is an example of a fractal.  To construct this fractal, we first begin with an equilateral triangle.  Using the middle third of a side as the base, we construct another equilateral triangle.  Then we remove the middle third of the original side.  We do this for all three sides of the initial equilateral triangle.  In the next stage, both sides of each of the new triangles get the same treatment.  This process continues indefinitely.  The first four stages of the construction are shown below.
+
+\bigskip
+
+\begin{center}\includegraphics[scale = .85]{KochSnowflake}\end{center}
+
+\vfill
+
+{\bf What is the perimeter?}
+
+\medskip
+
+\begin{enumerate}
+
+\item  If we begin with an equilateral triangle where the length of the sides is 1, what is the perimeter in the first stage?  The second stage?  The third and fourth stages?
+
+\bigskip
+
+\item  Determine a formula for the perimeter of the Koch Snowflake in the $n^\text{th}$ stage.
+
+\bigskip
+
+\item  The fractal requires infinitely many stages to construct.  What is the perimeter of the Koch Snowflake?
+
+\bigskip
+
+\end{enumerate}
+
+\vfill
+
+{\bf What is the area?}
+
+\medskip
+
+\begin{enumerate}
+
+\item  What is the area of the equilateral triangle we begin the construction with?
+
+\bigskip
+
+\item  How much area is added on in the first stage?  In the second stage? Third stage? Fourth stage? 
+
+\bigskip
+
+\item  Determine a formula for how much area added on in the $n^\text{th}$ stage.
+
+\bigskip
+
+\item  Write the area of the Koch Snowflake as an infinite sum of the area added in each stage.
+
+\bigskip
+
+\item  What is the area of the Koch Snowflake?
+
+\bigskip
+
+\end{enumerate}
+
+\vfill
+
+{\bf Be Creative}
+
+\medskip
+
+Come up with your own fractal.  It can be two or three-dimensional.  Define your fractal by giving the starting stage and what happens in each iteration.  Draw or build enough stages to give a good idea of the process and what the final object could look like.  Use a compass and straight-edge, use computer programs (Geogebra can do some cool stuff), use playdough, use sugar cubes, use sponges, use cardboard, \dots go crazy!  Compute the perimeter, area, surface area, volume, etc. of your fractal.
+
+\vfill
+
+\newpage
+
+For this project, present some information about fractals in any way you want.  You can write a report, make a poster, build a demonstration, create a game, nearly anything.  Be sure to include a few things:
+
+\medskip
+
+\begin{itemize}
+
+\item  Information about the Koch Snowflake.  What is it?  What is the perimeter?  What is the area?
+
+\item  The same information about your own fractal.
+
+\item  Either some history about fractals or some applications of fractals.
+
+\end{itemize}
+
+\medskip
+
+Whatever style of presentation you choose, you should assume your audience consists of your peers in Calc 2.  You may assume that these peers have the knowledge and understanding of the beginnings of the sequences and series unit; so they will understand the notation and language used, but will need clear explanations of computations and results and thinking.  Feel free to be creative with these explanations; sometimes a picture really is worth a thousand words.
+
+
+
+\end{document}

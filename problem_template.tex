@@ -1,0 +1,70 @@
+\documentclass[10pt]{article}
+\usepackage{geometry}
+%\usepackage{showframe} %This line can be used to clearly show the new margins
+
+\newgeometry{vmargin={25mm, 30mm}, hmargin={15mm,15mm}}   % set the margins
+
+\usepackage{fancyhdr}
+
+\pagestyle{fancyplain}
+
+\usepackage{color}
+\definecolor{headercolor}{rgb}{0.3922,0.5843,0.9294}
+
+\usepackage{blindtext}%
+\usepackage[theorems,breakable]{tcolorbox}%
+
+\usepackage{tikz} % https://texample.net/tikz/examples/bisector/
+\usetikzlibrary{calc,intersections}
+
+\fancypagestyle{cheader}{% https://tex.stackexchange.com/questions/69950/fancyhdr-color-and-width-of-line
+	\fancyhf{}% Clear all headers/footers
+	\fancyhead[L]{\raisebox{-.5\baselineskip}[0pt][0pt]{Mathematics}}% Header Centred
+	\fancyhead[C]{\raisebox{-.5\baselineskip}[0pt][0pt]{\textbf{\Large Center}}}% Header Centred
+	\fancyhead[R]{\raisebox{-.5\baselineskip}[0pt][0pt]{\today}}% Header Centred
+	\fancyfoot[C]{-\hspace{5mm}\thepage\hspace{5mm}-}% Footer Centred
+	\renewcommand{\headrulewidth}{2pt}% 2pt header rule
+	\renewcommand{\headrule}{\hbox to\headwidth{%
+			\color{headercolor}\leaders\hrule height \headrulewidth\hfill}}
+	\renewcommand{\footrulewidth}{0pt}% No footer rule
+}
+
+\newtcbtheorem{problem}{Problem}{% https://tex.stackexchange.com/questions/198820/create-newshadetheorem-without-numbering
+	theorem name,%
+	colback=green!5,%
+	colframe=green!35!black,%
+	fonttitle=\bfseries,title after break={Problem  -- \raggedleft Continued}%
+}{problem}
+
+\newtcbtheorem{solution}{Solution}{%
+	theorem name,%
+	colback=green!5,%
+	colframe=green!35!black,%
+	fonttitle=\bfseries,title after break={Solution  -- \raggedleft Continued}%
+}{solution}
+
+
+
+
+\begin{document}
+	\pagestyle{cheader}
+	
+	\begin{problem}{}{}
+		Given an acute triangle $\triangle ABC$, construct with straightedge and compass square $DEFG$ 
+		such that D and E are on $\overline{BC}$, G is on AB and F is on $\overline{AC}$.
+	\end{problem}
+
+	\noindent
+	Straightedge and compass can construct the middle point of a line segment, and perpendicular line 
+	through a point on a line segment.
+	\begin{enumerate}
+		\item draw height AH to BC
+		\item extend BC to I such that CI = AH
+		\item draw height JI to BI such that JI = AH
+		\item draw height CK to BC
+		\item set intersaction of CK and BJ to X
+		\item draw line pass X and parallel to BC, intersact with AB at G, with AC at F
+		\item draw perpendicular lines down from G and F to get D and E		
+	\end{enumerate}
+	To prove DEFG is a square, 
+\end{document}
