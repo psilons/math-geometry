@@ -18,6 +18,8 @@
 \usetikzlibrary{calc,intersections}
 \usepackage{tkz-euclide}
 
+\usepackage{amsmath}
+
 \fancypagestyle{cheader}{% https://tex.stackexchange.com/questions/69950/fancyhdr-color-and-width-of-line
 	\fancyhf{}% Clear all headers/footers
 	\fancyhead[L]{\raisebox{-.5\baselineskip}[0pt][0pt]{Mathematics}}% Header Centred
@@ -61,7 +63,7 @@
 	Straightedge and compass can construct the middle point of a line segment, and perpendicular line 
 	through a point on a line segment.
 	
-	\centering
+	\begin{center}
 	\begin{tikzpicture} [scale=0.7]
 		%----------------------------------------------------
 		% Coordinates of A, B and C, the triangle vertices 
@@ -72,72 +74,79 @@
 		\tkzLabelPoints[above](A)
 		\tkzLabelPoints[below](B,C)
 		\tkzDrawPolygon[thick,fill=gray!5](A,B,C);
-		%\tkzDrawPoints(A,B,C)
 		
 		\tkzDefPointBy[projection = onto B--C](A) \tkzGetPoint{H};
-		\draw [orange, dashed] (A) -- (H) node [right, below] {$H$};
-		
-		
-		%\tkzDefLine(A, H) \tkzGetLength{height}
-		
-		%\tkzDefLine[orthogonal=through A](C,B)     
-		%\tkzGetPoint{X_1}
-		%  
-		%\tkzInterLL(A,X_1)(B,C)
-		%\tkzGetPoint{H5}
-		%\draw [orange, dashed] (A) -- (H5) node [right, below] {$H$};
-		%\tkzDrawPoints(H5)
-		%\tkzDefLine(A, H) \tkzGetLength{height}
-		%\tkzDefPoint (H5){H}
-		
-		%\tkzDrawAltitude[dashed,color=magenta](C,B)(A)   %% draw the perpendicular
-		%\tkzGetPoint{P}                                  %% get the point P
-		%\tkzLabelPoint[below](P){$P$}                    %% label the point P
-		%\tkzDrawSegment[dashed,color=magenta](C,P)       %% draw CP
-		
-		
-		%\tkzInterLL(U, A)(B, C)
-		%\tkzGetPoint{H}
-		%\draw [orange, dashed] (A) -- (H) node [right, above] {$H$};
-		
-		%\draw [orange, dashed] (A) |- (C) node [midway, below] {$H$}; 
-		
-		%\tkzDefLine(A, H) \tkzGetLength{height}
+		\draw [orange, dashed] (A) -- (H) node [right, below] {$H$};		
 		
 		\tkzDefLine[orthogonal=through C](B,C) \tkzGetPoint{X1};
 		\tkzDefLine[parallel=through A](B,C) \tkzGetPoint{X2};
 		\tkzInterLL(A,X2)(C,X1) \tkzGetPoint{X3};
-		\draw [orange, dashed] (A) -- (X3) node [right, above] {$I$};
+		\draw [dashed] (A) -- (X3) node [orange, right, above] {$I$};
 		\draw [orange, dashed] (C) -- (X3);
 		
 		\tkzCalcLength(C,X3) \tkzGetLength{height};
 		\tkzDefShiftPoint[C](\height pt,0){J};
-		\draw [orange, dashed] (C) -- (J) node [right, below] {$J$};
+		\draw [dashed] (C) -- (J) node [orange, right, below] {$J$};
 		\tkzDefSquare(C,J)\tkzGetPoints{K}{I};
 		\tkzDrawPolygon[dashed, color=black](C,J,K, I);
-		\draw [orange, dashed] (B) -- (K) node [right, above] {$K$};
+		\draw [dashed] (B) -- (K) node [orange, right, above] {$K$};
 		
-		%\draw [orange, dashed] (C) -- ([xshift={veclen(\B, \C} cm]C) node [right, below] {$J$};
+		\tkzInterLL(C,I)(B,K) \tkzGetPoint{X};
+		\tkzLabelPoint[orange,below right](X){$X$};
+		%\tkzAutoLabelPoints(X);
+		\tkzDefLine[parallel=through X](B,C) \tkzGetPoint{W};
+		\tkzInterLL(X,W)(A,B) \tkzGetPoint{G};
+		\tkzInterLL(X,W)(A,C) \tkzGetPoint{F};
+		\draw [red, dashed] (F) -- (X); 
+		\draw [red, thick] (G) -- (F);
 		
-		%\tkzDrawSegment(C,[xshift=1 cm]C)
+		\tkzDefPointBy[projection=onto B--C](F) \tkzGetPoint{E};
+		\draw [red, thick] (E) -- (F);
+		\tkzDefPointBy[projection=onto B--C](G) \tkzGetPoint{D};
+		\draw [red, thick] (G) -- (D);
 		
-		%\tkzDrawLine[add = .1 and .1, color=red](C,X_1)
+		\tkzLabelPoint[magenta,below](E){$E$};
+		\tkzLabelPoint[magenta,below](D){$D$};
+		\tkzLabelPoint[magenta,above right](F){$F$};
+		\tkzLabelPoint[magenta,above left](G){$G$};
 		
-		%\draw (A) -- (B);
-		%\draw (A) -- (C);
-		%\draw (B) -- (C);
+		\tkzInterLL(F,G)(A,H) \tkzGetPoint{L};
+		\tkzLabelPoint[orange,above left](L){$L$};
+		
 	\end{tikzpicture}
-	
+	\end{center}
+
 	\noindent
-	Steps are:
+	Construction steps are:
 	\begin{enumerate}
-		\item draw height AH to BC
-		\item extend BC to I such that CI = AH
-		\item draw height JI to BI such that JI = AH
-		\item draw height CK to BC
-		\item set intersaction of CK and BJ to X
-		\item draw line pass X and parallel to BC, intersact with AB at G, with AC at F
-		\item draw perpendicular lines down from G and F to get D and E		
+		\item draw height $AH$ to $BC$
+		\item extend $BC$ to J such that $CJ$ = $AH$
+		\item draw square $CJKI$
+		\item set intersection of $CK$ and $BJ$ to $X$
+		\item draw line pass $X$ and parallel to $BC$, intersect with $AB$ at $G$, with $AC$ at $F$
+		\item draw perpendicular lines down from $G$ and $F$ to get $D$ and $E$		
 	\end{enumerate}
-	To prove DEFG is a square, 
+
+	\noindent
+	To prove $DEFG$ is a square, since $\triangle BCX \sim \triangle BJK$,
+	\begin{equation}
+		\frac{CX}{JK} = \frac{BC}{BJ} 
+		\quad \textrm{or} \quad \frac{EF}{AH} = \frac{BC}{BC + AH}
+		\quad \textrm{or} \quad EF = \frac{BC * AH}{BC + AH}
+	\end{equation}
+	since $\triangle ABC \sim \triangle AGF$,
+	\begin{equation}
+		\frac{GF}{BC} = \frac{AL}{AH} = \frac{AH - EF}{AH}		
+	\end{equation}
+	Then we just verify that $GF = EF$,
+	\begin{equation}
+		\begin{aligned}
+		GF &= BC * \frac{AH - EF}{AH} = \frac{BC}{AH} *(AH - EF)\\ 
+		   &= \frac{BC}{AH} * (AH - \frac{BC * AH}{BC + AH})\\
+		   &= \frac{BC}{AH} * \frac{AH^2}{BC + AH} = \frac{BC * AH}{BC + AH} = EF
+		\end{aligned}
+	\end{equation}
+
+	\noindent
+	The construction logic is derived from the $GF$ expression.
 \end{document}
