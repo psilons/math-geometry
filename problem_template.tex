@@ -1,4 +1,4 @@
-\documentclass[10pt]{article}
+\documentclass[12pt]{article}
 \usepackage{geometry}
 %\usepackage{showframe} %This line can be used to clearly show the new margins
 
@@ -19,6 +19,8 @@
 \usepackage{tkz-euclide}
 
 \usepackage{amsmath}
+
+\usepackage{enumitem}
 
 \fancypagestyle{cheader}{% https://tex.stackexchange.com/questions/69950/fancyhdr-color-and-width-of-line
 	\fancyhf{}% Clear all headers/footers
@@ -118,7 +120,8 @@
 
 	\noindent
 	Construction steps are:
-	\begin{enumerate}
+	% https://tex.stackexchange.com/questions/119919/no-spacing-between-enumerated-items-with-usepackageenumerate
+	\begin{enumerate}[topsep=0pt,itemsep=-1ex,partopsep=1ex,parsep=1ex]
 		\item draw height $AH$ to $BC$
 		\item extend $BC$ to J such that $CJ$ = $AH$
 		\item draw square $CJKI$
@@ -138,15 +141,25 @@
 	\begin{equation}
 		\frac{GF}{BC} = \frac{AL}{AH} = \frac{AH - EF}{AH}		
 	\end{equation}
-	Then we just verify that $GF = EF$,
+	Then we just need to verify that $GF = EF$. From $(2)$,
 	\begin{equation}
 		\begin{aligned}
 		GF &= BC * \frac{AH - EF}{AH} = \frac{BC}{AH} *(AH - EF)\\ 
-		   &= \frac{BC}{AH} * (AH - \frac{BC * AH}{BC + AH})\\
+		   &= \frac{BC}{AH} * (AH - \frac{BC * AH}{BC + AH}), \quad from (1)\\
 		   &= \frac{BC}{AH} * \frac{AH^2}{BC + AH} = \frac{BC * AH}{BC + AH} = EF
 		\end{aligned}
 	\end{equation}
 
 	\noindent
 	The construction logic is derived from the $GF$ expression.
+	
+	This\\
+	is \\
+	a \\
+	long \\
+	solution\\
+	spilled\\
+	to\\
+	page\\
+	2
 \end{document}
