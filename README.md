@@ -1,5 +1,82 @@
-# math-geometry
+# Latex Templates
 
+Most publishers, journals, and academies have their own templates. The 
+templates here are mainly for casual usages outside of those scopes.
+- a problem solving template. Given a problem, spill out the solution.
+- a report template. This is a little lengthy article/report for school 
+  projects, and others. Usually, it spills over several sections. I think more
+  than 5 sections is too much. Break it up if it's the case. 20 pages or less
+  is good.
+- a booklet template. It has chapters and sections. 60 pages or less are good.
+
+Other options are Markdown, MS Word. But TeX is the king.
+
+## Styles
+
+Here are the styles we care:
+- fonts, including font size, style, foreground/background colors
+- structure, such as chapters, sections, etc
+- math formulae, graphs, etc
+
+## Common Packages
+
+Here are commonly used packages. Like in Python or R, it requires > 100 libs
+to get to the fluent level for practical purpose.
+- amsmath, amsfonts, amssymb, mathtools
+- pgf/tikz/tkz-euclide, pgfplots
+- geometry
+- xcolor
+- booktabs
+- fancyhdr
+- quotchap, for chapter headers
+- hyperref
+- kbordermatrix
+- subfigure
+- graphicx
+- enumitem
+- subfiles
+- microtype
+- listings, source code format
+- beamer
+- minted, algorithms, algorithmicx
+- pstricks
+
+
+When writing or almost doing anything, we need to think about:
+- Are we doing it in the right way?
+- Are we doing it in the right place?
+- Are we doing it in the most efficient way?
+
+
+## IDEs
+
+Which IDE is the best:
+- create projects to group relevant files
+- knows the main entry
+- auto-complete
+- syntax highlight
+
+
+## Tutorials
+
+- https://www1.cmc.edu/pages/faculty/aaksoy/latex/latextutorialmain.html
+
+- https://guides.libraries.psu.edu/latex/create
+
+- https://ptmartins.info/latex/
+
+- http://www-h.eng.cam.ac.uk/help/tpl/textprocessing/LaTeX_intro.html
+
+
+## References:
+
+- https://user.math.uni-bremen.de/~grimpen/LaTeX.html
+
+- https://brushingupscience.com/2016/02/13/four-effortless-latex-packages-you-should-use/
+
+- https://www.semipol.de/posts/2018/06/latex-best-practices-lessons-learned-from-writing-a-phd-thesis/
+
+- https://github.com/egeerardyn/awesome-LaTeX
 
 ## tkz euclid package
 
@@ -37,15 +114,6 @@ https://gist.github.com/kpym/f08d1a326884e11dddb7d272359eb2bd
 
 - LSTM: https://blog.csdn.net/qq_41437512/article/details/109189067
  
- 
-## Other Packages
-
-- https://ctan.org/
-
-- http://pgfplots.sourceforge.net/
-
-- http://www.tug.org/PSTricks/main.cgi
-
 
 ## Templates
 
