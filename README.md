@@ -78,6 +78,12 @@ Which IDE is the best:
 
 - https://github.com/egeerardyn/awesome-LaTeX
 
+- Section header banner: https://tex.stackexchange.com/questions/40034/giving-headlines-a-background-color-spanning-across-the-entire-typearea
+
+- block title: https://www.overleaf.com/learn/latex/Beamer_Presentations%3A_A_Tutorial_for_Beginners_(Part_3)%E2%80%94Blocks%2C_Code%2C_Hyperlinks_and_Buttons
+
+- fancy chapter header: https://texample.net/tikz/examples/fancy-chapter-headings/
+
 ## tkz euclid package
 
 ### PDF Manual
@@ -132,6 +138,10 @@ https://gist.github.com/kpym/f08d1a326884e11dddb7d272359eb2bd
 - https://www.latextypesetting.com/showcase
 
 - https://www.latextemplates.com/
+
+- report template: https://www.overleaf.com/articles/cpsc-542f-notes/cvptzcpvsrpn
+
+- book template: https://www.overleaf.com/latex/templates/the-legrand-orange-book-template-english/jtctyfmnpppc
 
 
 ## Installation
