@@ -1,9 +1,18 @@
-\documentclass{article}
+\documentclass[12pt]{article}
 % \usepackage[spanish]{babel}
 % \usepackage{lipsum}
 % \usepackage{natbib}
 % \usepackage{graphicx}
 \usepackage{report_style}
+
+\usepackage{eso-pic}
+\usepackage{graphicx}
+\usepackage{tikz}
+%\usepackage{color}
+\definecolor{bannercolor}{rgb}{0.3922,0.5843,0.9294}
+
+%\definecolor{bannergrey}{cmyk}{0, 0, 0, 0.3}
+
 
 %------------------Document----------------------------
 
@@ -11,10 +20,40 @@
 	
 	%-------------------------TitlePage------------------------
 	%\begin{titlepage}
-		%\end{titlepage}
+	%\end{titlepage}
+	\title{Clustering the interstellar medium}
+	
+	\begingroup
+	\thispagestyle{empty}
+	\AddToShipoutPicture*{\put(0,0){\includegraphics[scale=1.25]{esahubble.png}}} % Image background
+	
+	\vspace*{3.75cm}
+	\hspace*{-4cm}
+	%\put(0 mm, 142 mm) % copied from https://www.overleaf.com/latex/templates/matnat-compendium/xbfgbfgzpcxz
+	%{ % Given a picture, we overlay a banner, rather than modifying the picture itself
+		\begin{tikzpicture}[scale = 1mm]
+			%\filldraw[white, opacity = 0.8] 
+			%(0, 2.5) rectangle (\paperwidth, 3.73);
+			%\filldraw[white, opacity = 0.6] 
+			%(0, 0) rectangle (\paperwidth, 2.5);
+			\filldraw[bannercolor, opacity = 0.3] 
+			(0, 0) rectangle (\paperwidth, 3.5);
+		\end{tikzpicture}
+	%}
+	\centering
+	\vspace*{-9cm}
+	\par\normalfont\fontsize{35}{35}\sffamily\selectfont
+	\textbf{Clustering the interstellar medium}\\
+	{\LARGE Data Mining and Machine Learning in Astronomy}\par % Book title
+	\vspace*{1cm}
+	{\Huge Flying Cat}\par % Author name
+	\endgroup
+	
+	\newpage
 	
 	%-------------------------Content------------------------
 
+	\tableofcontents
 	
 	\section{Analysis Report}
 	

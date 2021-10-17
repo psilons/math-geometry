@@ -2,7 +2,7 @@
 \usepackage{tikz}
 \usepackage{fontspec}
 \usepackage{xcolor}
-\usepackage[left=2.5cm,right=2.5cm,top=3cm,bottom=2.5cm]{geometry}
+\usepackage[left=2.5cm,right=2.5cm,top=3cm,bottom=3cm]{geometry}
 \usepackage{fancyhdr}
 
 %------------------Main Font-------------------------
@@ -18,9 +18,21 @@
 \definecolor{MediumBlue}{RGB}{38, 119, 193}
 
 %------------------Section Default Setting-------------
-\titleformat*{\section}{\color{DarkBlue}\normalfont\bfseries\LARGE}
+%\titleformat*{\section}{\color{DarkBlue}\normalfont\bfseries\LARGE}
 \titleformat*{\subsection}{\color{LightBlue}\normalfont\bfseries\Large}
 \titleformat*{\subsubsection}{\color{MediumBlue}\normalfont\bfseries\large}
+
+\titleformat{\section}[block]
+%{\sffamily\LARGE}
+{\color{white}\sffamily\bfseries\Large}
+{}
+{0pt}
+{\colorsection}
+\titlespacing*{\section}{0pt}{\baselineskip}{\baselineskip}
+
+\newcommand{\colorsection}[1]{%
+	\colorbox{DarkBlue}{\parbox{\dimexpr\textwidth-2\fboxsep}{#1}}}
+
 
 %-------------------Section Numbers Removal------------
 \setcounter{secnumdepth}{0}
