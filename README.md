@@ -117,9 +117,22 @@ https://gist.github.com/kpym/f08d1a326884e11dddb7d272359eb2bd
 
 ## Templates
 
-- https://www.authorea.com/featured-templates
+.sty, .cls
+
+- https://www.authorea.com/featured-templates, interact with Javascripts too.
 
 - https://www.overleaf.com/latex/templates
+
+- https://awesomeopensource.com/projects/latex-template
+
+- https://awesomeopensource.com/project/tdehaeze/clean-latex-template
+
+- https://awesomeopensource.com/project/hantang/awesome-latex-templates
+
+- https://www.latextypesetting.com/showcase
+
+- https://www.latextemplates.com/
+
 
 ## Installation
 
@@ -129,3 +142,4 @@ Download: https://www.texstudio.org/
 
 Launch miktex console to update packages (and install new packages later on)
 
+Different compilers
