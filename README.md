@@ -11,6 +11,39 @@ templates here are mainly for casual usages outside of those scopes.
 
 Other options are Markdown, MS Word. But TeX is the king.
 
+## Latex Distributions
+There are 2 distributions: TeX Live and MikTeX. Here is a comparison from
+[this post](https://tex.stackexchange.com/questions/175121/tex-live-and-miktex-underlying-basic-difference):
+- the actual program code for the engines (pdftex, luatex, etc): ~ 90% same
+- the TeX, MetaFont, MetaPost, fonts, support files: ~ 99.99% same
+- the infrastructure - update manager etc: varying
+- updmap files, format files, trees, texmf.cnf files: varying, invisible to users
+
+MikTex is easier to start with. So we go with it.
+Select OS from https://docs.miktex.org/manual/installing.html, e.g.,
+https://miktex.org/howto/install-miktex-mac
+
+## Editors
+
+## Outputs
+
+[Here](https://www.dickimaw-books.com/latex/novices/html/auxiliary.html) has a 
+brief description for the output.
+[Here](https://tex.stackexchange.com/questions/118489/what-exactly-is-synctex) 
+is a more detailed explanation of synctex. It's one of the outputs.
+
+## .cls and .sty
+
+.cls is called class
+- loaded with \documentclass
+- defines the structure of documents, such as chapters, sections, etc.
+
+.sty is called package or style
+- loaded with \usepackage
+- it's optional to have
+
+
+
 ## Styles
 
 Here are the styles we care:
@@ -22,17 +55,19 @@ Here are the styles we care:
 
 Here are commonly used packages. Like in Python or R, it requires > 100 libs
 to get to the fluent level for practical purpose.
-- amsmath, amsfonts, amssymb, mathtools
-- pgf/tikz/tkz-euclide, pgfplots
+- mathtools (amsmath is not needed anymore)
+- amsfonts, amssymb
+- tikz (xcolor is loaded too)
+- pgf/tkz-euclide, pgfplots
 - geometry
-- xcolor
+- xcolor (color is not needed anymore)
 - booktabs
 - fancyhdr
 - quotchap, for chapter headers
 - hyperref
 - kbordermatrix
 - subfigure
-- graphicx
+- graphicx (graphics is not needed anymore)
 - enumitem
 - subfiles
 - microtype
@@ -41,6 +76,8 @@ to get to the fluent level for practical purpose.
 - minted, algorithms, algorithmicx
 - pstricks
 
+For replacements, check "See Also" section in package entries on 
+[CTAN](https://ctan.org/pkg/).
 
 When writing or almost doing anything, we need to think about:
 - Are we doing it in the right way?
@@ -120,6 +157,10 @@ https://gist.github.com/kpym/f08d1a326884e11dddb7d272359eb2bd
 
 - LSTM: https://blog.csdn.net/qq_41437512/article/details/109189067
  
+## Fonts
+
+https://www.ctan.org/pkg/fontawesome
+
 
 ## Templates
 
@@ -153,3 +194,4 @@ Download: https://www.texstudio.org/
 Launch miktex console to update packages (and install new packages later on)
 
 Different compilers
+

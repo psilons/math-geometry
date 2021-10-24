@@ -1,0 +1,26 @@
+%! Author = Wonderland
+%! Date = 10/23/2021
+
+% use LuaLatex compiler, otherwise we get CJK error and missing greeks.
+
+% Preamble
+\documentclass[11pt, letterpaper]{article}
+
+% Packages
+\usepackage{amsmath}
+\usepackage[UTF8]{ctex} % use chinese
+\usepackage{fontsetup} % use greek letter directly
+
+\title{银河系漫游指南 - The Galaxy}
+\author{星空}
+\date{\today}
+
+% Document
+\begin{document}
+
+\maketitle
+    This is a test!  文章内容。
+    % we have greeks in the formula
+    The vorticity $ω$ is defined as $ω = ∇ × u$.
+
+\end{document}
