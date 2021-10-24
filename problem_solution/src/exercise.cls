@@ -9,7 +9,7 @@
 
 % Provide the name of your document class, the date it was last updated, and a
 % comment about what it's used for
-\ProvidesPackage{exercise.cls}[Exercise's Document Class, a problem and a solution]
+\ProvidesPackage{exercise}[Exercise's Document Class, a problem and a solution]
 
 % We'll pass any document class options along to the underlying class
 \DeclareOption*{%
@@ -30,4 +30,4 @@
 
 \linespread{1.2}
 
-\setlength{\headheight}{25}
+\setlength{\headheight}{25pt}

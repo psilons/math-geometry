@@ -8,32 +8,28 @@
 \usepackage{exercise}
 \usepackage{xcolor} % define header line color
 
-\usepackage{tcolorbox}
-\tcbuselibrary{most}
-\usepackage{amsmath, amssymb}
-
-\newtcbtheorem{problem}{Problem}{% https://tex.stackexchange.com/questions/198820/create-newshadetheorem-without-numbering
-    theorem name,%
-    colback=green!5,%
-    colframe=green!35!black,%
-    fonttitle=\bfseries,title after break={Problem  -- \raggedleft Continued}%
-}{problem}
+%\usepackage{tcolorbox}
+%\tcbuselibrary{most}
+%\usepackage{amsmath, amssymb}
+%
+%\newtcbtheorem{problem}{Problem}{% https://tex.stackexchange.com/questions/198820/create-newshadetheorem-without-numbering
+%    theorem name,%
+%    colback=green!5,%
+%    colframe=green!35!black,%
+%    fonttitle=\bfseries,title after break={Problem  -- \raggedleft Continued}%
+%}{problem}
 
 
 \begin{document}
-
     \definecolor{headercolor}{RGB}{100, 130, 220}
     \exerheader{Math}{Geometry}{\today}{headercolor}
-
-    I am here
-
-%    \setlength{\headheight}{23.11996pt}
-%    \addtolength{\topmargin}{-11.11996pt}
-%    \begin{problem}
-%		Why is this good?
-%	\end{problem}
 
     \begin{problem}{}{}
     Let's see
     \end{problem}
+
+    \begin{myTheorem}{Fermats Last Theorem}{thm:FermatsLastTheorem}
+        No three positive integers \(a\), \(b\) and \(c\) satisfy the equation
+        \(a^{n} + b^{n} = c^{n}\) for any integer greater than two.
+    \end{myTheorem}
 \end{document}

@@ -7,7 +7,8 @@
 
 \RequirePackage{fancyhdr}
 
-
+\RequirePackage{tcolorbox}
+\tcbuselibrary{most}
 
 \newcommand{\exerheader}[4]{
     \fancypagestyle{pageheader}{% https://tex.stackexchange.com/questions/69950/fancyhdr-color-and-width-of-line
@@ -28,6 +29,35 @@
     \pagestyle{pageheader}
 }
 
+\newtcbtheorem{problem}{Problem}{% https://tex.stackexchange.com/questions/198820/create-newshadetheorem-without-numbering
+    theorem name,%
+    colback=green!5,%
+    colframe=green!35!black,%
+    fonttitle=\bfseries,title after break={Problem  -- \raggedleft Continued}%
+}{problem}
 
+\newtcbtheorem[number within=chapter]{Theorem}{}{
+        enhanced,
+        sharp corners,
+        attach boxed title to top left={
+            xshift=-1mm,
+            yshift=-5mm,
+            yshifttext=-1mm
+        },
+        top=1.5em,
+        colback=white,
+        colframe=blue!75!black,
+        fonttitle=\bfseries,
+        boxed title style={
+            sharp corners,
+            size=small,
+            colback=blue!75!black,
+            colframe=blue!75!black,
+        }
+    }{thm}
 
-
+\newenvironment{myTheorem}[2]{
+    \begin{Theorem}[adjusted title=#1]{}{#2}
+    \textbf{Theorem \thetcbcounter.}
+    }{\end{Theorem}
+}
