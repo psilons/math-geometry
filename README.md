@@ -103,6 +103,9 @@ Which IDE is the best:
 - https://ptmartins.info/latex/
 
 - http://www-h.eng.cam.ac.uk/help/tpl/textprocessing/LaTeX_intro.html
+- 
+- https://tex.stackexchange.com/questions/399123/how-to-reference-a-boxed-theorem
+- https://newbedev.com/counter-for-tcolorbox
 
 
 ## References:

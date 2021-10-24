@@ -10,6 +10,9 @@
 \RequirePackage{tcolorbox}
 \tcbuselibrary{most}
 
+% 调色板
+\RequirePackage{xcolor-material}
+
 \newcommand{\exerheader}[4]{
     \fancypagestyle{pageheader}{% https://tex.stackexchange.com/questions/69950/fancyhdr-color-and-width-of-line
         \fancyhf{}% Clear all headers/footers
@@ -29,6 +32,24 @@
     \pagestyle{pageheader}
 }
 
+%----------------------------------------------------------------------------------------
+\newtcbtheorem[number within=section]{theorem}{Theorem}{
+  enhanced, % without this, the title box won't show up
+  fonttitle=\bfseries,
+  boxrule=0.1mm,
+  %before upper={\parindent2em}, % no indent
+  colback=MaterialGreen50,
+  colframe=MaterialGreen,
+  attach boxed title to top left={xshift=12pt, yshift*=-\tcboxedtitleheight/2},
+  boxed title style={colback=MaterialGreen}
+}{theorem}
+
+\newenvironment{theoremgreen}[2]{
+    \begin{theorem}[adjusted title=#1]{}{#2}
+    \textbf{Theorem \thetcbcounter.}
+    }{\end{theorem}
+}
+
 \newtcbtheorem{problem}{Problem}{% https://tex.stackexchange.com/questions/198820/create-newshadetheorem-without-numbering
     theorem name,%
     colback=green!5,%
@@ -38,23 +59,24 @@
 
 \newtcbtheorem[number within=chapter]{Theorem}{}{
         enhanced,
-        sharp corners,
+        %sharp corners,
         attach boxed title to top left={
-            xshift=-1mm,
-            yshift=-5mm,
-            yshifttext=-1mm
+            xshift=12pt,
+            yshift=-\tcboxedtitleheight/2,
+            %yshifttext=-1mm
         },
         top=1.5em,
         colback=white,
         colframe=blue!75!black,
         fonttitle=\bfseries,
         boxed title style={
-            sharp corners,
-            size=small,
+            %sharp corners,
+            %size=small,
             colback=blue!75!black,
-            colframe=blue!75!black,
+            %colframe=blue!75!black,
         }
     }{thm}
+
 
 \newenvironment{myTheorem}[2]{
     \begin{Theorem}[adjusted title=#1]{}{#2}

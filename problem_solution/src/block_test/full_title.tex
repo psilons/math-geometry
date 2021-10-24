@@ -1,0 +1,35 @@
+
+% Preamble
+\documentclass[11pt]{article}
+
+% Packages
+%\usepackage{xcolor} % define header line color
+%\tcbuselibrary{most}
+\RequirePackage{tcolorbox}
+%\tcbuselibrary{most} % this works too, it loads most tcb libs, search /tcb/library/most
+% or we could load individuals
+\tcbuselibrary{theorems, breakable}
+
+% https://newbedev.com/counter-for-tcolorbox
+% general syntax is:
+% \newtcbtheorem[init options]{theoremenvname}{Theorem Name}{options}{prefix}
+\newtcbtheorem[auto counter]{problem}{Problem}{% https://tex.stackexchange.com/questions/198820/create-newshadetheorem-without-numbering
+%    theorem name,%
+    colback=green!5,%
+    colframe=green!35!black,%
+    fonttitle=\bfseries,
+    boxsep=7pt, % space between title string and border
+    title after break={Problem  -- \raggedleft Continued},%
+}{problem}
+
+% Document
+\begin{document}
+    \begin{problem}{}{}
+    Let's see
+    \end{problem}
+
+    \begin{problem}{Algorithm}{boxref}
+    Let's see
+    \end{problem}
+    Here we refer Problem~\ref{problem:boxref}% need to compile twice
+\end{document}

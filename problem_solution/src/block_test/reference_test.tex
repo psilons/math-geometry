@@ -1,0 +1,40 @@
+% https://tex.stackexchange.com/questions/399123/how-to-reference-a-boxed-theorem
+% screenshot in docs
+% syntax is
+% \newtcbtheorem[init options]{Theorem box name}{Theorem title}{options}{prefix for label}
+\documentclass{article}
+\usepackage{amsthm}
+\usepackage[bookmarks=true]{hyperref}
+\usepackage[many]{tcolorbox}
+\newtcbtheorem[number within=section]{Theorem}{Theorem}{
+  enhanced,breakable,
+  sharp corners,
+  attach boxed title to top left={
+    yshifttext=-1mm
+  },
+  colback=white,
+  colframe=blue!75!black,
+  fonttitle=\bfseries,
+  boxed title style={
+    sharp corners,
+    size=small,
+    colback=blue!75!black,
+    colframe=blue!75!black
+  }
+}{thm}
+
+\begin{document}
+\section{Section 1}
+
+\subsection{Subsection 1}
+\begin{Theorem}{First}{first}
+test
+\end{Theorem}
+
+% need to compile twice to populate the references - need to generate refs
+Here we refer Theorem~\ref{thm:first}
+\begin{Theorem}{Second}{second}
+test
+\end{Theorem}
+Here we refer Theorem~\ref{thm:second}
+\end{document}
