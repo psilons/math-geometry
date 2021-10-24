@@ -29,3 +29,5 @@
 \setlength\parindent{0pt} % no indent for paragraphs
 
 \linespread{1.2}
+
+\setlength{\headheight}{25}

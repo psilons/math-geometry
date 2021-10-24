@@ -106,6 +106,7 @@ Which IDE is the best:
 
 
 ## References:
+- fancy headers: https://latex-ninja.com/2018/12/11/fancy-headers-and-final-footers-in-latex/
 
 - https://user.math.uni-bremen.de/~grimpen/LaTeX.html
 
