@@ -33,11 +33,26 @@
     \pagestyle{pageheader}
 }
 
+% define 6 colors
+\definecolor{ctbRedDark}{RGB}{155, 28, 49} % Royal Red
+\definecolor{ctbRedLight}{RGB}{255, 242, 242} % red!5
+\definecolor{ctbGreenDark}{RGB}{19, 160, 7} % Royal Green modified
+\definecolor{ctbGreenLight}{RGB}{242, 255, 242} % green!5
+\definecolor{ctbBlueDark}{RGB}{65, 105, 225} % Royal Blue
+\definecolor{ctbBlueLight}{RGB}{242, 242, 255} % blue!5
+
+\definecolor{ctbHoneyDark}{RGB}{244,143,35} %
+\definecolor{ctbHoneyLight}{RGB}{255,253,230} %
+\definecolor{ctbPinkDark}{RGB}{217,2,125} %
+\definecolor{ctbPinkLight}{RGB}{255,230,242} %
+\definecolor{ctbPurpleDark}{RGB}{165,80,236} %
+\definecolor{ctbPurpleLight}{RGB}{238,226,242} %
+
 %--------------------------------------------------------------------------------------------------
 % Colored Text Blocks
 % Two dimensional shortcuts, title names and colors.
 %--------------------------------------------------------------------------------------------------
-% Leave title open to users to overwrite, no number sequence.
+% Stripped title. Leave title open to users to overwrite, no number sequence.
 % This is base function, shouldn't be called by users
 \newtcbtheorem{cbstrip}{Dummy}{%
     %theorem name,%
@@ -51,19 +66,32 @@
 
 % pass in title, such as Problem, Fermats Last Theorem
 \newenvironment{cbred}[1]
-    {\begin{cbstrip}[adjusted title=#1, colframe=red!35!black,colback=red!5,]{}{}}
+    {\begin{cbstrip}[adjusted title=#1, colframe=ctbRedDark,colback=ctbRedLight]{}{}}
     {\end{cbstrip}}
 
 \newenvironment{cbgreen}[1]
-    {\begin{cbstrip}[adjusted title=#1, colframe=green!35!black,colback=green!5,]{}{}}
+    {\begin{cbstrip}[adjusted title=#1, colframe=ctbGreenDark,colback=ctbGreenLight,]{}{}}
     {\end{cbstrip}}
 
 \newenvironment{cbblue}[1]
-    {\begin{cbstrip}[adjusted title=#1, colframe=blue!35!black,colback=blue!5,]{}{}}
+    {\begin{cbstrip}[adjusted title=#1, colframe=ctbBlueDark,colback=ctbBlueLight,]{}{}}
+    {\end{cbstrip}}
+
+\newenvironment{cbhoney}[1]
+    {\begin{cbstrip}[adjusted title=#1, colframe=ctbHoneyDark,colback=ctbHoneyLight,]{}{}}
+    {\end{cbstrip}}
+
+\newenvironment{cbpink}[1]
+    {\begin{cbstrip}[adjusted title=#1, colframe=ctbPinkDark,colback=ctbPinkLight,]{}{}}
+    {\end{cbstrip}}
+
+\newenvironment{cbpurple}[1]
+    {\begin{cbstrip}[adjusted title=#1, colframe=ctbPurpleDark,colback=ctbPurpleLight,]{}{}}
     {\end{cbstrip}}
 
 %--------------------------------------------------------------------------------------------------
-% Title Problem
+% Stripped title. Titled Problem
+%--------------------------------------------------------------------------------------------------
 \newtcbtheorem{cbstripproblem}{Problem}{%
     toptitle=3pt, bottomtitle=3pt, left=5pt, right=5pt,
     fonttitle=\sffamily,
@@ -71,19 +99,32 @@
 }{cbsprob}
 
 \newenvironment{cbredproblem}[2]
-    {\begin{cbstripproblem}[colframe=red!35!black,colback=red!5,]{#1}{#2}}
+    {\begin{cbstripproblem}[colframe=ctbRedDark,colback=ctbRedLight]{#1}{#2}}
     {\end{cbstripproblem}}
 
 \newenvironment{cbgreenproblem}[2]
-    {\begin{cbstripproblem}[colframe=green!35!black,colback=green!5,]{#1}{#2}}
+    {\begin{cbstripproblem}[colframe=ctbGreenDark,colback=ctbGreenLight]{#1}{#2}}
     {\end{cbstripproblem}}
 
 \newenvironment{cbblueproblem}[2]
-    {\begin{cbstripproblem}[colframe=blue!35!black,colback=blue!5,]{#1}{#2}}
+    {\begin{cbstripproblem}[colframe=ctbBlueDark,colback=ctbBlueLight]{#1}{#2}}
     {\end{cbstripproblem}}
 
+\newenvironment{cbhoneyproblem}[2]
+    {\begin{cbstripproblem}[colframe=ctbHoneyDark,colback=ctbHoneyLight]{#1}{#2}}
+    {\end{cbstripproblem}}
 
+\newenvironment{cbpinkproblem}[2]
+    {\begin{cbstripproblem}[colframe=ctbPinkDark,colback=ctbPinkLight]{#1}{#2}}
+    {\end{cbstripproblem}}
 
+\newenvironment{cbpurpleproblem}[2]
+    {\begin{cbstripproblem}[colframe=ctbPurpleDark,colback=ctbPurpleLight]{#1}{#2}}
+    {\end{cbstripproblem}}
+
+%--------------------------------------------------------------------------------------------------
+% Beveled Titles
+%--------------------------------------------------------------------------------------------------
 
 
 \newtcbtheorem[number within=section]{theorem}{Theorem}{
