@@ -8,7 +8,7 @@
 \RequirePackage{fancyhdr}
 
 \RequirePackage{tcolorbox}
-\tcbuselibrary{theorems, breakable}
+\tcbuselibrary{most}
 
 % 调色板
 \RequirePackage{xcolor-material}
@@ -90,7 +90,7 @@
     {\end{cbstrip}}
 
 %--------------------------------------------------------------------------------------------------
-% Stripped title. Titled Problem
+% Stripped title. Hardcode title to "Problem".
 %--------------------------------------------------------------------------------------------------
 \newtcbtheorem{cbstripproblem}{Problem}{%
     toptitle=3pt, bottomtitle=3pt, left=5pt, right=5pt,
@@ -124,6 +124,52 @@
 
 %--------------------------------------------------------------------------------------------------
 % Beveled Titles
+%--------------------------------------------------------------------------------------------------
+% User supplied title, no number sequence
+\newtcbtheorem{cbbevel}{Dummy}{
+  enhanced, % without this, the title box won't show up
+  %fonttitle=\bfseries,
+  boxrule=0.1mm,
+  %before upper={\parindent2em}, % no indent
+  %colback=MaterialGreen50,
+%  colframe=MaterialGreen,
+  attach boxed title to top left={xshift=12pt, yshift*=-\tcboxedtitleheight/2},
+%  boxed title style={colback=MaterialGreen}
+}{theorem}
+
+% pass in title, such as Problem, Fermats Last Theorem
+\newenvironment{cbbred}[1]
+    {\begin{cbbevel}[adjusted title=#1, colback=ctbRedLight,
+        boxed title style={colback=ctbRedDark, boxrule=0mm}]{}{}}
+    {\end{cbbevel}}
+
+\newenvironment{cbbgreen}[1]
+    {\begin{cbbevel}[adjusted title=#1, colback=ctbGreenLight,
+        boxed title style={colback=ctbGreenDark, boxrule=0mm}]{}{}}
+    {\end{cbbevel}}
+
+\newenvironment{cbbblue}[1]
+    {\begin{cbbevel}[adjusted title=#1, colback=ctbBlueLight,
+        boxed title style={colback=ctbBlueDark, boxrule=0mm}]{}{}}
+    {\end{cbbevel}}
+
+\newenvironment{cbbhoney}[1]
+    {\begin{cbbevel}[adjusted title=#1, colback=ctbHoneyLight,
+        boxed title style={colback=ctbHoneyDark, boxrule=0mm}]{}{}}
+    {\end{cbbevel}}
+
+\newenvironment{cbbpink}[1]
+    {\begin{cbbevel}[adjusted title=#1, colback=ctbPinkLight,
+        boxed title style={colback=ctbPinkDark, boxrule=0mm}]{}{}}
+    {\end{cbbevel}}
+
+\newenvironment{cbbpurple}[1]
+    {\begin{cbbevel}[adjusted title=#1, colback=ctbPurpleLight,
+        boxed title style={colback=ctbPurpleDark, boxrule=0mm}]{}{}}
+    {\end{cbbevel}}
+
+%--------------------------------------------------------------------------------------------------
+% Beveled, hardcode title prefix to "Problem", has number sequence
 %--------------------------------------------------------------------------------------------------
 
 
