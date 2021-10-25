@@ -127,50 +127,100 @@
 %--------------------------------------------------------------------------------------------------
 % User supplied title, no number sequence
 \newtcbtheorem{cbbevel}{Dummy}{
-  enhanced, % without this, the title box won't show up
-  %fonttitle=\bfseries,
-  boxrule=0.1mm,
-  %before upper={\parindent2em}, % no indent
-  %colback=MaterialGreen50,
-%  colframe=MaterialGreen,
-  attach boxed title to top left={xshift=12pt, yshift*=-\tcboxedtitleheight/2},
-%  boxed title style={colback=MaterialGreen}
-}{theorem}
+    enhanced, % without this, the title box won't show up
+    %fonttitle=\bfseries,
+    boxrule=0.1mm,
+    %before upper={\parindent2em}, % no indent
+    %colback=MaterialGreen50,
+%   colframe=MaterialGreen,
+    attach boxed title to top left={xshift=12pt, yshift*=-\tcboxedtitleheight/2},
+%   boxed title style={colback=MaterialGreen}
+}{cbbevel}
 
 % pass in title, such as Problem, Fermats Last Theorem
 \newenvironment{cbbred}[1]
     {\begin{cbbevel}[adjusted title=#1, colback=ctbRedLight,
-        boxed title style={colback=ctbRedDark, boxrule=0mm}]{}{}}
+        boxed title style={colback=ctbRedDark, boxrule=0mm,
+                           top=3pt, bottom=3pt, left=4pt, right=4pt}]{}{}}
     {\end{cbbevel}}
 
 \newenvironment{cbbgreen}[1]
     {\begin{cbbevel}[adjusted title=#1, colback=ctbGreenLight,
-        boxed title style={colback=ctbGreenDark, boxrule=0mm}]{}{}}
+        boxed title style={colback=ctbGreenDark, boxrule=0mm,
+                           top=3pt, bottom=3pt, left=4pt, right=4pt}]{}{}}
     {\end{cbbevel}}
 
 \newenvironment{cbbblue}[1]
     {\begin{cbbevel}[adjusted title=#1, colback=ctbBlueLight,
-        boxed title style={colback=ctbBlueDark, boxrule=0mm}]{}{}}
+        boxed title style={colback=ctbBlueDark, boxrule=0mm,
+                           top=3pt, bottom=3pt, left=4pt, right=4pt}]{}{}}
     {\end{cbbevel}}
 
 \newenvironment{cbbhoney}[1]
     {\begin{cbbevel}[adjusted title=#1, colback=ctbHoneyLight,
-        boxed title style={colback=ctbHoneyDark, boxrule=0mm}]{}{}}
+        boxed title style={colback=ctbHoneyDark, boxrule=0mm,
+                           top=3pt, bottom=3pt, left=4pt, right=4pt}]{}{}}
     {\end{cbbevel}}
 
 \newenvironment{cbbpink}[1]
     {\begin{cbbevel}[adjusted title=#1, colback=ctbPinkLight,
-        boxed title style={colback=ctbPinkDark, boxrule=0mm}]{}{}}
+        boxed title style={colback=ctbPinkDark, boxrule=0mm,
+                           top=3pt, bottom=3pt, left=4pt, right=4pt}]{}{}}
     {\end{cbbevel}}
 
 \newenvironment{cbbpurple}[1]
     {\begin{cbbevel}[adjusted title=#1, colback=ctbPurpleLight,
-        boxed title style={colback=ctbPurpleDark, boxrule=0mm}]{}{}}
+        boxed title style={colback=ctbPurpleDark, boxrule=0mm,
+                           top=3pt, bottom=3pt, left=4pt, right=4pt}]{}{}}
     {\end{cbbevel}}
 
 %--------------------------------------------------------------------------------------------------
 % Beveled, hardcode title prefix to "Problem", has number sequence
 %--------------------------------------------------------------------------------------------------
+%
+\newtcbtheorem{cbbevelproblem}{Problem}{
+    enhanced,
+    boxrule=0.1mm,
+    %toptitle=3pt, bottomtitle=3pt, left=5pt, right=5pt,
+    attach boxed title to top left={xshift=12pt, yshift*=-\tcboxedtitleheight/2},
+}{cbbprob}
+
+\newenvironment{cbbredproblem}[2]
+    {\begin{cbbevelproblem}[colback=ctbRedLight,
+        boxed title style={colback=ctbRedDark, boxrule=0mm,
+                           top=3pt, bottom=3pt, left=4pt, right=4pt}]{#1}{#2}}
+    {\end{cbbevelproblem}}
+
+\newenvironment{cbbgreenproblem}[2]
+    {\begin{cbbevelproblem}[colback=ctbGreenLight,
+        boxed title style={colback=ctbGreenDark, boxrule=0mm,
+                           top=3pt, bottom=3pt, left=4pt, right=4pt}]{#1}{#2}}
+    {\end{cbbevelproblem}}
+
+\newenvironment{cbbblueproblem}[2]
+    {\begin{cbbevelproblem}[colback=ctbBlueLight,
+        boxed title style={colback=ctbBlueDark, boxrule=0mm,
+                           top=3pt, bottom=3pt, left=4pt, right=4pt}]{#1}{#2}}
+    {\end{cbbevelproblem}}
+
+\newenvironment{cbbhoneyproblem}[2]
+    {\begin{cbbevelproblem}[colback=ctbHoneyLight,
+        boxed title style={colback=ctbHoneyDark, boxrule=0mm,
+                           top=3pt, bottom=3pt, left=4pt, right=4pt}]{#1}{#2}}
+    {\end{cbbevelproblem}}
+
+\newenvironment{cbbpinkproblem}[2]
+    {\begin{cbbevelproblem}[colback=ctbPinkLight,
+        boxed title style={colback=ctbPinkDark, boxrule=0mm,
+                           top=3pt, bottom=3pt, left=4pt, right=4pt}]{#1}{#2}}
+    {\end{cbbevelproblem}}
+
+\newenvironment{cbbpurpleproblem}[2]
+    {\begin{cbbevelproblem}[colback=ctbPurpleLight,
+        boxed title style={colback=ctbPurpleDark, boxrule=0mm,
+                           top=3pt, bottom=3pt, left=4pt, right=4pt}]{#1}{#2}}
+    {\end{cbbevelproblem}}
+
 
 
 \newtcbtheorem[number within=section]{theorem}{Theorem}{
