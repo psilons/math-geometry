@@ -33,3 +33,5 @@
 \setlength{\headheight}{25pt}
 
 \renewcommand{\familydefault}{\sfdefault}
+
+\setlength{\jot}{10pt} % set spacing between formulae
