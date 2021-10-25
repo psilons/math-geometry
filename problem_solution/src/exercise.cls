@@ -31,3 +31,5 @@
 \linespread{1.2}
 
 \setlength{\headheight}{25pt}
+
+\renewcommand{\familydefault}{\sfdefault}

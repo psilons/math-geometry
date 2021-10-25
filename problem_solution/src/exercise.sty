@@ -50,6 +50,25 @@
     }{\end{theorem}
 }
 
+\newtcbtheorem[auto counter]{cbstrip}{Problem}{% https://tex.stackexchange.com/questions/198820/create-newshadetheorem-without-numbering
+    %theorem name,%
+    colback=green!5,%
+    colframe=green!35!black,%
+    top=5pt,
+    bottom=5pt,
+    %boxsep=5pt,
+    left=5pt,
+    fonttitle=\sffamily,
+    title after break={Problem  -- \raggedleft Continued}%
+}{cbstrip}
+
+\newenvironment{theoremblue}[2]{
+    \begin{cbstrip}[adjusted title=#1, colback=blue!5,]{}{#2}
+    %\textbf{Theorem \thetcbcounter.}
+    }{\end{cbstrip}
+}
+
+
 \newtcbtheorem{problem}{Problem}{% https://tex.stackexchange.com/questions/198820/create-newshadetheorem-without-numbering
     theorem name,%
     colback=green!5,%
