@@ -1,9 +1,18 @@
+% https://www.overleaf.com/learn/latex/Code_Highlighting_with_minted
+% https://latex-tutorial.com/code-listings/
 \documentclass{article}
+
 \usepackage[outputdir=../../out]{minted} % this is tricky, relative to current file.
+\usemintedstyle[python]{monokai} % rather than for all language
+\RequirePackage{xcolor}
+
+\usepackage{cleveref}
+
+\definecolor{bgcolor}{RGB}{16, 31, 62}
 
 \begin{document}
     This is Python code:
-\begin{minted}{python}
+\begin{minted}[linenos, bgcolor=bgcolor]{python}
 import numpy as np
 
 def incmatrix(genl1,genl2):
@@ -36,4 +45,20 @@ def incmatrix(genl1,genl2):
     return M
 \end{minted}
 
+    Here is an example with listing:
+    \begin{listing}
+        \begin{minted}{Python}
+            def hello_world():
+                print("Hello floating world!")
+        \end{minted}
+        \caption{Floating Listing.}
+        \label{lst:hello}
+    \end{listing}
+
+    References: \cref{lst:hello},~\ref{lst:hello}
+
+    Here is file input:
+    \inputminted{tex}{source_code_test.tex}
+
+    Here is an example of a line code \mintinline{c}|int i| .
 \end{document}

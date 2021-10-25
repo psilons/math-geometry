@@ -7,6 +7,9 @@
 % Packages
 \usepackage{../exercise}
 
+% 调色板
+%\RequirePackage{xcolor-material}
+
 % Document
 \begin{document}
     % Strip: overwrite title
@@ -149,14 +152,20 @@
     Here we refer Problem~\ref{cbbprob:cbb_purple_algebra}
 
 %--------------------------------------------------------------------------------------------------
-    %
-    \begin{cbbar}{Note}{ctbRedDark}
+    % vertical bar
+    \begin{cbbar}{Note}{ctbGreenDark}
+        This is a vertical bar.
+        It will highlight the text from left side.
+        The color of the bar can be customized by users.
+    \end{cbbar}
+
+    \begin{cbbar}{Tip}{ctbBlueDark}
         This is a vertical bar.
         It will highlight the text from left side.
         The color of the bar can be customized by users.
     \end{cbbar}
 
 %--------------------------------------------------------------------------------------------------
-%
+    % source code listing
 
 \end{document}

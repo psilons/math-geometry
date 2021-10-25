@@ -11,6 +11,8 @@ templates here are mainly for casual usages outside of those scopes.
 
 Other options are Markdown, MS Word. But TeX is the king.
 
+Concentrate on content with minimal formatting.
+
 ## Latex Distributions
 There are 2 distributions: TeX Live and MikTeX. Here is a comparison from
 [this post](https://tex.stackexchange.com/questions/175121/tex-live-and-miktex-underlying-basic-difference):
