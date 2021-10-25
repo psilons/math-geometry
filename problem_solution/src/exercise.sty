@@ -8,13 +8,14 @@
 \RequirePackage{fancyhdr}
 
 \RequirePackage{tcolorbox}
-\tcbuselibrary{most}
+\tcbuselibrary{theorems, breakable}
 
 % 调色板
 \RequirePackage{xcolor-material}
 
 \newcommand{\exerheader}[4]{
-    \fancypagestyle{pageheader}{% https://tex.stackexchange.com/questions/69950/fancyhdr-color-and-width-of-line
+    % https://tex.stackexchange.com/questions/69950/fancyhdr-color-and-width-of-line
+    \fancypagestyle{pageheader}{
         \fancyhf{}% Clear all headers/footers
 
         \fancyhead[L]{\raisebox{-.5\baselineskip}[0pt][0pt]{#1}}% Header Centred
@@ -32,7 +33,59 @@
     \pagestyle{pageheader}
 }
 
-%----------------------------------------------------------------------------------------
+%--------------------------------------------------------------------------------------------------
+% Colored Text Blocks
+% Two dimensional shortcuts, title names and colors.
+%--------------------------------------------------------------------------------------------------
+% Leave title open to users to overwrite, no number sequence.
+% This is base function, shouldn't be called by users
+\newtcbtheorem{cbstrip}{Dummy}{%
+    %theorem name,%
+    %colback=green!5,%
+    %colframe=green!35!black,%
+    toptitle=3pt, bottomtitle=3pt, left=5pt, right=5pt,
+    %boxsep=5pt,
+    fonttitle=\sffamily,
+    title after break={Problem  -- \raggedleft Continued}%
+}{cbstrip}
+
+% pass in title, such as Problem, Fermats Last Theorem
+\newenvironment{cbred}[1]
+    {\begin{cbstrip}[adjusted title=#1, colframe=red!35!black,colback=red!5,]{}{}}
+    {\end{cbstrip}}
+
+\newenvironment{cbgreen}[1]
+    {\begin{cbstrip}[adjusted title=#1, colframe=green!35!black,colback=green!5,]{}{}}
+    {\end{cbstrip}}
+
+\newenvironment{cbblue}[1]
+    {\begin{cbstrip}[adjusted title=#1, colframe=blue!35!black,colback=blue!5,]{}{}}
+    {\end{cbstrip}}
+
+%--------------------------------------------------------------------------------------------------
+% Title Problem
+\newtcbtheorem{cbstripproblem}{Problem}{%
+    toptitle=3pt, bottomtitle=3pt, left=5pt, right=5pt,
+    fonttitle=\sffamily,
+    title after break={Problem  -- \raggedleft Continued}%
+}{cbsprob}
+
+\newenvironment{cbredproblem}[2]
+    {\begin{cbstripproblem}[colframe=red!35!black,colback=red!5,]{#1}{#2}}
+    {\end{cbstripproblem}}
+
+\newenvironment{cbgreenproblem}[2]
+    {\begin{cbstripproblem}[colframe=green!35!black,colback=green!5,]{#1}{#2}}
+    {\end{cbstripproblem}}
+
+\newenvironment{cbblueproblem}[2]
+    {\begin{cbstripproblem}[colframe=blue!35!black,colback=blue!5,]{#1}{#2}}
+    {\end{cbstripproblem}}
+
+
+
+
+
 \newtcbtheorem[number within=section]{theorem}{Theorem}{
   enhanced, % without this, the title box won't show up
   fonttitle=\bfseries,
@@ -50,23 +103,23 @@
     }{\end{theorem}
 }
 
-\newtcbtheorem[auto counter]{cbstrip}{Problem}{% https://tex.stackexchange.com/questions/198820/create-newshadetheorem-without-numbering
-    %theorem name,%
-    colback=green!5,%
-    colframe=green!35!black,%
-    top=5pt,
-    bottom=5pt,
-    %boxsep=5pt,
-    left=5pt,
-    fonttitle=\sffamily,
-    title after break={Problem  -- \raggedleft Continued}%
-}{cbstrip}
-
-\newenvironment{theoremblue}[2]{
-    \begin{cbstrip}[adjusted title=#1, colback=blue!5,]{}{#2}
-    %\textbf{Theorem \thetcbcounter.}
-    }{\end{cbstrip}
-}
+%\newtcbtheorem[auto counter]{cbstrip}{Problem}{%
+%    %theorem name,%
+%    colback=green!5,%
+%    colframe=green!35!black,%
+%    top=5pt,
+%    bottom=5pt,
+%    %boxsep=5pt,
+%    left=5pt,
+%    fonttitle=\sffamily,
+%    title after break={Problem  -- \raggedleft Continued}%
+%}{cbstrip}
+%
+%\newenvironment{theoremblue}[2]{
+%    \begin{cbstrip}[adjusted title=#1, colback=blue!5,]{}{#2}
+%    %\textbf{Theorem \thetcbcounter.}
+%    }{\end{cbstrip}
+%}
 
 
 \newtcbtheorem{problem}{Problem}{% https://tex.stackexchange.com/questions/198820/create-newshadetheorem-without-numbering
