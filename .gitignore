@@ -4,3 +4,4 @@
 *.gz
 
 /report/out/*.toc
+/problem_solution/out/_minted-source_code_test
