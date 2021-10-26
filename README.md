@@ -12,10 +12,33 @@ templates here are mainly for casual usages outside of those scopes.
 Other options are Markdown, MS Word. But TeX is the king.
 
 Concentrate on content with minimal formatting.
-paragraphs
+
+layout, style vs content
+
+colors
+paragraphs - text blocks(position), textbox(grouping), font, spacing, color, and other styles
+source code
 tables
 graphs
 images
+math
+commands
+environments
+structures:
+    parts/chapters/sections/subsections
+    document/page/headers/footers
+    templates
+references
+bib
+common libs
+variables & ???
+
+resume
+ref cards
+geometry
+integral & asymptotics
+direct/undirect graphs
+
 
 ## Latex Distributions
 There are 2 distributions: TeX Live and MikTeX. Here is a comparison from
