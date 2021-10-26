@@ -3,7 +3,10 @@
 \RequirePackage{fontspec}
 \RequirePackage{xcolor}
 \RequirePackage[left=2.5cm,right=2.5cm,top=3cm,bottom=3cm]{geometry}
+
 \RequirePackage{fancyhdr}
+\RequirePackage{lastpage}
+\pagestyle{fancy} % these 3 lines set the footer to the middle with total page #.
 
 %------------------Main Font-------------------------
 %\setmainfont{Fira Sans}
@@ -21,19 +24,20 @@
 
 %------------------Section Default Setting-------------
 %\titleformat*{\section}{\color{DarkBlue}\normalfont\bfseries\LARGE}
-\titleformat*{\subsection}{\color{LightBlue}\normalfont\bfseries\Large}
-\titleformat*{\subsubsection}{\color{MediumBlue}\normalfont\bfseries\large}
+\titleformat*{\section}{\color{Orange}\normalfont\bfseries\Large}
+\titleformat*{\subsection}{\color{Orange}\normalfont\bfseries\large}
 
-\titleformat{\section}[block]
-%{\sffamily\LARGE}
-{\color{white}\sffamily\bfseries\Large}
-{}
-{0pt}
-{\colorsection}
-\titlespacing*{\section}{0pt}{\baselineskip}{\baselineskip}
-
-\newcommand{\colorsection}[1]{%
-	\colorbox{DarkBlue}{\parbox{\dimexpr\textwidth-2\fboxsep}{#1}}}
+%\titleformat{\section}[block]
+%%\titleformat{\chapter}[block]
+%%{\sffamily\LARGE}
+%{\color{white}\sffamily\bfseries\Large}
+%{}
+%{0pt}
+%{\colorsection}
+%\titlespacing*{\section}{0pt}{\baselineskip}{\baselineskip}
+%
+%\newcommand{\colorsection}[1]{%
+%	\colorbox{DarkBlue}{\parbox{\dimexpr\textwidth-2\fboxsep}{#1}}}
 
 
 %-------------------Section Numbers Removal------------
@@ -41,15 +45,24 @@
 
 
 %-------------------------Header & Footer------------------------
+% https://en.wikibooks.org/wiki/LaTeX/Customizing_Page_Headers_and_Footers
+% this overwrites \leftmark and \rightmark
+\renewcommand{\chaptermark}[1]{ \markboth{#1}{} }
+\renewcommand{\sectionmark}[1]{ \markright{#1}{} }
 
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[L]{ \leftmark
-	\begin{tikzpicture}[remember picture,overlay] \node[anchor=north east, yshift=1.5mm, xshift=1.5mm] at (current page.north east) {\includegraphics[height=25mm]{right_header_corner}};
+\fancyhead[L]{ \thechapter.~\leftmark % rightmark has section title
+	%\begin{tikzpicture}[remember picture,overlay] \node[anchor=north east, yshift=1.5mm, xshift=1.2mm] at (current page.north east) {\includegraphics[height=25mm]{right_header_corner}};
+	%\end{tikzpicture}
+}
+\fancyhead[R]{ \rightmark % rightmark has section title
+	\begin{tikzpicture}[remember picture,overlay] \node[anchor=north east, yshift=1.5mm, xshift=1.2mm] at (current page.north east) {\includegraphics[height=25mm]{right_header_corner}};
 	\end{tikzpicture}
 }
 \fancyfoot[C]{
-	\begin{tikzpicture}[remember picture,overlay] \node[anchor=south east, yshift=-1.5mm, xshift=1.5mm] at (current page.south east) {\includegraphics[height=29mm]{banner}};
+	\begin{tikzpicture}[remember picture,overlay] \node[anchor=south east, yshift=-7mm, xshift=1.5mm] at (current page.south east) {\includegraphics[height=29mm]{banner}};
 	\end{tikzpicture}
-	\textcolor{LightGray}{\thepage}
+	%\fancyfoot[C]{Page \thepage\ of~\pageref{LastPage}}
+	\textcolor{Orange}{Page \thepage\ of~\pageref{LastPage}}
 }

@@ -9,7 +9,7 @@
 
 % Provide the name of your document class, the date it was last updated, and a
 % comment about what it's used for
-\ProvidesPackage{exercise}[Exercise's Document Class, a problem and a solution]
+\ProvidesPackage{exercise}[Exercise's Document Class]
 
 % We'll pass any document class options along to the underlying class
 \DeclareOption*{%
@@ -25,6 +25,11 @@
 
 \RequirePackage{geometry}
 \newgeometry{vmargin={25mm, 30mm}, hmargin={15mm,15mm}}   % set page margins
+
+\RequirePackage{fancyhdr}
+\RequirePackage{lastpage}
+\pagestyle{fancy} % these 3 lines set the footer to the middle with total page #.
+
 
 \setlength\parindent{0pt} % no indent for paragraphs
 

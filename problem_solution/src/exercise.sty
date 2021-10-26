@@ -6,6 +6,10 @@
 \ProvidesPackage{exercise}[2021/10/23 Exercise's Package]
 
 \RequirePackage{fancyhdr}
+\RequirePackage{lastpage}
+\pagestyle{fancy}
+
+\RequirePackage{xcolor}
 
 \RequirePackage{tcolorbox}
 \tcbuselibrary{most}
@@ -23,7 +27,7 @@
         \renewcommand{\headrule}{\hbox to\headwidth{%
                 \color{#4}\leaders\hrule height \headrulewidth\hfill}}
 
-        \fancyfoot[C]{Page\hspace{1mm}\thepage}% Footer Centred
+        \fancyfoot[C]{Page \thepage\ of~\pageref{LastPage}}
         \renewcommand{\footrulewidth}{0pt}% No footer rule
     }
 
@@ -31,7 +35,7 @@
 }
 
 % define 6 colors
-\definecolor{ctbRedDark}{RGB}{155, 28, 49} % Royal Red
+\definecolor{ctbRedDark}{RGB}{183, 28, 28} % Royal Red
 \definecolor{ctbRedLight}{RGB}{255, 242, 242} % red!5
 \definecolor{ctbGreenDark}{RGB}{19, 160, 7} % Royal Green modified
 \definecolor{ctbGreenLight}{RGB}{242, 255, 242} % green!5
@@ -230,7 +234,7 @@
   bottomrule=0pt,
   leftrule=0pt,
   rightrule=0pt,
-  borderline west={2pt}{0pt}{#1},
+  borderline west={2pt}{0pt}{{#1}},
 }
 
 % pass in title, such as Problem, Fermats Last Theorem
