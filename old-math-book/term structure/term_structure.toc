@@ -1,0 +1,22 @@
+\contentsline {chapter}{Contents}{i}
+\contentsline {chapter}{\chapternumberline {1}Numbers in Java}{1}
+\contentsline {section}{\numberline {1.1}Number Representation in Java}{1}
+\contentsline {section}{\numberline {1.2}Errors}{3}
+\contentsline {section}{\numberline {1.3}Comparison}{5}
+\contentsline {section}{\numberline {1.4}Arithmetic Operations}{6}
+\contentsline {section}{\numberline {1.5}Functions}{7}
+\contentsline {section}{\numberline {1.6}Bibliography}{8}
+\contentsline {chapter}{\chapternumberline {2}Error Function}{9}
+\contentsline {section}{\numberline {2.1}Error Function}{9}
+\contentsline {section}{\numberline {2.2}Complementary Error Function}{10}
+\contentsline {section}{\numberline {2.3}Error Function Inverse}{11}
+\contentsline {chapter}{\chapternumberline {3}Gamma Function}{13}
+\contentsline {section}{\numberline {3.1}Gamma Function}{13}
+\contentsline {section}{\numberline {3.2}Log Gamma Function}{15}
+\contentsline {section}{\numberline {3.3}Incomplete Gamma Function}{15}
+\contentsline {section}{\numberline {3.4}Reference}{17}
+\contentsline {section}{\numberline {3.5}Bibliography}{18}
+\contentsline {chapter}{\chapternumberline {4}Beta Function}{19}
+\contentsline {section}{\numberline {4.1}Beta Function}{19}
+\contentsline {section}{\numberline {4.2}Incomplete Beta Function}{20}
+\contentsline {section}{\numberline {4.3}Bibliography}{20}

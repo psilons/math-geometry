@@ -1,0 +1,46 @@
+\contentsline {chapter}{Contents}{i}
+\contentsline {chapter}{\chapternumberline {1}Matrix Design}{1}
+\contentsline {section}{\numberline {1.1}Scope}{1}
+\contentsline {section}{\numberline {1.2}Fundamental Classes}{3}
+\contentsline {section}{\numberline {1.3}Matrix Interface}{3}
+\contentsline {chapter}{\chapternumberline {2}Matrix implementation}{7}
+\contentsline {section}{\numberline {2.1}Matrix Storage}{7}
+\contentsline {section}{\numberline {2.2}Matrix Constructors}{9}
+\contentsline {section}{\numberline {2.3}Arithmetic Operations}{10}
+\contentsline {section}{\numberline {2.4}Class consideration}{11}
+\contentsline {section}{\numberline {2.5}Transformation Matrices}{11}
+\contentsline {subsection}{\numberline {2.5.1}Identity Matrix}{11}
+\contentsline {subsection}{\numberline {2.5.2}Permutation Matrix}{12}
+\contentsline {subsection}{\numberline {2.5.3}Elementary Modifier Matrix}{12}
+\contentsline {subsection}{\numberline {2.5.4}Projection Matrix}{12}
+\contentsline {subsection}{\numberline {2.5.5}Rotation Matrix}{12}
+\contentsline {subsection}{\numberline {2.5.6}Householder Reflection Matrix}{12}
+\contentsline {chapter}{\chapternumberline {3}More Matrix Operations}{13}
+\contentsline {section}{\numberline {3.1}Matrix Norms}{14}
+\contentsline {section}{\numberline {3.2}Matrix Decompositions}{14}
+\contentsline {subsection}{\numberline {3.2.1}LU Decomposition}{14}
+\contentsline {subsection}{\numberline {3.2.2}Cholesky Decomposition}{14}
+\contentsline {subsection}{\numberline {3.2.3}QR Decomposition}{14}
+\contentsline {subsection}{\numberline {3.2.4}Singular Value Decomposition(SVD)}{14}
+\contentsline {subsection}{\numberline {3.2.5}Eigen Decomposition}{14}
+\contentsline {section}{\numberline {3.3}Determinant}{15}
+\contentsline {section}{\numberline {3.4}Linear Equation Systems}{15}
+\contentsline {section}{\numberline {3.5}Matrix Inverse and Condition Number}{15}
+\contentsline {section}{\numberline {3.6}Testing}{15}
+\contentsline {subsection}{\numberline {3.6.1}Correctness and Error Bound}{15}
+\contentsline {subsection}{\numberline {3.6.2}Algorithm Stability}{15}
+\contentsline {subsection}{\numberline {3.6.3}Performance}{15}
+\contentsline {section}{\numberline {3.7}Reference}{16}
+\contentsline {section}{\numberline {3.8}Bibliography}{16}
+\contentsline {chapter}{\chapternumberline {4}Matrix Algorithms}{17}
+\contentsline {section}{\numberline {4.1}LU Decomposition}{17}
+\contentsline {section}{\numberline {4.2}Cholesky Decomposition}{17}
+\contentsline {section}{\numberline {4.3}Geometric Transformations}{18}
+\contentsline {subsection}{\numberline {4.3.1}Projection}{18}
+\contentsline {subsection}{\numberline {4.3.2}Reflection}{21}
+\contentsline {subsection}{\numberline {4.3.3}Rotation}{24}
+\contentsline {section}{\numberline {4.4}QR decomposition}{24}
+\contentsline {section}{\numberline {4.5}Singular Value Decomposition}{26}
+\contentsline {section}{\numberline {4.6}Eigen Decomposition}{26}
+\contentsline {section}{\numberline {4.7}Reference}{26}
+\contentsline {section}{\numberline {4.8}Bibliography}{26}

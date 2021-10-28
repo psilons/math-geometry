@@ -1,0 +1,120 @@
+%********** Chapter 2 **********
+\chapter{Matrix implementation}
+\minitoc
+Once we have the matrix interface ready, we could think about the implementation. Keeping in mind, matrices could be very large and thus we have to make all effort to preserve the memory. Another twist is that there are so many types of matrices, such as diagonal matrix, tridiagonal matrix, symmetric matrix, to name a few. 
+
+
+\section{Matrix Storage}
+General matrices could take a lot of memory, e.g., a single 7000 \texttimes 7000 matrix could take \textasciitilde 390MB. In order to save memory, the following special matrices are implemented, in addition to the general purpose matrix. Here, we follow the java array index convention, i.e., index runs from 0 to length - 1.
+\begin{itemize}
+\item \textbf{DiagonalMatrix}: all off diagonal cells are zeros, i.e., \[A(i, j) = 0, \ \   if \ \  i \neq j\] So the storage is just a double[].
+\item \textbf{AntiDiagonalMatrix}: all off secondary diagonal cells are zeros, i.e. \[A(i, j) = 0, \ \ if \ \ i \neq n-1-j\]
+So the storage is a double[].
+\item \textbf{ToeplitzMatrix}: each descend diagonal has the same value, i.e., \[A(i, j) =A(i-1, j-1)\] So we only need to store the secondary diagonal cells and thus it requires the same storage as AntiDiagonalMatrix, i.e., a double[]. 
+\item \textbf{HankelMatrix}: each skew diagonal has the same value, i.e., \[A(i, j) = A(i-1, j+1)\] So we need a double[] to storage the different values.
+\item \textbf{BidiagonalMatrix}: there are two version, UpperBidiagonalMatrix and LowerBidiagonalMatrix. For the UpperBidiagonalMatrix, all off diagonal and off super-diagonal cells are zeros, i.e., \[A(i, j) = 0, \ \ if i \neq j \ \ and i \neq j+1\] For the LowerBidiagonalMatrix, all off diagonal and off sub-diagonal cells are zeros, i.e., \[A(i, j) = 0, \ \ if i \neq j \ \ and \ \ i \neq j -1 \] So the storage is two $double[$. 
+\item \textbf{TridiagonalMatrix}: all off diagonal, off super-diagonal, and off sub-diagonal cells are zeros, i.e., \[A(i, j) = 0 \ \ if i \neq j \ \ and \ \  i \neq j+1 \ \ and \ \ i \neq j-1\] So the storage of this class is 3 double[].
+\item \textbf{TriangularMatrix}: there are two versions, UpperTriangularMatrix and LowerTriangularMatrix. For the UpperTriangularMatrix, all cells below diagonal are zeros, i.e., \[A(i, j) = 0 \ \ if \ \ i > j\] For the LowerTriangularMatrix, all cells above diagonal are zeros, i.e., \[A(i, j) = 0 \ \ if \ \ i < j\] So the storage for these classes are $double[][]$ with each $double[i]$ having length i, so the total size of the storage is about the half of the matrix size (the size is half of the matrix size minus the diagonal size).
+\item \textbf{SymmetricMatrix}: symmetric about the diagonal, \[A(i, j) = A(j, i)\] So we need the same storage as triangular matrices.
+\item \textbf{AntiSymmetricMatrix}: since it satisfies \[A(i, j) = -A(j, i)\] the diagonal cells are all zero. So we need to store only the strictly upper half of the matrix.
+\item \textbf{GeneralNumericMatrix}: we have to store the entire matrix in this case.
+\item \textbf{SparseMatrix}: nonzero cells are sparse.
+\end{itemize}
+The guideline is to save at least a half of the storage(minus one diagonal).
+
+In java, there are two storage types to store a matrix, double[][] and double[]. There are also two ways to store a matrix using these types, row majored or column majored. There is a performance impact on accessing the cells in a row or a column.
+
+There are several ways to store a matrix, using a double[][] with row or column major, or using a double[] with row or column major. Choosing a row or column major also depends on the dimensions of the given matrix. For example, if row numbers > column numbers, then we could choose column majored.
+
+
+Sparse matrices have a different way to store data.
+
+Other issues are views, slice and dice matrices.
+
+Matrix readers and writers
+
+RealArray and ComplexArray
+
+RealMatrix and ComplexMatrix.
+
+ComplexMatrix \{ double[][] real; double[][] imag; \}
+Sometimes, we have conjuates(in the real field). a pair of conjugates uses only 2 matrices like a +- bi, but two complex general matrix use 4 matrices.
+
+nice printing(fixed number of digits)
+
+quadratic form
+
+
+\section{Matrix Constructors}
+There are several constructors in each of the matrix classes. The first one is taking the size parameters (row size and column size) so that users can use getters and setters to retrieve and set matrix values. The second one is taking arrays, which will be deeply cloned. The third one is a copy constructor. The forth one is the general form: NumericMatrix newCopy(). The purpose of this is that we could create a new copy of the invoking matrix without knowing its concrete class. So this method is added to the NumericMatrix interface. Given each implementation, the data related methods can be implemented straight forward.
+
+The key consideration here is the setCell(), because it makes matrices mutable. The conscious and balanced decision is to keep this so that we could reuse some of the matrix objects without creating a lot of large matrices. Another reason is that without it, we have to rely on the constructors to pass in matrix data and thus we have to clone a lot of data if we want to enforce data encapsulation. Though most of the time there is a constructor that takes data structure, such as double[] or double[][], users in general should use the constructor that takes size(s) because of the deep cloning. The main purpose of the constructors taking arrays is for unit testing. Keep in mind, matrices are mutable.
+
+How to create a matrix from vectors.
+
+
+\section{Arithmetic Operations}
+Since there are different types of matrices, we try to preserve the types under these operations whenever possible. The visitor pattern naturally breaks down the different cases. Since all operations have no dependency on other components, these visitors can be stateful. In constrast, in the next chapter we have to utilize a stateless visitor because it could have dependencies which could have changed during runtime. Using a stateful visitor is not thread safe, but the visitor interface stays the same, i.e., visit(Visitable v). Using a stateless visitor has to change the interface whenever the returning result is different, e.g., matrix additions return a matrix, but determinant calculation return a real number(assuming all cells are real).
+
+In the above session, in order to save memory space, we choose to implement several matrix classes for different data storage. These different implementations introduce several complexities when we operate them:
+\begin{itemize}
+\item When we add a diagonal matrix to a tridiagonal matrix, the result is still a tridiagonal matrix. But when we add a upper triangular matrix to a lower triangular matrix, it's likely we get a general, full size matrix. This means the add() method has to return a new object of a different class.
+\item If we enforce that all math operations to return a new object, then we run out of memory pretty quickly when matrix has large sizes. So the compromised way is to return new objects sometimes and return the old object other times. For all special matrices, since we already save the storage by implementing them, we could return a new object. But for the general matrix, since the storage could be huge, we choose to return itself. When using the interface NumericMatrix, sometimes we could get lost to track different matrix classes(and we shouldn't do this at all since it defeats the purpose of the interface), so the rule of thumb is that the invoking object of the math operations could be changed after the operations. If users have to keep the invoking object, call newCopy() first to get a fresh object. The passing parameter of math operations are never modified, because we don't want to implicitly modify the parameter, so the so-called "side effect".
+\item Because of returning itself in the case of a general matrix for math operations, it introduce another complexity when we multiply a general matrix by a special matrix from left, such as d.multiply(g), where d is a diagonal matrix and g is a general matrix. By the rule, this will return a new object, though g.multiply(d) will return g itself after modification. So we have to introduce two more methods, leftSubstract() and leftMultiplication(). Basically, we treat general matrix as an object that can be transformed by other matrices, which are treated as transformers.
+\item Sometimes, we want to precise results, such as a diagonal matrix multiply a diagonal matrix should be also a diagonal matrix, rather than a general matrix. With the combinations of different types of invoking objects and parameters, a naive implementation will end up a lot of embedded if-else blocks. A better approach is to use visitor design patterns. So we add the visitor pattern to the matrix interface. All complex math operations are using this pattern.
+\end{itemize}
+return new result object
+
+general matrix return same object and export
+
+Of all the combinations, we need to implement only half of the operations.
+
+We want to abstract the math operations from the data storage, such as C = A + B, we want to construct the result object first (maybe in different ways, a new object, or the invoking object), and then fill the result. Adding two different types/classes of matrices should be in one place for each combination.
+
+multiplication taks $O(n^3)$ operations, very expensive.
+
+\section{Class consideration}
+The matrix classes are designed to be value objects, i.e., as long as all cell values are equal, they are considered to be equal.
+Our classes of matrices are value objects. There are several considerations due to java language:
+equals() method: Because of the choice of implementations, when check whether two matrices are equal, we should check the cell values, not the classes. For example, the identity matrix can be created with many classes. In the same class, we need to maintain the consistency of the equals() method and hashCode() method, but for different classes, we can safely ignore this.
+
+toString()
+
+visitor
+
+export general matrix internal double[][] to hook into 3rd party libs.
+
+
+Do we need valueEquals() so that we separate equals() for the systemwide.
+
+Root exceptions.
+
+\section{Transformation Matrices}
+We also implement several special matrices, transformation matrices.
+
+\subsection{Identity Matrix}
+pass in a dimension.
+
+\subsection{Permutation Matrix}
+There are two special cases, exchange matrix and 
+
+\subsection{Elementary Modifier Matrix}
+There are actually two different operations, scale a row/column, or modify a row/column with another.
+There are 3 types: type 1, 2, 3.
+Type 3 modify another row/column by multipling a row and then adding to that row. the determinant is 1 but the norm is not 1 in general.
+
+\subsection{Projection Matrix}
+Projection
+
+\subsection{Rotation Matrix}
+Givens Rotation and Jacobi Rotation.
+
+We want to distinguish the rotation behavior and the creation of rotations.
+
+General rotation is \(RR^T = 1\) and \(det(R) = 1\).
+
+\subsection{Householder Reflection Matrix}
+Reflection
+
+
+%********** End of chapter **********

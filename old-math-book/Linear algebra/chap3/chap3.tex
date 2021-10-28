@@ -1,0 +1,137 @@
+\chapter{More Matrix Operations}
+\minitoc
+Now we are ready to consider these operations. We provide our own implementation and Jlapack hookup. There is no point to reinvent the wheel if there is a high quality package available. Better algorithms are added over time, such as divide-and-conquer, parallel. 
+
+Template methods for iterative methods.
+
+Estimate run time $O(n^3)$
+
+\section{Matrix Norms}
+There are many norms
+
+\section{Matrix Decompositions}
+We consider only the commonly used decompositions.
+
+\subsection{LU Decomposition}
+Pivoting: no partial or full.
+
+Full LU decomposition is numerical stable for well conditioned matrices.
+
+Lapack SGETRF
+
+\subsection{Cholesky Decomposition}
+If a matrix is symmetric, then the LU decomposition can be simplified
+\[A = L * D * L^T\]
+where L is an unit lower triangular matrix and D is diagonal. If A is positive definite, then we can absorb D into L by taking the square root of the cells of D, \[A= L * L^T\]
+Numerically, Cholesky decomposition takes a shortcut using the above expression and thus save time. If A is not positive definite, in theory we still have the first expression, but due to pivoting we can't use it numerically. The best shot is to make D is block diagonal with 2 X 2 blocks.
+\subsection{QR Decomposition}
+Using householder transformation.
+
+\subsection{Singular Value Decomposition(SVD)}
+Do we care symmetric?
+
+Polar decomposition of a matrix A is A = PQ, where P is symmetric positive semidefinite and Q is orthogonal. We can derive this from the SVD.
+
+\subsection{Eigen Decomposition}
+This part has several applications:
+\begin{itemize}
+\item find eigenvalues only
+\item find eigenvalues and eigenvectors
+\item find eigenvalues, eigenvectors, and the transformation matrix.
+\end{itemize}
+If the matrix is symmetric, we could use householder matrix to transform it to a tridiagonal matrix, then use QL + implicit shift.
+
+If the matrix is nonsymmetric, use householder to transform it to a Hessenberg form, then transform it to a Schur form.
+
+\section{Determinant}
+We could use LU decomposition to compute Determinant for general matrices.
+
+\section{Linear Equation Systems}
+Use LU decomposition to solve. pivoting.
+
+general solver()
+
+--> LU
+
+--> cholesky
+
+--> Iterative
+
+Another method is iterative method.
+Here are the two packages:
+
+SPARSKIT: http://www-users.cs.umn.edu/~saad/software/
+
+Templates: http://www.netlib.org/templates/
+\section{Matrix Inverse and Condition Number}
+The inverse of a matrix can be deducted from the linear solver.
+The condition number is defined as \[\kappa = {\frac{1}{|A||A^{-1}}|}\]
+condition number estimate.
+
+\section{Testing}
+test different compositions.
+\subsection{Correctness and Error Bound}
+\subsection{Algorithm Stability}
+\subsection{Performance}
+In general, there are two places where we can optimize:
+
+     *      1. time spent to access elements
+
+     *      2. time spent to calculate.
+
+Java array bound checking.
+
+Test the difference between:
+
+Matrix and double[][]
+
+and 
+
+Vector and double[]
+
+for getter/setter.
+\section{Reference}
+
+Java implementations:
+\begin{itemize}
+\item JLapack: http://www.netlib.org/lapack/
+\item Colt implementation:
+\item Jsci implementation:
+\item ojAlgo
+\item Jama
+\item Jampack
+\item UJMP: http://www.ujmp.org/
+\end{itemize}
+
+Other implementations:
+\begin{itemize}
+\item Aglib: for C++, .net
+\item newmat: a good C++ implementation
+\item BLAS: http://www.netlib.org/blas/
+\item BOOST: http://www.boost.org/ 
+\item PLapack C implementation: http://www.cs.utexas.edu/~plapack/
+\end{itemize}
+
+BLAS
+
+\begin{thebibliography}{99}
+
+% >>>>>>>>> Book examples <<<<<<<<<
+\bibitem{CarpenterBOOK} Carpenter, R.H.S., {\textit Movements of the Eyes},
+ 2nd Edition, Pion Publishing, 1988.
+
+\bibitem{FranklinBOOK} Franklin, G.F., Powel, J.D., Workman, M.L.,
+{\textit Digital Control of Dynamic Systems}, Second Edition,
+Addison-Wesley, 1990.
+
+% >>>>>>>>> Conference Proceedings Example <<<<<<<<<
+\bibitem{OhICRA1998} Oh, P.Y., Allen, P.K., ``Design a Partitioned
+ Visual Feedback Controller,'' {\textit IEEE Int Conf Robotics
+ \& Automation}, Leuven, Belgium, pp. 1360-1365 5/98
+
+% >>>>>>>>> Journal Example <<<<<<<<<<<<<<<<<<<<<<<<
+\bibitem{OhTRA2001} Oh, P.Y., Allen, P.K., ``Visual Servoing
+ by Partitioning Degrees of Freedom,'' {\textit IEEE Trans on 
+ Robotics \& Automation}, V17, N1, pp. 1-17, 2/01
+
+\end{thebibliography}

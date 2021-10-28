@@ -1,0 +1,160 @@
+%********** Chapter 1 **********
+\chapter{Matrix Design}
+\minitoc
+
+TO DO LIST
+
+amsfont are better.
+
+java code needs a better format: font and layout position.
+
+
+There are already various packages available in Java for linear algebra, but most of them are dedicated to algorithms, such as solving linear equation systems. The main purpose of this package is to design matrices and their related behaviors at the proper abstract level from a software engineering point of view. Mathematical programming is harder than general software programming because of the heavy optimization embedded in the code. Designing matrix related classes are among the worst because matrix computing involves both performance and memory management. However, in the same spirit in mathematics where we always divide bigger problems into smaller problems, we hope we achieve a better design by utilizing some software design principles without sacrificing performance. Our goal is to design a reusable, flexible and easy to extend and test package.
+
+\section{Scope}
+This package has the following scope:
+\begin{itemize}
+\item All matrices are two dimensional.
+\item All matrix cells are of type double.
+\item Banded/Block matrices are not implemented.
+\item Any parallel or divide-and-conquer based algorithms are not in the scope.
+\end{itemize}
+There are several reasons we limit ourselves to this scope:
+\begin{itemize}
+\item Though Java has a root class, Number, for all numeric classes, it's not operable arithmetically, such as $a + b$ where $a$ and $b$ are of type Number. Therefore, even we can extend Number class to Rational, Complex, or Quaternion, we really can't operate on them. The consequence is that we can't define a generic matrix interface which has getCell() and setCell() methods depending on Number class. If we have to extend Number, we would have to extend arithmetic operations through interfaces, such as addition and subtraction. This would make the code hard to read and maintain. 
+\item The Java array is continuous in the memory. But arrays of array is not. This has a big performance hit, even in multiplications of matrices of type double. If we have array of arrays of Objects, the performance is getting worse.
+\item Java doesn't support operator overloading and so even if we extend from the Number class to a Complex, we can't utilize the same code for doubles on Complex, such as arithmetic operations. Furthermore, we can't overload matrix operations either, otherwise we could easily extend the cell-based matrices to block-based matrices.
+\item One way to expand to higher dimensional matrices, such as double[][][], one way is to define a new class to encapsulate the index various, e.g., a MatrixIndex class, then map the objects of this class to the matrix data storage. But we need to create a lot of objects of this class, one for each matrix cell. If the matrix is fairly large, the performance is hardly satisfied.
+\item Because Java can't be extended to create new types of number natively, like in C++, and operators can be overloaded like in C++, creating new types of numbers, like Rational, Complex, or Quaternion will have performance hit. If we create MatrixValue class to handle different types of values(with subclasses like DoubleMatrixValue, ComplexMatrixValue), then the math operations(plus, minus, multiply, and division) will create a lot of small objects. To make things worse, MatrixValue[] array copy will be slow too. So another unknown is how to map MatrixValue[] to double[] arrays.
+\end{itemize}
+Another problem is when a real matrix times a complex number, then the storage has to be expanded. The general interface is matrix<N extends Number>.
+The design of the implementation should satisfy the following:
+\begin{itemize}
+\item easy to add new types of matrices with minimal effort. For example, 
+\item easy to add new matrix operations.
+\item easy to change implementations of matrix operations.
+\end{itemize}
+In addition, it should be easy to test each class and every line of code. We should avoid duplicate code, reuse whenever possible. For example, a permutation matrix cares only multiplication, so its addition should be the default. However, it should be easy to overwrite this method if needed.
+
+A look back on design after the implementation is always a good health check. Sometimes we need a refactoring at the design level - design refactoring, beside the code refactoring.
+
+
+\section{Fundamental Classes}
+The fundamental classes/interfaces are:
+
+
+
+\lstset{% general command to set parameter(s)
+	basicstyle=\small, % print whole in small
+	%commentstyle=\rmfamily\smaller,
+	commentstyle=\textit,
+	stringstyle=\ttfamily, % typewriter type for strings
+	showstringspaces=false,
+	numbers=left, % numbers on the left
+	numberstyle=\tiny, % Tiny numbers
+	stepnumber=1, % number every second line of code
+	numbersep=5pt, % 5pt seperation between numbering and code listing
+	xleftmargin=5ex,%literate={<-}{{$\leftarrow$}}1 {~}{{$\sim$}}1,
+	language=Java }
+\begin{lstlisting}[frame=trbl]{}
+public interface NumericMatrix implements Serializable;
+public class NumericVector implements Serializable;
+public class NumericMatrixException extends RuntimeException;
+\end{lstlisting}
+The interface NumericMatrix is an interface and thus it gives us the freedom to implement various types of matrices with different memory storage. Vector is just a class since there is no need for different types of storage. The last class is a subclass of RuntimeException. This class is the root class of all exceptions in this package, it provides a convenience for users to catch all runtime exceptions if needed, rather than catching each particular exception in a series of tedious try-catch blocks, unless users need to do so. The runtime exception is chosen because normally there is no way to recover from these value related errors but keep throwing them up in the chain.
+ 
+\section{Matrix Interface}
+There are so many matrix operations, and probably more will be added in the future. A proper abstraction and design of the matrix behaviors are well deserved. We will present the interface first and then explain the rationales behind it. Here is the list of behaviors:
+\lstset{language=Java}
+\lstset{commentstyle=\textit}
+\begin{lstlisting}[frame=trbl]{}
+public interface NumericMatrix extends Serializable 
+{   
+    int getNumberOfRows();
+    int getNumberOfColumns();
+
+    NumericMatrix transpose();
+
+    double getCell(int row, int column);    
+    void setCell(int row, int column, double value);    
+
+    // return the sum of all diagonal cells. 
+    double trace();
+
+    // return the cell-wise sum.
+    NumericMatrix add(NumericMatrix numericMatrix);
+
+    // return the cell-wise difference, this - matrix.
+    NumericMatrix sub(NumericMatrix numericMatrix);
+
+    // return the cell-wise difference, matrix - this.
+    NumericMatrix leftSub(NumericMatrix numericMatrix);
+
+    // return the product, this * matrix.
+    NumericMatrix multi(NumericMatrix numericMatrix);
+
+    // return the product, matrix * this.
+    NumericMatrix leftMulti(NumericMatrix numericMatrix);  
+  
+    // return the product, this * vector.
+    NumericVector multi(NumericVector numericVector);
+
+    // return the product, vector^T * this.
+    NumericVector leftMulti(NumericVector numericVector);
+
+    // return the product, this * scaler. 
+    NumericMatrix multi(double scaler);
+
+    NumericMatrix newCopy();
+    void accept(NumericMatrixVisitor numericMatrixVisitor);
+}
+\end{lstlisting}
+These behaviors are divided into two major groups, data related and arithmetic. Note that these methods have no dependency on how the data(the cells of matrices) is stored.
+
+The first five methods are data related. Note that the setter and getter for cells depend on the type double. If we want to extend this interface to a more generic operable numeric class, then we have to change these two methods. The setter method also indicates that matrix implementations are mutable. Making it immutable like the \textit{String} class would have big impact in memory on practical usage. However, we will try our best to preserve the immunity because it does provide benefits on making the code healthy and solid. Part of this effort is to eliminate the methods to get a row, or a column, or a portion of them, or a sub-matrix, because either we have to expose the internal memory reference or duplicate the data. Exposing the internal memory reference would make tracing value changes very hard. Duplicating data would restrict the applicable usage of this package. 
+
+Though the method conjugate() is close to transpose() we don't include it because it is a special method for complex matrices, not apply to other types of matrices.
+
+Other properties of matrices are omitted too, such as whether a matrix is a square matrix, an orthogonal matrix, or a symmetric matrix. These properties are left out to separate classes.
+
+The next nine methods are arithmetic operations. Besides the normal operations, there are a few left- operations, leftSub and leftMulti. At first thought, if matrix1 and matrix2 are two matrices, then 
+\lstset{language=Java}
+\lstset{commentstyle=\textit}
+\begin{lstlisting}[frame=trbl]{}
+matrix1.multi(matrix2)
+\end{lstlisting}
+has the effect to multiply matrix2 by matrix1 from the left and thus there is no need to have these extra left- operations. However, if we think about matrices as both transformations and objects being transformed, it would be beneficial to the users to have these methods. Let's say we have a huge matrix matrix1 as the object being transformed, we want to apply a series of transforms $T_i$onto it. We could do it like this: 
+\lstset{language=Java}
+\lstset{commentstyle=\textit}
+\begin{lstlisting}[frame=trbl]{}
+matrix1.multi(T_1).leftMulti(T_2) ...
+\end{lstlisting}
+This means matrix1 is changed. The rule we enforce here is the input parameters $T_i$ are not changed by these methods, only the invoking objects could be changed. 
+
+Note that the methods 
+\lstset{language=Java}
+\lstset{commentstyle=\textit}
+\begin{lstlisting}[frame=trbl]{}
+multi(double scaler)
+double trace()
+\end{lstlisting}
+depends on the type of double, combining with the get() and set() methods, totally we have 4 methods depending on the type double. If in the future we want to expand this package to to other types of matrices, we need to change these these method signatures.
+
+The BLAS related methods are not here either, such as $\alpha AB + C$.
+
+There are a lot of behaviors we intentionally leave out of the above interfaces. There are different reasons to leave them out and we propose a different way to handle them.
+\begin{itemize}
+\item matrix norms: Though each of the norms, 1-norm, 2-norm, infinity-norm, etc, is trivial, but these norm variances should be left out of the interface and dealt with separately.
+\item matrix inverse: not all matrices have inverse(e.g., a rectangle matrix). Even if there is an inverse, the implementation is not as trivial as the above methods. Plus there is a pseudo inverse consideration as well.
+\item determinant: is only for square matrices and its computation is not as trivial as the above methods. 
+\item solving linear equation system, again this is more complex and there are several concerns, such as pivoting(no/partial/full), under/over constraint. Besides, this is more like a way to use matrix, not an internal behavior of a matrix.
+\item matrix decomposition: There are many different types of decompositions, the most commonly used are LU, QR, SVD, and eigen decompositions. Others are polar, etc. We may have more in the future. Squeezing all of them in the above interface is not a good practice to follow OOP. 
+\end{itemize}
+We should have a better way to deal with the above features of matrices in a uniform manner. Furthermore, the design should make it easy to add more features and compose different features together. For example, when we estimate the condition number of a matrix using the formula
+\[cond(A) = \frac{1}{\bigl|A\bigr|_p \bigl|A^{-1}\bigr|_p} \]
+we should be able to specify the number p = 1, 2, or infinity. 
+
+The last two methods have special purposes. The newCopy() method is to create a new copy of the invoking object without knowing its concrete type. In contrast, if we know the type of a matrix, we could directly invoke its constructors. The accept() method is for the visitor design pattern. This method is the center of the purpose of this package. Using a visitor pattern, also called double dispatch, we could delegate each different case to a different class, rather than having a deeply nested if-else. Knowing that there are some side effects stated in GoF, the benefit is far more outweighed.
+
+
+%********** End of chapter **********

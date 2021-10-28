@@ -1,0 +1,27 @@
+% https://tex.stackexchange.com/questions/517628/include-a-floating-image-in-the-title-using-tcolorbox
+\documentclass{book}
+\usepackage[utf8]{inputenc}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins,xparse,breakable,hooks}
+\usepackage{minted}
+\usepackage{graphicx}
+%-----------------------------
+%  box example
+%-----------------------------
+\newtcolorbox{codigo}{drop fuzzy midday shadow,enhanced, arc=2mm, outer arc=1mm, colback=white!85!gray, colframe=black!30!blue!70,
+    frame code={ \foreach \n in {north east,north west,south east,south west}
+    {\path [fill=gray!25!black] (interior.\n) circle (2mm); };},
+    overlay={\node[anchor=east] at ([xshift=-3.5mm]frame.north
+    east){\includegraphics[width=1.5cm]{panda}};}
+    }
+
+\begin{document}
+\begin{codigo}
+% \begin{minted}{R}
+% install.packages("plot3Drgl")
+% #install.packages("rgl")
+% \end{minted}
+Something\\
+Something more
+\end{codigo}
+\end{document}

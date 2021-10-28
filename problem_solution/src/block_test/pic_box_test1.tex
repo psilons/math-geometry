@@ -1,0 +1,44 @@
+% for pic at the corner
+% https://tex.stackexchange.com/questions/604700/tcolorbox-frame-tikz-picture-marginpar
+% image in the background
+% https://tex.stackexchange.com/questions/347434/clip-background-image-inside-tcolorbox
+% double frame
+% https://tex.stackexchange.com/questions/483519/how-to-add-double-frame-in-tcolorbox
+%
+% https://www.overleaf.com/latex/examples/drawing-coloured-boxes-using-tcolorbox/pvknncpjyfbp
+%
+% https://topanswers.xyz/tex?q=1089
+%
+% https://stackoverflow.com/questions/62343315/is-tcolorbox-compatible-with-tabular-tabularx
+
+\documentclass[12pt]{article}
+\usepackage{tcolorbox}
+\usepackage{graphicx}
+
+\begin{document}
+\begin{tcolorbox}[
+%      breakable,
+      left=5pt,
+      right=0pt,
+      top=8pt,
+      bottom=8pt,
+      colback=white,
+      colframe=red,
+      width=\textwidth,
+      enlarge left by=0mm,
+      boxsep=5pt,
+      arc=4pt,
+      outer arc=4pt,
+    ]
+    \Large
+    \smash{\raisebox{-5pt}{\includegraphics[width=1.5cm,height=1.5cm]{panda}}}\hfill
+
+    This is test.
+
+    This is test again.
+
+    This is test.
+
+    This is test again.
+\end{tcolorbox}
+\end{document}

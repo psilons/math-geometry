@@ -10,6 +10,7 @@
 \pagestyle{fancy}
 
 \RequirePackage{xcolor}
+\RequirePackage{graphicx}
 
 \RequirePackage{tcolorbox}
 \tcbuselibrary{most}
@@ -62,7 +63,7 @@
     toptitle=3pt, bottomtitle=3pt, left=5pt, right=5pt,
     %boxsep=5pt,
     fonttitle=\sffamily,
-    title after break={Problem  -- \raggedleft Continued}%
+    %title after break={Problem  -- \raggedleft Continued}%
 }{cbstrip}
 
 % pass in title, such as Problem, Fermats Last Theorem
@@ -234,7 +235,7 @@
   bottomrule=0pt,
   leftrule=0pt,
   rightrule=0pt,
-  borderline west={2pt}{0pt}{{#1}},
+  borderline west={2pt}{0pt}{#1},
 }
 
 % pass in title, such as Problem, Fermats Last Theorem
@@ -243,9 +244,51 @@
     {\end{cbbarbox}}
 
 %--------------------------------------------------------------------------------------------------
+% Image title
+%--------------------------------------------------------------------------------------------------
+% https://tex.stackexchange.com/questions/253519/how-to-use-newenvironment-why-doesnt-this-code-work-how-do-i-fix-it
+% see pic_box_test1 and pic_box_test5
+\newtcolorbox{cbpicbox}[2][]{
+    left=5mm,
+    right=5mm,
+    top=5mm,
+    bottom=5mm,
+    colback=white,
+    colframe=#2,
+}
+
+% pass in frame color and image file name
+\newenvironment{cbpictitle}[2]
+    {\vspace{5mm} \begin{cbpicbox}{#1} \smash{\raisebox{-1mm}{\includegraphics[width=15mm,height=15mm]{#2}}}\\}
+    {\end{cbpicbox}}
+
+%--------------------------------------------------------------------------------------------------
+% curved title
+%--------------------------------------------------------------------------------------------------
+%
+\newtcolorbox{cbcurvedbox}[4][]{
+    % #1 is the text, #2 title, #3 background colr, #4 foreground color
+    enhanced, interior hidden,
+    colframe={#3}, colback={#3}, coltitle={#4},
+    attach boxed title to top left,
+    boxed title style={empty, boxrule=0.5mm},
+    underlay boxed title={
+        \path[draw={#3}, line width=0.5mm, rounded corners, fill={#3}]
+            ([xshift=.25mm]frame.west) |- ([xshift=-2.5mm]title.north east)
+                to[out=0, in=180] ([xshift=7.5mm, yshift=-.25mm]title.south east);
+    },
+    title={#2},
+    #1
+}
+
+\newenvironment{cbcurvedtitle}[3]
+    {\begin{cbcurvedbox}{#1}{#2}{#3} }
+    {\end{cbcurvedbox}}
+%--------------------------------------------------------------------------------------------------
 % Source code listings
 %--------------------------------------------------------------------------------------------------
 % Minted is good to go
+
 
 %\newtcbtheorem[auto counter]{cbstrip}{Problem}{%
 %    %theorem name,%

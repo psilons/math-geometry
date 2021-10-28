@@ -228,3 +228,32 @@ Launch miktex console to update packages (and install new packages later on)
 
 Different compilers
 
+https://tex.stackexchange.com/questions/60491/latex-tracing-commands-list
+
+debug is not practical
+
+https://jdhao.github.io/2019/08/27/latex_table_with_booktabs/
+
+https://people.inf.ethz.ch/markusp/teaching/guides/guide-tables.pdf
+
+https://tex.stackexchange.com/questions/401566/making-a-booktabs-table
+
+https://tex.stackexchange.com/questions/28087/example-of-fancy-table-using-tikz-package
+
+https://tex.stackexchange.com/questions/112343/beautiful-table-samples
+https://blog.modelworks.ch/automatic-line-breaks-in-latex-tables/
+
+*** https://tex.stackexchange.com/questions/112343/beautiful-table-samples
+*** https://texblog.net/latex-archive/uncategorized/fancy-chapter-tikz/
+
+https://www.ctan.org/pkg/excel2latex
+
+https://pypi.org/project/tabulate/
+
+https://nhigham.com/2019/11/19/better-latex-tables-with-booktabs/
+
+http://blog.analogmachine.org/2011/05/16/top-10-latex-packages/
+
+https://www.reddit.com/r/LaTeX/comments/fl7d4f/the_most_useful_packages/
+
+https://nhigham.com/2020/06/18/six-useful-latex-packages/

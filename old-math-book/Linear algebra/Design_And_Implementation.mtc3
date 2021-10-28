@@ -1,0 +1,11 @@
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.1}Matrix Storage}{\reset@font\mtcSfont 7}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.2}Matrix Constructors}{\reset@font\mtcSfont 9}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.3}Arithmetic Operations}{\reset@font\mtcSfont 10}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.4}Class consideration}{\reset@font\mtcSfont 11}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.5}Transformation Matrices}{\reset@font\mtcSfont 11}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.5.1}Identity Matrix}{\reset@font\mtcSSfont 11}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.5.2}Permutation Matrix}{\reset@font\mtcSSfont 12}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.5.3}Elementary Modifier Matrix}{\reset@font\mtcSSfont 12}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.5.4}Projection Matrix}{\reset@font\mtcSSfont 12}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.5.5}Rotation Matrix}{\reset@font\mtcSSfont 12}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.5.6}Householder Reflection Matrix}{\reset@font\mtcSSfont 12}}

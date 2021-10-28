@@ -1,0 +1,16 @@
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.1}Matrix Norms}{\reset@font\mtcSfont 14}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.2}Matrix Decompositions}{\reset@font\mtcSfont 14}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.2.1}LU Decomposition}{\reset@font\mtcSSfont 14}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.2.2}Cholesky Decomposition}{\reset@font\mtcSSfont 14}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.2.3}QR Decomposition}{\reset@font\mtcSSfont 14}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.2.4}Singular Value Decomposition(SVD)}{\reset@font\mtcSSfont 14}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.2.5}Eigen Decomposition}{\reset@font\mtcSSfont 14}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.3}Determinant}{\reset@font\mtcSfont 15}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.4}Linear Equation Systems}{\reset@font\mtcSfont 15}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.5}Matrix Inverse and Condition Number}{\reset@font\mtcSfont 15}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.6}Testing}{\reset@font\mtcSfont 15}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.6.1}Correctness and Error Bound}{\reset@font\mtcSSfont 15}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.6.2}Algorithm Stability}{\reset@font\mtcSSfont 15}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.6.3}Performance}{\reset@font\mtcSSfont 15}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.7}Reference}{\reset@font\mtcSfont 16}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.8}Bibliography}{\reset@font\mtcSfont 16}}

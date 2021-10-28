@@ -1,0 +1,45 @@
+%
+
+\documentclass{article}
+
+\usepackage[most]{tcolorbox}
+
+\newtcolorbox{mybox}[2][]{colback=red!5!white,
+colframe=red!75!black,fonttitle=\bfseries,
+colbacktitle=red!85!black,enhanced,
+attach boxed title to top center={yshift=-2mm},
+title=#2,#1}
+
+
+\newtcolorbox{myboxwithtwoparameters}[2]{colback=red!5!white,
+colframe=red!75!black,fonttitle=\bfseries,
+colbacktitle=red!85!black,enhanced,
+attach boxed title to top center={yshift=-2mm},
+title=#2,code={\addtocontents{toc}{#2}}}
+
+
+\DeclareTColorBox{mytotalbox}{O{}mO{-2mm}}{colback=red!5!white,
+colframe=red!75!black,fonttitle=\bfseries,
+colbacktitle=red!85!black,enhanced,
+attach boxed title to top center={yshift=#3},
+title=#2,#1}
+
+
+\begin{document}
+\tableofcontents
+\begin{mybox}[colback=yellow]{Hello there}
+This is my own box with a mandatory title
+and options.
+\end{mybox}
+
+\begin{myboxwithtwoparameters}{Hello there}{Hello Darkness my old friend}
+Foo
+\end{myboxwithtwoparameters}
+
+\begin{mytotalbox}[colback=yellow]{Hello there}[-5mm]
+This is my own box with a mandatory title
+and options.
+\end{mytotalbox}
+
+
+\end{document}

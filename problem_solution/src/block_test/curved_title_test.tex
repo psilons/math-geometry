@@ -1,0 +1,30 @@
+% https://tex.stackexchange.com/questions/587912/tcolorbox-custom-title-box-style
+% https://tex.stackexchange.com/questions/566246/how-to-i-replicate-this-using-tcolorbox
+\documentclass{article}
+\usepackage[most]{tcolorbox}
+\usepackage{varwidth}
+\usepackage{lipsum}
+
+\newtcolorbox{mybox}[2][]{
+    enhanced, interior hidden,
+colframe=cyan!30, colback=cyan!30, coltitle=blue!70!black,
+fonttitle=\bfseries\sffamily,
+attach boxed title to top left,
+boxed title style={empty, boxrule=0.5mm},
+varwidth boxed title=0.5\linewidth,
+underlay boxed title={
+\path[draw=cyan!30, line width=0.5mm, rounded corners, fill=cyan!30]
+([xshift=.25mm]frame.west) |- ([xshift=-2.5mm]title.north east) to[out=0, in=180] ([xshift=7.5mm, yshift=-.25mm]title.south east);
+},
+title={#2},#1}
+\begin{document}
+
+\begin{mybox}{My title}
+\lipsum[2]
+\end{mybox}
+
+\begin{mybox}{A longer title}
+\lipsum[2]
+\end{mybox}
+
+\end{document}

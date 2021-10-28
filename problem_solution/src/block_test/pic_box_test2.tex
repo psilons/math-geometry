@@ -1,0 +1,36 @@
+% https://tex.stackexchange.com/questions/181090/alignment-of-image-in-tcolorbox
+
+% Preamble
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+\usepackage[many]{tcolorbox}
+\usepackage{lipsum}
+\usetikzlibrary{calc}
+
+\newtcolorbox{mybox}{
+  enhanced,
+  left=0pt,
+  right=0pt,
+  top=8pt,
+  bottom=8pt,
+  colback=white,
+  colframe=red,
+  width=\textwidth,
+  enlarge left by=0mm,
+  boxsep=5pt,
+  fontupper=\itshape\small,
+  arc=4pt,
+  outer arc=4pt,
+  leftupper=1.5cm,
+  overlay={
+    \node[anchor=west]
+      at ([xshift=10pt] $ (frame.north west)!0.5!(frame.south west) $ )
+       {\includegraphics[width=1cm,height=1cm]{panda}};}
+}
+\begin{document}
+\begin{mybox}
+\lipsum[4]
+\end{mybox}
+\end{document}
+
+enter image description here

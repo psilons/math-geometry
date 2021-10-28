@@ -1,0 +1,137 @@
+\documentclass{memoir}
+
+\title{Floating Numbers and Functions Using Java}
+%\author{Rick Cui}
+\date{03/22/2009}
+
+\usepackage{graphicx, amsfonts, amssymb, amsmath, amsthm}
+% This is for java code format.
+\usepackage{listings}
+% for bib
+\usepackage[sectionbib]{natbib}
+\usepackage{chapterbib}
+
+% chapter header style
+\usepackage{color,calc,soul,fourier}
+\definecolor{nicered}{rgb}{.647,.129,.149}
+\makeatletter
+\newlength\dlf@normtxtw
+\setlength\dlf@normtxtw{\textwidth}
+\def\myhelvetfont{\def\sfdefault{mdput}}
+\newsavebox{\feline@chapter}
+\newcommand\feline@chapter@marker[1][4cm]{%
+	\sbox\feline@chapter{%
+		\resizebox{!}{#1}{\fboxsep=1pt%
+			\colorbox{nicered}{\color{white}\bfseries\sffamily\thechapter}%
+	}}%
+	\rotatebox{90}{%
+		\resizebox{%
+		\heightof{\usebox{\feline@chapter}}+\depthof{\usebox{\feline@chapter}}}%
+		{!}{\scshape\so\@chapapp}
+	}\quad%
+	\raisebox{\depthof{\usebox{\feline@chapter}}}{\usebox{\feline@chapter}}%
+}
+\newcommand\feline@chm[1][4cm]{%
+	\sbox\feline@chapter{\feline@chapter@marker[#1]}%
+	\makebox[0pt][l]{% aka \rlap
+	\makebox[1cm][r]{\usebox\feline@chapter}%
+}}
+\makechapterstyle{daleif1}{
+	\renewcommand\chapnamefont{\normalfont\Large\scshape\raggedleft\so}
+	\renewcommand\chaptitlefont{\normalfont\huge\bfseries\scshape\color{nicered}}
+	\renewcommand\chapternamenum{}
+	\renewcommand\printchaptername{}
+	\renewcommand\printchapternum{\null\hfill\feline@chm[2.5cm]\par}
+	\renewcommand\afterchapternum{\par\vskip\midchapskip}
+	\renewcommand\printchaptertitle[1]{\chaptitlefont\raggedleft ##1\par}
+}
+\makeatother
+\chapterstyle{daleif1}
+
+% chapter mini toc
+\usepackage{minitoc}
+
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+
+%============================================================================
+\begin{document}
+\DeclareGraphicsExtensions{.pdf, .png, .eps, .svg}
+\setsecnumdepth{subsection}
+%\settocdepth{subsection}
+\maxsecnumdepth{subsection}
+
+%\maketitle
+
+% This is the front cover, TitleGM style
+\begin{center}
+\thispagestyle{empty}
+\begingroup
+	%\vspace*{\baselineskip} 
+	\vfill 
+	\hbox{% 
+		\hspace*{0.03\textwidth}% 
+		\rule{1pt}{\textheight} 
+		\hspace*{0.05\textwidth}% 
+		\parbox[b]{0.9\textwidth}{ 
+			\vbox{% 
+				\vspace{0.1\textheight} 
+				{\noindent\HUGE\bfseries Numbers and Functions\\[0.5\baselineskip] 
+					Using Java}\\[2\baselineskip] 
+				{\Large\itshape An Object-oriented Approach}\\[4\baselineskip] 
+				{\Large A crazy boy}\par 
+				\vspace{0.5\textheight} 
+				{\noindent Wonderful World}\\[\baselineskip] 
+			}% end of vbox 
+		}% end of parbox 
+	}% end of hbox 
+	\vfill 
+	\null 
+\endgroup
+\end{center}
+
+\frontmatter % This place triggers a blank page after the first page.
+
+\dominitoc
+
+\begin{center}
+
+%\addtocontents{toc}{\protect\thispagestyle{empty}}
+
+\thispagestyle{empty}
+\setcounter{page}{1}
+\tableofcontents
+\end{center}
+
+\incrementmtc
+
+\pagestyle{headings}
+\mainmatter
+%\input{ack/ack.tex}
+%\pagebreak
+
+\lstset{% general command to set parameter(s)
+	basicstyle=\small, % print whole in small
+	%commentstyle=\rmfamily\smaller,
+	commentstyle=\textit,
+	stringstyle=\ttfamily, % typewriter type for strings
+	showstringspaces=false,
+	numbers=left, % numbers on the left
+	numberstyle=\tiny, % Tiny numbers
+	stepnumber=1, % number every second line of code
+	numbersep=5pt, % 5pt seperation between numbering and code listing
+	xleftmargin=5ex,%literate={<-}{{$\leftarrow$}}1 {~}{{$\sim$}}1,
+	language=Java }
+\input{chap1/chap1.tex}
+\input{chap2/chap2.tex}
+\input{chap3/chap3.tex}
+\input{chap4/chap4.tex}
+
+% *************** Bibliography ***************
+%\bibliographystyle{plain}
+%{\small\bibliography{Design_And_Implementation}}
+
+\backmatter
+
+\end{document}

@@ -1,0 +1,42 @@
+\documentclass{article}
+\usepackage[most]{tcolorbox}
+\usepackage{varwidth}
+\usepackage{lipsum}
+
+\newtcolorbox{cbcurvedbox}[4][]{
+    % #1 is the text, #2 title, #3 background colr, #4 foreground color
+    enhanced, interior hidden,
+    colframe={#3}, colback={#3}, coltitle={#4},
+    %fonttitle=\bfseries\sffamily,
+    attach boxed title to top left,
+    boxed title style={empty, boxrule=0.5mm},
+    %varwidth boxed title=0.5\linewidth,
+    underlay boxed title={
+        \path[draw={#3}, line width=0.5mm, rounded corners, fill={#3}]
+            ([xshift=.25mm]frame.west) |- ([xshift=-2.5mm]title.north east)
+                to[out=0, in=180] ([xshift=7.5mm, yshift=-.25mm]title.south east);
+    },
+    title={#2},
+    #1}
+
+\newenvironment{cbcurvedtitle}[3]
+    {\begin{cbcurvedbox}{#1}{#2}{#3} }
+    {\end{cbcurvedbox}}
+
+\begin{document}
+
+\begin{cbcurvedbox}{My title}{green}{red!70!black}
+\lipsum[2]
+\end{cbcurvedbox}
+
+\begin{cbcurvedbox}{A longer title}{blue}{red!70!black}
+\lipsum[2]
+\end{cbcurvedbox}
+
+\begin{cbcurvedtitle}{A longer longer longer title}{cyan!30}{red!70!black}
+    This is a vertical bar.
+    It will highlight the text from left side.
+    The color of the bar can be customized by users.
+\end{cbcurvedtitle}
+
+\end{document}

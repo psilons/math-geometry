@@ -1,0 +1,226 @@
+%********** Chapter 1 **********
+\chapter{Numbers in Java}
+\minitoc
+In this chapter, we overview the floating number representation of real numbers and their arithmetic operations in Java. A good understanding how they work in Java is essential for numerical analysis using Java. We are not going into great details except hightlighting the key features, because there are quite a few good references that gives more rigorous and broader treatment on this subject, such as Higham's book [Higham:1996:AS] and Goldberg's article [Goldberg:WEC]. They are very informative, e.g., why a 2-based representation is better than a 16-based representation, or why a guard bit helps improving the accuracy.
+
+\section{Number Representation in Java}
+Java uses IEEE 754 standard to represent real numbers. \textit{double} in Java is stored in the following binary format:
+\begin{center}
+\begin{tabular}{ | c | c | c | }
+   \hline
+   sign & exponent & fraction(significand, or mantissa) \\ 
+   \hline
+   1 bit & 11 bits & 52 bits \\  
+   \hline
+   s & e & f \\
+   \hline
+\end{tabular}
+\end{center}
+
+The sign field $s$ is 0 for positive and 1 for negative.
+
+The exponent field $e$ is interpreted as unsiged integers, 0 to $2^{11}-1 = 2047$, with 0 and 2047 reserved for special purposes. To represent negative integers power, we use a bias 1023 to shift the range to between -1022 to 1023.
+
+The significand field $f$ is interpreted as follows. Normally the representation of a number is not unique, e.g., 1.1101 can be expressed as $1.1101$, or $0.11101 \times 2$, or $0.011101 \times 2^2$, just like we do in the decimal cases, such as 3.1415926 can be expressed in many ways, such as $3.1415926$, $0.31415926 \times 10$, $0.031415926 \times 10^2$, etc. Among these different representations, there is only one representation such that the leading digit is nonzero and there is only one digit before the period. So this is the representation we are going to use. If the leading bit is nonzero(i.e., 1 in binary case), the representation is called \textit{normalized} (Otherwise, it is \textit{denormalized}, we will discuss this more later) and the number is evaluated as the following
+\[ (-1)^s \times 1.f \times 2^e\]
+Since we know the leading digit already, we don't need to store it and thus gain an extra bit for the fraction. The leading bit is called the implied bit. \textbf{Precision} is defined as the number of bits in the significand(including the implied bit), so Java double precision is 53 bits.
+\begin{table}
+\caption{Special Representations}
+\centering
+\begin{tabular}{l l l} 
+\hline\hline
+exponent & significand & values \\
+\hline
+$e = 0$ & $f = 0$ & $\pm 0$ \\
+$e = 0$ & $f \neq 0$ & denormalized numbers $\pm 0.f \times 2^{-1022}$ \\
+$e = 2027$ & $f = 0$ & $\pm$infinity \\
+$e = 2027$ & $f \neq 0$ & NaN \\
+\end{tabular}
+\end{table}
+
+The table 1.1 shows the corner cases for e and f, the second case shows that if $e = 0$, then the leading digit is zero, otherwise if $e \neq 0$, then the leading digit is 1. So by using the exponent, we can figure out the leading implied digit. Java Double and Float classes have methods to convert the decimal numbers to hex decimal string so that we could inspect the bits in the storage, for example  
+\begin{lstlisting}[frame=trbl]{}
+System.out.println(Double.toHexString(0.9));
+\end{lstlisting}
+The result is $0x1.ccccccccccccdp-1$, in the hexdecimal format. 
+
+The denormalized numbers are used for gracefully flushing to zero. They fill in the gap between zero and smallest normalized positive number. However, when we run into this range, we are losing accuracy, for example
+
+\begin{lstlisting}[frame=trbl]{}
+x = 2.999999999999999E-308;
+y = x / 30000 * 30000;
+y = 2.999999999995396E-308
+\end{lstlisting}
+$x$ is initialized to very close to the smallest positive normalized number such that $x / 30000$ is a denormalized number. y should be the same as $x$, but apparently not.
+
+The range of the real numbers we can represent are listed in Table 1.2.
+\begin{table}
+\caption{Range of the double}
+\centering
+\begin{tabular}{l l} 
+\hline\hline
+sign & +, - \\
+exponent & 1 ... 2046, with bias 1023 \\
+significand & [1, 1.9999999999999998] \\
+largest positive & 1.79769313486231570e+308 \\
+ & 0x1.fffffffffffffp1023 \\
+ & Double.MAX\_VALUE \\
+smallest positive & 4.94065645841246544e-324 \\
+ & 0x0.0000000000001p-1022 \\
+ & Double.MIN\_VALUE \\
+smallest positive normalized & 2.2250738585072014E-308 \\
+ & 0x1.0p-1022 \\
+largest denormalized & 2.225073858507201E-308 \\
+ & 0x0.fffffffffffffp-1022 \\
+\end{tabular}
+\end{table}
+In java, it is a compiler error when specifying a number larger than the Double.MAX\_VALUE, e.g., 1.0e+310, or smaller than Double.MIN\_VALUE. JDK documentation for the toHexString(double) method in the Double class has more information. 
+
+There is a $C$ routine, machar, written by Cody, that can explore some of the characteristics of a floating number model.
+
+\section{Errors}
+Since the real numbers are continuous while the binary representation is discrete, we can not express every real number in the binary representation, even if they are well in the range. For example, \[1.666666666666666666\] is stored as \[1.6666666666666667\] The difference is called the \textbf{rounding error}. IEEE 754 standard has 4 rounding mode, but Java is using the default, round to nearest only.
+
+When a given number is represented in Java, the last bit of the significand can be inaccurate due to rounding(assuming the number is within the range, not underflow or overflow), this one-bit difference is magnified by the exponent. In other word, there is more gap toward the infinity, for example
+\begin{lstlisting}[frame=trbl]{}
+Math.ulp(2.0d) = 4.440892098500626E-16
+Math.ulp(20000000.0d) = 3.725290298461914E-9
+\end{lstlisting} 
+The \textbf{ulp}, or unit in the last place, is defined as this one-bit difference, the gap distance between two adjacent floating representations. If $x = 1.d_1d_2...d_p \times 2^e$, i.e., the precision is p bits, then \[\operatorname{ulp}(x) = 2^{-p} \times 2^e = 2^{e-p} \]
+It follows that
+\[ \frac{\operatorname{ulp}(x)}{|x|} = \frac{2^{e-p}}{2^e \times 1.f} \leq \frac{2^{e-p}}{2^e} = 2^{-p}\] 
+This is the difference ignoring the exponent.
+
+The rounding error of the floating representation is bounded by $\frac{1}{2}ulp(x)$ if we choose the closest represenation, i.e., 
+\[ |\hat{x} - x| \leq \frac{1}{2}ulp(x) \]
+Another way to state this is
+\[ \frac{|\hat{x} - x|}{|x|} \leq \frac{1}{2}\frac{ulp(x)}{|x|} \leq \frac{1}{2}2^{-p}  \]
+The last constant depends on only $p$, which is only related to the floating number model we are using. We define this constant, called \textbf{machine epsilion}, as follows
+ \[\epsilon = 2^{-p} \]
+In java, $p = 52$ and thus $\epsilon = 2^{-52} = 2.220446049250313E-16$. On a side note, $\epsilon$ is the one bit change in the significand, and thus $\epsilon = \operatorname{Math.ulp}(1.0d)$. Now the above becomes
+\[ \frac{|\hat{x} - x|}{|x|} \leq \frac{1}{2}\epsilon\]
+Let's define two more terms.
+\textbf{Absolute error} is defined as \[E_{abs}(\hat{x}) = |x - \hat{x}|\] 
+\textbf{Relative error} is defined as \[E_{rel}(\hat{x}) = \frac{|x - \hat{x}|}{|x|}\]
+Then the above can be rewritten as
+\[E_{abs}(\hat{x}) \leq \frac{1}{2}ulp(x) \]
+and 
+ \[E_{rel}(\hat{x})\leq \frac{1}{2}\epsilon\]
+The relative formula can be rewritten as \[ \hat{x} = x(1 \pm E_{rel}(\hat{x}))\] 
+The relative error is more "uniform" than the absolute error, e.g., 
+\begin{center}
+$|1000 - 999.99| < 0.01$ and $|0.02 - 0.01| < 0.01$ 
+\end{center}
+have the same absolute error, however, the difference is very small in the first case and very big in the second case because the exponent field plays a role. Relative errors count on the difference in the significant.
+
+Another way to express the relative error is the \textbf{significant digits}. This term is very useful when we discuss the cancellation errors. Given a number in the scientific format,
+\[ x = 3.205400 \times 10^7 \]
+the number of significant digits is 7. Now if we have
+\[ x = 1.23456789 \ \text{and} y = 1.23455555\]
+then
+\[ x - y = 0.00001234 = 1.234 \times 10^{-5} \]
+this means that we are losing sigificant digits from 9 to 4 due to substraction. 
+
+Sometimes, we need to round to certain digits, e.g., we want to round to 2 decimal places when dealing with US dollars so that we deal with up to 1 cent.
+In Java, we could do the following
+\begin{lstlisting}[frame=trbl]{}
+Math.round(x * 100) / 100.0d
+\end{lstlisting}
+here the rounding policy is to round to the closest, we could use other rounding policies, such as ceiling or floor (Do not forget to deal with corner cases, like NaN, the above code is just for illustration purpose).
+
+\section{Comparison}
+In general, it is not safe to check whether two floating numbers are equal due to rounding. Even if it is the same number, double and float types are not the same, e.g., $1.0d/3 \neq 1.0f/3$. The alternative is to check whether these two numbers are close enough. However, being close enough is not transitive as in the case of being equal, i.e., if $|x - y| < eps$ and $|y - z| < eps$, for a given bound $eps$, we can not deduct $|x - z| < eps$. To extend this further, it is not safe to use double as part of the hash related keys either. In case of we have to use double in a hash key, define a fix number for precision, such as $10^{-12}$, for the safe range. But this will limit the usage and should be well documented.
+
+There are a few special cases. First Java Double class has two static values POSITIVE$\_$INFINITY and NEGATIVE$\_$INFINITY. Though they are used for flaging overflows, they do follow conventional math when comparing.
+
+Another corner case in Java is $+0.0$ and $-0.0$, they are equal but have different signs. One pitfall is the following implementation of absolute value in math:
+\begin{lstlisting}[frame=trbl]{}
+public double abs(double d)
+{
+    return d >= 0.0 ? d : -d;
+}
+\end{lstlisting}
+Since -0.0 = +0.0, abs(-0.0) returns -0.0, the correct answer is 0.0. Similarly, the expression return d<=0.0 ? -d : d is also not right because for 0.0 it returns -0.0. The sign is important in some context. The correct way is
+\begin{lstlisting}[frame=trbl]{}
+public double abs(double d)
+{
+    if (d == 0.0) return 0.0;
+    else return d > 0.0 ? d : -d;
+}
+\end{lstlisting}
+
+Another one is NaN, which means nondeterministic, for example, when zero divided by zero, the result is not able to be determined. When $x \rightarrow 0$, $\frac{x}{x^2} \rightarrow \infty$ but $\frac{x^2}{x} \rightarrow 0$. So depends on how "fast" the denominator and numerator go to zero, we end up different results. So NaN is not comparable at all, e.g., $5.0 > NaN$ and $5.0 \leq NaN$ are both false and thus we lose exclusiveness. The following code doesn't catch the NaN case:
+\begin{lstlisting}[frame=trbl]{}
+if (rate < 0.0)
+    throw new IllegalArgumentException("rate is negative");
+interestPayment = principal * rate;
+\end{lstlisting}
+If we want to catch the NaN case, we should either add the explicit check for NaN or reverse the logic
+\begin{lstlisting}[frame=trbl]{}
+if (rate >= 0.0)    
+	interestPayment = principal * rate;
+else
+   throw new IllegalArgumentException("rate is negative");
+\end{lstlisting}
+
+
+
+\section{Arithmetic Operations}
+
+Java arithmetic operations follow IEEE 754 standard, if we denote the arithmetic operations $+, \ -, \ \times, \ \div$ by $\maltese$, then
+\[ fl{(x \ \maltese \ y)} = (x \ \maltese \ y) (1 + \delta), \ \ |\delta| \leqslant \mu \]
+where $fl(x)$ is the floating representation of $x$ in the previous section and $\mu$ is the unit roundoff, $2^{-53} \approx 1.1102230246251565E-16$, which is $\frac{1}{2}\epsilon$, half of the machine epsilon. 
+
+The common problems with the arithmetic operations are divided by zero, underflow and overflow. Java throws an ArithmeticException when dividing by zero. It flags the overflow by setting the result to 
+\begin{center}
+Double.POSITIVE$\_$INFINITY or Double.NEGATIVE$\_$INFINITY
+\end{center}
+however it does not stop the process. So users have to check this value for overflow. Java does not flag underflow at all.
+
+Another problem is losing accuracy. The first possible way is to operate on numbers that are too far apart, for example, $10^{10} + 10^{-10}$. The second way is the subtraction cancellation. When two very close numbers are subtracted from each other, significant digits are lost and consequently errors are magnified by the exponent. For example, $1 - 0.999 = 0.001 = 1.0 \times 10^3$ If the last digit of 0.999 is not accurate, then the result is not accurate at all. The third way is the error scaling, either multiply by a relatively very large number or divide by a relatively very small number, the consequence is that the error is magnified.
+The forth way is error accumulation, when we have a series of calculations and each step depends on the result from previous step, for example, when calculating sums or averages.
+
+ 
+\section{Functions}
+In the above section, when we analyze errors, we assume x and y are accurate and then calculate the upper bound of the error. This is called forward error. However, most of the time, x and y are also approximate values, i.e., we really have $\hat{x}$ and $\hat{y}$. Instead of computing $x + y$, we are actually computing $\hat{x} + \hat{y}$. Now the question is how far we are from real $x + y$.
+
+Let us consider this situation in a more general context. Let $f(x)$ be a function of x(so arithmetic operations are a special case), if $x$ is perturbed by a small $\Delta x$, the eror analysis can be carried out via Taylor expansion
+\[\Delta y = f(x + \Delta x) - f(x) = f'(x)\Delta x + O \Big((\Delta x)^2 \Big)\]
+The relative error is
+\[ \frac{\Delta y}{y} = \frac{f'(x)}{f(x)} \Delta x + O \Big((\Delta x)^2 \Big)
+= \Big( \frac{xf'(x)}{f(x)} \Big) \frac{\Delta x}{x} + O \Big((\Delta x)^2 \Big)\]
+The scaler 
+\[ \kappa_f(x) = cond_f(x) = \Big | \frac{xf'(x)}{f(x)} \Big |\]
+is defined as the \textbf{condition number} of the function $f(x)$. If $f(x) = 0$, we define 
+\[ \kappa_f(x) = cond_f(x) = | f'(x) |\]
+It measures the sensitive of $f$ at the point $x$, i.e., a small perturbation of $x$ causes how much of the change of the function value. If $\kappa_f(x)$ is small enough so that any small perturbation in $x$ results small changes in $y$, then we call $f$ \textit{ numerically stable} at $f$. The perception about the $\kappa_f(x)$ is that the number of correct digits in the calculated function value is roughly 
+\[p - log_{10}\Big(conf_f(x)\Big)\] 
+where $p = -log_{10}\Big | \frac{\Delta x}{x} \Big |$, about 16 for double and 9 for float. A special case is when $x_0$ is a roote of $f(x)$, i.e., $f(x_0) = 0$ and $x_0$ and $f'(x_0)$ are nonzero, then near $x_0$, $\kappa_f(x)$ is very large and tends to $\infty$ as $x$ goes to $x_0$. So this small neighbourhood of $x_0$ is very sensitive to small perturbation. 
+
+In general, when we implement a function $f(x)$ with an algorithm $\hat{f}(x)$, we usually describe the accuracy of the algorithm as 
+\[\big|f(x) - \hat{f}(x)\big| < eps\] 
+for some small $eps$, such as $10^{-16}$. However, this small absolute measure does not necessarily mean high accuracy. Take again the log gamma function as an example. The C99 implementation(and others) written by Sun Micro has very good accuracy except the small neighbourhoods around 1 and 2. In these two regions, C99 suffers the cancellation error first, then the error gets magnified further so that the function value gets shift by huge number of $ulp$s.
+
+When implementing functions, we have to adjust the required error bound criteria depending on the range of the function values. When the function value is large($>1$), the absolute error is more rigorous. When the function value is near zero, the relative error is more rigorous. However, most of the time, it is acceptable to use the following 
+\[ \big|f(x) - \hat{f}(x)\big| < \operatorname{Math.ulp}(\hat{f}(x)) \]
+This means that we should try to find the right "bucket" for the function value. Some of the elementary functions are implemented with more strict restriction:
+\[ \big|f(x) - \hat{f}(x)\big| < \frac{1}{2}\operatorname{Math.ulp}(\hat{f}(x)) \]
+See the references for more information and reasons for doing this.
+    
+Two powerful tools to approximate functions are rational approximation and continuous fraction.Another approach to get high accuracy results is the arbitrary/multi precision approach. It is slow but can be as accurate as pre-specified.
+
+When we implement functions, we care two things: accurate and performant.
+
+
+\begin{thebibliography}{99}
+
+\bibitem{Higham:1996:AS} Higham, N.J., {\itshape Accuracy and Stability of Numerical Algorithms}, SIAM, 1996
+
+\bibitem{Goldberg:WEC} Goldberg, David, {\itshape What Every Computer Scientist Should Know About Floating-point Arithmetic}
+
+\bibitem{NumericalComputationGuide} Sun Micro, {\itshape Numerical Computation Guide}, http://docs.sun.com/source/806-3568/
+
+
+
+\end{thebibliography}
+

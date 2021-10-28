@@ -1,0 +1,26 @@
+% https://tex.stackexchange.com/questions/170274/very-simple-tcolorbox-with-picture-in-header/170289
+% not a good combination
+% https://tex.stackexchange.com/questions/451457/create-page-layout-with-beautiful-boxes-tcolorbox
+\documentclass{article}
+
+\usepackage{mwe} % just for the example
+
+\usepackage[most]{tcolorbox}
+\usepackage{graphicx}
+
+\newtcolorbox{SimpleBox}{%
+  breakable,
+  enhanced,
+  colback=red!0!white,
+  colframe=red!75!black,
+  title={\large Simple box\hfill%
+    \smash{\raisebox{-11pt}{\includegraphics[width=1cm,height=1cm]{panda}}}},
+}
+
+\begin{document}
+
+\begin{SimpleBox}
+Some Text
+\end{SimpleBox}
+
+\end{document}
