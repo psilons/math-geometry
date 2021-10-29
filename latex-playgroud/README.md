@@ -96,6 +96,7 @@ to get to the fluent level for practical purpose.
 - pgf/tkz-euclide, pgfplots
 - geometry
 - xcolor (color is not needed anymore)
+- xcolar-material
 - booktabs
 - fancyhdr
 - quotchap, for chapter headers

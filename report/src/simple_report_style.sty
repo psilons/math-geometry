@@ -1,0 +1,175 @@
+%! Package = simple_report_style
+%! Author = free
+%! Date = 10/29/2021
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{simple_report_style}[2021/10/29 free's Package]
+
+% page margins
+\RequirePackage[left=2.5cm,right=2.5cm,top=3cm,bottom=3cm]{geometry}
+
+% page headers and footers
+\RequirePackage{fancyhdr}
+\RequirePackage{lastpage}
+\pagestyle{fancy} % these 3 lines set the footer to the middle with total page #.
+
+\RequirePackage{tikz}
+%\graphicspath{{images/}} % needs tikz
+\RequirePackage{graphicx} % load image
+
+\RequirePackage{titlesec} % titleformat needs this
+\RequirePackage{parskip} % adjust title/subtitle/etc
+
+\RequirePackage[absolute]{textpos} % textblock
+\RequirePackage[]{rotating} % text rotation
+
+\RequirePackage{tocloft} % move down Contents
+\setlength{\cftbeforesecskip}{5pt}
+% https://texblog.org/2011/09/09/10-ways-to-customize-tocloflot/
+\RequirePackage{hyperref} % toc is clickable, need to compile twice
+\hypersetup{ % it doesn't work near toc, has to be global in here.
+    colorlinks=true,
+    linkcolor=MaterialPink700,
+    urlcolor=MaterialPink700,
+    filecolor=MaterialGreen,
+    pdfborder={0 0 0},
+}
+
+%--------------------------------------------------------------------------------------------------
+\RequirePackage{xcolor}
+\RequirePackage{xcolor-material}
+\definecolor{LightBlue}{RGB}{66, 163, 251}
+\definecolor{DarkBlue}{RGB}{36, 100, 176}
+\definecolor{LightGray}{gray}{.94}
+\definecolor{DarkGray}{gray}{.172}
+\definecolor{Orange}{RGB}{229, 133, 3}
+\definecolor{MediumBlue}{RGB}{38, 119, 193}
+\definecolor{bannercolor}{rgb}{0.3922,0.5843,0.9294}
+
+% copied from problem module
+\definecolor{ctbRedDark}{RGB}{183, 28, 28} % Royal Red
+\definecolor{ctbRedLight}{RGB}{255, 242, 242} % red!5
+\definecolor{ctbGreenDark}{RGB}{19, 160, 7} % Royal Green modified
+\definecolor{ctbGreenLight}{RGB}{242, 255, 242} % green!5
+\definecolor{ctbBlueDark}{RGB}{65, 105, 225} % Royal Blue
+\definecolor{ctbBlueLight}{RGB}{242, 242, 255} % blue!5
+
+\definecolor{ctbHoneyDark}{RGB}{244,143,35} %
+\definecolor{ctbHoneyLight}{RGB}{255,253,230} %
+\definecolor{ctbPinkDark}{RGB}{217,2,125} %
+\definecolor{ctbPinkLight}{RGB}{255,230,242} %
+\definecolor{ctbPurpleDark}{RGB}{165,80,236} %
+\definecolor{ctbPurpleLight}{RGB}{238,226,242} %
+
+\setlength{\headheight}{15pt}
+%--------------------------------------------------------------------------------------------------
+% Chapter Setting
+\titlespacing*{\chapter}{0pt}{\baselineskip}{\baselineskip}
+
+\titleformat{\chapter}[block]
+%{\sffamily\LARGE}
+{\color{white}\sffamily\bfseries\Large}
+{} % chapter number usually
+{0pt}
+{\colorchapter}
+
+\newcommand{\colorchapter}[1]{%
+% fboxsep: the distance between the frame and the content
+	\colorbox{DarkBlue}{\parbox[c][20pt]{\dimexpr\textwidth-2\fboxsep}{\thechapter.~#1}}}
+
+%--------------------------------------------------------------------------------------------------
+% Section Setting
+%\titleformat*{\section}{\color{DarkBlue}\normalfont\bfseries\LARGE}
+\titleformat*{\section}{\color{Orange}\normalfont\bfseries\Large}
+\titleformat*{\subsection}{\color{Orange}\normalfont\bfseries\large}
+
+\setcounter{secnumdepth}{0}
+
+%--------------------------------------------------------------------------------------------------
+% Header & Footer
+% https://en.wikibooks.org/wiki/LaTeX/Customizing_Page_Headers_and_Footers
+% this overwrites \leftmark and \rightmark
+\renewcommand{\chaptermark}[1]{ \markboth{#1}{} }
+\renewcommand{\sectionmark}[1]{ \markright{#1}{} }
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{ \thechapter.~\leftmark % rightmark has section title
+	%\begin{tikzpicture}[remember picture,overlay] \node[anchor=north east, yshift=1.5mm, xshift=1.2mm] at (current page.north east) {\includegraphics[height=25mm]{right_header_corner}};
+	%\end{tikzpicture}
+}
+\fancyhead[R]{ \rightmark % rightmark has section title
+	\begin{tikzpicture}[remember picture,overlay] \node[anchor=north east, yshift=1.5mm, xshift=1.2mm] at (current page.north east) {\includegraphics[height=25mm]{right_header_corner}};
+	\end{tikzpicture}
+}
+\fancyfoot[C]{
+	\begin{tikzpicture}[remember picture,overlay] \node[anchor=south east, yshift=-7mm, xshift=1.5mm] at (current page.south east) {\includegraphics[height=29mm]{banner}};
+	\end{tikzpicture}
+	%\fancyfoot[C]{Page \thepage\ of~\pageref{LastPage}}
+	\textcolor{Orange}{Page \thepage\ of\ \pageref*{LastPage}} % * removes the hyperlink
+}
+
+%--------------------------------------------------------------------------------------------------
+% front page
+
+\newenvironment{simplefrontpage}[3]
+    {% initialize for textblock
+     \setlength{\TPHorizModule}{1mm}
+     \setlength{\TPVertModule}{1mm}
+     \begin{titlepage}
+         \newgeometry{vmargin={30mm, 30mm}, hmargin={30mm,30mm}}
+
+         \begin{textblock}{50}(-10,-10)
+             \begin{color}{#2}
+                 \rule{3cm}{30cm} % width and length of the strip
+             \end{color}
+         \end{textblock}
+
+         \begin{textblock}{20}(12,70) % x, y of upper left
+            \begin{rotate}{90}
+            {\huge\bfseries \textcolor{#3}{#1}}
+            \end{rotate}
+        \end{textblock}
+    }
+    {\end{titlepage}
+         \setlength{\cftbeforetoctitleskip}{300pt} % move content down by this much
+         \setlength{\cftaftertoctitleskip}{20pt}
+%%         \vspace{10mm}
+         \setcounter{tocdepth}{1} % toc up to section only
+
+         \centerline{
+             \begin{minipage}{0.93\linewidth}
+                 \begingroup
+
+                 \tableofcontents
+                 \endgroup
+             \end{minipage}
+         }
+        \thispagestyle{empty} % remove page number
+        \newpage
+    }
+
+% this is used inside the above simplefrontpage
+\newenvironment{simpletitle}[3]
+    {\begin{textblock}{150}(30,30) %, length, x-coord, y-coord of upper left corner
+            {\includegraphics[height=20mm]{#3}} \medskip
+
+            {\huge\bfseries #1 }\medskip %title
+
+            {\Large\bfseries #2 }\medskip % description
+
+            {\large\today}\medskip\medskip\medskip
+
+            % authors
+    }
+    {\end{textblock}}
+
+% https://tex.stackexchange.com/questions/24066/start-new-chapter-on-same-page
+% keep chapter on the same page, rather than a new page
+\newcommand{\simplechapter}[1]{
+    \begingroup
+    \let\clearpage\relax
+    \chapter{#1}
+    \endgroup
+    \thispagestyle{fancy} % in order to show header/footer
+}
