@@ -3,7 +3,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{tcolorbox}
 \tcbuselibrary{skins,xparse,breakable,hooks}
-\usepackage{minted}
+\usepackage{minted} % need -shell-escape
 \usepackage{graphicx}
 %-----------------------------
 %  box example
@@ -12,7 +12,7 @@
     frame code={ \foreach \n in {north east,north west,south east,south west}
     {\path [fill=gray!25!black] (interior.\n) circle (2mm); };},
     overlay={\node[anchor=east] at ([xshift=-3.5mm]frame.north
-    east){\includegraphics[width=1.5cm]{panda}};}
+    east){\includegraphics[width=1.5cm]{../panda}};}
     }
 
 \begin{document}

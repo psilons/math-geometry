@@ -1,5 +1,5 @@
-%! Class = CLASS_NAME
-%! Author = Wonderland
+%! Class = exercise
+%! Author = free
 %! Date = 10/23/2021
 
 % https://stackoverflow.com/questions/3702222/can-i-write-cls-files-in-latex-instead-of-tex
@@ -30,13 +30,12 @@
 \RequirePackage{lastpage}
 \pagestyle{fancy} % these 3 lines set the footer to the middle with total page #.
 
-
 \setlength\parindent{0pt} % no indent for paragraphs
 
-\linespread{1.2}
+\linespread{1.2} % make lines less crowded
 
 \setlength{\headheight}{25pt}
 
-\renewcommand{\familydefault}{\sfdefault}
+\renewcommand{\familydefault}{\sfdefault} % font
 
 \setlength{\jot}{10pt} % set spacing between formulae

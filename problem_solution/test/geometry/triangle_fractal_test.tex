@@ -1,0 +1,25 @@
+% https://steeven9.github.io/USI-LaTeX/html/math_fractal.html
+% https://newbedev.com/square-fractal-generation-in-tikz
+% https://texample.net/tikz/examples/lindenmayer-systems/
+% https://en.wikipedia.org/wiki/Koch_snowflake
+
+% Preamble
+\documentclass[11pt]{article}
+
+% Packages
+\usepackage{tikz}
+\usetikzlibrary{lindenmayersystems}
+
+% Document
+\begin{document}
+
+\pgfdeclarelindenmayersystem{Koch curve}
+{\rule {F -> F+F--F+F}}
+
+\begin{tikzpicture}
+\draw
+[l-system={Koch curve, step=2pt, angle=60, axiom=F--F--F, order=4}]
+lindenmayer system;
+\end{tikzpicture}
+
+\end{document}

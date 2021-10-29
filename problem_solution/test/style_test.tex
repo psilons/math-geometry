@@ -2,10 +2,10 @@
 %! Date = 10/23/2021
 
 % Preamble
-\documentclass[11pt, letterpaper]{exercise}
+\documentclass[11pt, letterpaper]{../src/exercise}
 
 % Packages
-\usepackage{exercise}
+\usepackage{../src/exercise}
 \usepackage{xcolor} % define header line color
 
 %\usepackage{tcolorbox}
@@ -26,21 +26,21 @@
 
 
 
-    \begin{problem}{Algorithm}{}
+    \begin{cbredproblem}{Algorithm}{}
     Let's see
-    \end{problem}
+    \end{cbredproblem}
 
-    \begin{theoremgreen}{Fermats Last Theorem}{thm:FermatsLastTheorem}
+    \begin{cbhoney}{Fermats Last Theorem}{thm:FermatsLastTheorem}
     No three positive integers \(a\), \(b\) and \(c\) satisfy the equation
         \(a^{n} + b^{n} = c^{n}\) for any integer greater than two.
-    \end{theoremgreen}
+    \end{cbhoney}
 
     \begin{cbstrip}{Algorithm}{}
     Let's see
     \end{cbstrip}
 
-    \begin{theoremblue}{Fermats Last Theorem}%{my_label}
+    \begin{cbhoney}{Fermats Last Theorem}%{my_label}
     Let's see
-    \end{theoremblue}
+    \end{cbhoney}
     Here we refer Item~\ref{cbstrip:my_label}% need to compile twice
 \end{document}

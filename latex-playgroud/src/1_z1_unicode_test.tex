@@ -1,5 +1,4 @@
-%! Author = Wonderland
-%! Date = 10/23/2021
+
 
 % use LuaLatex compiler, otherwise we get CJK error and missing greeks.
 
@@ -10,17 +9,26 @@
 \usepackage{amsmath}
 \usepackage[UTF8]{ctex} % use chinese
 \usepackage{fontsetup} % use greek letter directly
+\usepackage{xcolor}
 
-\title{银河系漫游指南 - The Galaxy}
-\author{星空}
+\title{Unicode is supported natively now in Latex}
+\author{Texer}
 \date{\today}
 
 % Document
 \begin{document}
 
 \maketitle
-    This is a test!  文章内容。
-    % we have greeks in the formula
-    The vorticity $ω$ is defined as $ω = ∇ × u$.
+    This is unicode 文章内容。
 
+    The vorticity $ω$ is defined as $ω = ∇ × u$.
+    We use greeks in the formula.
+
+    {\color{blue} \noindent
+    《望天门山》李白\\
+    天门中断楚江开，\\
+    碧水东流至此回。\\
+    碧水东流至此回。\\
+    两岸青山相对出，\\
+    孤帆一片日边来。}
 \end{document}
