@@ -6,17 +6,11 @@
 
 
 \graphicspath{{images/}}
-%\usepackage{color}
+
 \definecolor{bannercolor}{rgb}{0.3922,0.5843,0.9294}
 
-\RequirePackage{geometry}
-%\newgeometry{vmargin={25mm, 30mm}, hmargin={15mm,15mm}}   % set page margins
-
-%\usepackage[svgnames]{xcolor}
-%\usepackage{tikz}
-
 \usepackage[absolute]{textpos}
-\usepackage[]{rotating}
+\usepackage[]{rotating} % text rotation
 
 %\usepackage[]{titlesec} % to make titlepage work
 
@@ -87,8 +81,14 @@
 
     %\newpage
 
-    \chapter{Analysis Report}
+    \begingroup
+    \let\clearpage\relax
+    \chapter{Next Tool}
+    \endgroup
     \thispagestyle{fancy} % in order to show header/footer
+
+%    \chapter{Analysis Report}
+%    \thispagestyle{fancy} % in order to show header/footer
 
     This is a tool.
 
@@ -119,8 +119,8 @@
     \let\clearpage\relax
     \chapter{Next Tool}
     \endgroup
-
     \thispagestyle{fancy} % in order to show header/footer
+
 %    \chapter{Next Tool}
 %    \thispagestyle{fancy} % in order to show header/footer
 
