@@ -1,0 +1,45 @@
+% Preamble
+\documentclass[a4paper,12pt]{book}
+
+% Packages
+\usepackage[english]{babel}
+\usepackage{blindtext}
+
+\usepackage{xcolor}
+\usepackage{titlesec}
+%\usepackage{hyperref}
+
+\usepackage[T1]{fontenc}
+\usepackage[showframe]{geometry}
+
+\definecolor{nicered}{rgb}{.647,.129,.149}
+
+\titleclass{\chapter}{top}
+
+\titleformat{\chapter}[display]
+{\filleft\bfseries\color{blue}}
+{\fontsize{72}{75}\selectfont\color{nicered}\thechapter}
+{8ex}
+{\LARGE}%
+
+%\titlespacing*{\chapter}{0pt}{-8ex}{12ex}
+
+
+
+% Document
+\begin{document}
+    \chapter{Introduction}
+    This is an introduction.
+
+    \section{Get Started}
+    \blindtext[3]
+
+    \section{In Progress}
+    \blindtext[3]
+
+    \chapter{Deep Dive}
+    Get more details.
+
+    \section{Accomplishment}
+    \blindtext[3]
+\end{document}

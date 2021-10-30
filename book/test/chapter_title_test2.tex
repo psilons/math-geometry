@@ -1,0 +1,23 @@
+% https://texblog.org/2012/07/03/fancy-latex-chapter-styles/
+
+% doesn't work for book class
+\documentclass{memoir} % go to miktex console and install memoir
+\usepackage{tikz, blindtext}
+\makechapterstyle{box}{
+  \renewcommand*{\printchaptername}{}
+  \renewcommand*{\chapnumfont}{\normalfont\sffamily\huge\bfseries}
+  \renewcommand*{\printchapternum}{
+    \flushright
+    \begin{tikzpicture}
+      \draw[fill,color=black] (0,0) rectangle (2cm,2cm);
+      \draw[color=white] (1cm,1cm) node { \chapnumfont\thechapter };
+    \end{tikzpicture}
+  }
+  \renewcommand*{\chaptitlefont}{\normalfont\sffamily\Huge\bfseries}
+  \renewcommand*{\printchaptertitle}[1]{\flushright\chaptitlefont##1}
+}
+\chapterstyle{box}
+\begin{document}
+\chapter{Fancy chapter with TikZ}
+\blindtext
+\end{document}

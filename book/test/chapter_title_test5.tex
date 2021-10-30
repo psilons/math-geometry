@@ -1,0 +1,41 @@
+
+
+
+\documentclass{book}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage[percent]{overpic}
+\usepackage{fix-cm}
+\usepackage{lipsum}
+
+% formats: \chapter
+\newcommand\ctformatchapter[1]{%
+    \parbox[b][6cm][b]{\dimexpr.5\textwidth\relax}{%
+        \raggedright%
+        \textcolor{cyan!50!blue}{\textsf{#1}}%
+    }%
+}
+
+
+\titleformat{\chapter}[display]%
+{\fontsize{20pt}{20pt}\bfseries\selectfont}%
+{%
+    \raggedleft{%
+        \begin{overpic}[width=0.5\textwidth]{ctan_lion}
+            \put (30,42) {\rotatebox{-20}{\fontsize{60pt}{60pt}\selectfont\textsf{\Roman{chapter}}}}
+            \put (20,50) {\textcolor{cyan!50!blue}{\textsf{Chapter}}}
+        \end{overpic}
+    }%
+}%
+{-6.5cm}%
+{\ctformatchapter}%
+[\phantomsection]
+
+\usepackage[english]{babel}
+
+\begin{document}
+    \chapter{Introduction}
+    \lipsum
+\end{document}

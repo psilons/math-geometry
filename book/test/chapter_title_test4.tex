@@ -1,0 +1,44 @@
+% https://tex.stackexchange.com/questions/94729/how-to-customize-chapter-heading-style
+% build error: ! error:  (type 1): cannot open file for reading 'ugmr8a.pfb'
+% Font issue:
+% https://tex.stackexchange.com/questions/266643/pdftex-error-even-when-file-exists-cannot-open-type-1-font-file-minionpro-disp
+% disable the font selection and it works
+
+% Preamble
+\documentclass[a4paper,12pt]{book}
+
+% Packages
+\usepackage{blindtext}
+
+\usepackage{xcolor}
+\usepackage[T1]{fontenc}
+\usepackage{newtxtext, newtxmath}
+\usepackage{color}
+\definecolor{RoyalRed}{RGB}{157,16, 45}
+\usepackage{titlesec}
+\titleformat{\chapter}[display]
+  {\normalsize \huge  \color{black}}%
+  {\flushright\normalsize \color{RoyalRed}%
+   \MakeUppercase{\chaptertitlename}\hspace{1ex}%
+   %{\fontfamily{mdugm}\fontsize{60}{60}\selectfont\thechapter}}% font not found
+{\fontsize{60}{60}\selectfont\thechapter}}%
+  {10 pt}%
+  {\bfseries\huge}%
+
+% Document
+\begin{document}
+    \chapter{Introduction}
+    This is an introduction.
+
+    \section{Get Started}
+    \blindtext[3]
+
+    \section{In Progress}
+    \blindtext[3]
+
+    \chapter{Deep Dive}
+    Get more details.
+
+    \section{Accomplishment}
+    \blindtext[3]
+\end{document}
