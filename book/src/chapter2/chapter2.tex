@@ -7,9 +7,15 @@ It's time to get more detailed facts.
 
 \section{Environment Setup}
 
-This is a treasure, 汗血宝马.
+This horse, figure~\ref{fig:horse} is a treasure, Akhal Teke horse 汗血宝马.
 
-\includegraphics[scale=3]{chapter2/akhal_teke_horse}
+\begin{figure} % this is float around text
+  \centering
+    \includegraphics[scale=3]{chapter2/akhal_teke_horse}
+  \caption{Akhal Teke horse} % caption is below pic. Otherwise move this line above centering.
+  \label{fig:horse}
+\end{figure}
+
 
 \blindtext[3]
 

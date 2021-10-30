@@ -2,6 +2,8 @@
 \usepackage[english]{babel}
 \usepackage[a4paper, inner=2cm, outer=3cm, top=3cm, bottom=3cm, bindingoffset=0.5cm]{geometry}
 \usepackage{minitoc}
+
+
 \usepackage{graphicx}
 \usepackage{eso-pic}
 \usepackage{xcolor}
@@ -99,6 +101,7 @@
 
     % https://texblog.org/2008/09/15/create-small-tocslofslots-using-minitoc/
     \dominitoc % mini toc for chapters
+    \mtcsetrules{*}{off} % remove top/bottom lines around minitoc
     \tableofcontents % Print the table of contents itself
 
     % Forces the first chapter to start on an odd page so it's on the right side of the book

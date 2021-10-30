@@ -69,3 +69,9 @@ When writing or almost doing anything, we need to think about:
 - https://www.latextemplates.com/
 - report template: https://www.overleaf.com/articles/cpsc-542f-notes/cvptzcpvsrpn
 - book template: https://www.overleaf.com/latex/templates/the-legrand-orange-book-template-english/jtctyfmnpppc
+
+
+### Others
+
+https://anneurai.net/2017/10/18/thesis-formatting-in-latex/
+https://medium.com/@primogodec/how-did-i-design-my-cv-in-latex-bb4e5cc9f5fd
