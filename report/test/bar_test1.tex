@@ -1,0 +1,59 @@
+\documentclass{report}
+\usepackage[margin=3cm]{geometry}
+\usepackage[svgnames]{xcolor}
+\usepackage{tikz}
+
+\usepackage[absolute]{textpos}
+\usepackage[]{rotating}
+
+\usepackage[]{titlesec} % to make titlepage work
+
+\usepackage{graphicx} % load image
+\usepackage{parskip} % adjust title/subtitle/etc
+
+\usepackage{tocloft} % move down Contents
+
+\begin{document}
+    \setlength{\TPHorizModule}{1mm}
+    \setlength{\TPVertModule}{1mm}
+
+    \begin{titlepage}
+        \begin{textblock}{50}(-10,-10)
+            \begin{color}{MidnightBlue}
+                \rule{3cm}{30cm} % width and length of the strip
+            \end{color}
+        \end{textblock}
+
+        \begin{textblock}{20}(12,70) % x, y of upper left
+            \begin{rotate}{90}
+            {\huge\bfseries \textcolor{white}{Programming}}
+            \end{rotate}
+        \end{textblock}
+
+        \begin{textblock}{150}(30,30) %, length, x-coord, y-coord of upper left corner
+            \includegraphics[height=20mm]{images/panda}\medskip
+
+            {\huge\bfseries Application Design and Architecture }\medskip
+
+            {\Large\bfseries How to Write Reusable and Maintainable Code }\medskip
+
+            {\large\today}\vspace{10mm}
+
+            {\large\bfseries Firstname Lastname}
+        \end{textblock}
+
+        \setlength{\cftbeforetoctitleskip}{300pt} % move content down by this much
+        \setlength{\cftaftertoctitleskip}{20pt}
+        \tableofcontents
+
+        \thispagestyle{empty} % remove page number
+	\end{titlepage}
+
+    %\newpage
+
+    \section{Introduction}
+    \section{Section Name}
+    \subsection{Subsection Name}
+    \section{Conclusion}
+    This is next page, move it.
+\end{document}

@@ -1,0 +1,32 @@
+\documentclass{report}
+\usepackage[margin=3cm]{geometry}
+\usepackage[svgnames]{xcolor}
+\usepackage{tikz}
+
+\usepackage[]{rotating}
+
+\begin{document}
+
+
+\begin{tikzpicture}[remember picture,overlay]
+  \node[yshift=-5.57cm] at (current page.north west)
+  {\begin{tikzpicture}[remember picture, overlay]
+        \draw[draw=MidnightBlue,fill=MidnightBlue] (0,0) rectangle
+        (\paperwidth,5.57cm);
+   \end{tikzpicture}
+  };
+\end{tikzpicture}
+
+        \begin{tikzpicture}[remember picture,overlay]
+          \node[yshift=-1\paperheight] at (current page.north west)
+          {\begin{tikzpicture}[remember picture, overlay]
+                \draw[draw=DarkOrange,fill=DarkOrange] (0,-10) rectangle
+                (2cm,\paperheight);
+           \end{tikzpicture}
+          };
+        \end{tikzpicture}
+
+
+    This is next page, move it.
+\end{document}
+

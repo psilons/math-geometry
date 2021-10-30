@@ -17,7 +17,7 @@
 %\graphicspath{{images/}} % needs tikz
 \RequirePackage{graphicx} % load image
 
-\RequirePackage{titlesec} % titleformat needs this
+\RequirePackage{titlesec} % titleformat needs this, to make titlepage work
 % this needs to be before parskip, otherwise a warning is generated.
 \RequirePackage{tocloft} % move down Contents,
 \RequirePackage{parskip} % adjust title/subtitle/etc
@@ -117,7 +117,7 @@
 
 %--------------------------------------------------------------------------------------------------
 % front page
-
+% https://tex.stackexchange.com/questions/117328/fancyhdr-does-not-apply-same-header-footer-on-chapter-and-non-chapter-pages
 \newenvironment{simplefrontpage}[3]
     {% initialize for textblock
      \setlength{\TPHorizModule}{1mm}

@@ -1,0 +1,113 @@
+\documentclass[10pt]{scrartcl}
+\usepackage{xltxtra}
+\usepackage[]{xkeyval,polyglossia}
+\setmainlanguage[spelling=new]{german}
+\usepackage[a5paper,top=2cm, bottom=2cm, left = 2.5cm, right=2cm]{geometry}
+\usepackage[]{csquotes}
+\usepackage[]{titlesec}
+\usepackage[]{url}
+\usepackage[]{paralist}
+\usepackage[absolute]{textpos}
+\usepackage[]{rotating}
+
+%\usepackage[]{scrpage2}
+\usepackage[]{blindtext}
+
+%\pagestyle{scrheadings}
+%\setheadsepline[\textwidth]{0.25pt}{}
+
+%\ohead{\headmark}
+%\ofoot[\pagemark]{\pagemark}
+%\cfoot{}
+%\chead{}
+%\ihead{Foobar}
+
+\usepackage{xcolor}
+\definecolor{msdarkblue}{RGB}{54,95,145}
+\definecolor{msblue}{RGB}{79,129,189}
+
+%\titleformat{\section}[form]{layout}{labellayout}{abstand}{davorcode}[danachcode]
+\titleformat{\section}[hang]{\color{msdarkblue}\Large\sffamily\bfseries}{}{0pt}{\vspace*{-6pt}}
+\titleformat{\subsection}[hang]{\color{msblue}\large\sffamily\bfseries}{}{0pt}{\vspace*{-4pt}}
+\titleformat{\subsubsection}[hang]{\color{msblue}\normalsize\sffamily\bfseries}{}{0pt}{}
+
+\setsansfont[ItalicFont={Cambria Italic},BoldFont={Cambria Bold},BoldItalicFont={Cambria Bold Italic}]{Cambria}
+\setmainfont[ItalicFont={Calibri Italic},BoldFont={Calibri Bold},BoldItalicFont={Calibri Bold Italic}]{Calibri}
+\setmonofont[ItalicFont={Consolas Italic},BoldFont={Consolas Bold},BoldItalicFont={Consolas Bold Italic}]{Consolas}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1em}
+
+\usepackage{unicode-math}
+\setmathfont{Cambria Math}
+\begin{document}
+
+    \setlength{\TPHorizModule}{1mm}
+    \setlength{\TPVertModule}{1mm}
+
+    \begin{titlepage}
+        ~
+        \begin{textblock}{50}(-10,-10)
+            \begin{color}{msdarkblue}
+                \rule{3cm}{25cm}
+            \end{color}
+        \end{textblock}
+
+% Logo white
+        \begin{textblock}{130}(30,30)
+            \rule{2cm}{2cm}\\[2em]   %\includegraphics[height=20mm]{Logo.jpg}
+
+            {\noindent\Huge\bfseries Title }
+
+            {\noindent\huge\bfseries Subtitle }\\[5em]
+
+            {\noindent\Large\bfseries Firstname Lastname}
+
+        \end{textblock}
+
+
+        \begin{textblock}{20}(12,200)
+            \begin{rotate}{90}
+            {\huge\bfseries \textcolor{white}{rotierter Text}}
+            \end{rotate}
+        \end{textblock}
+
+    \end{titlepage}
+
+
+    \tableofcontents
+
+    \clearpage
+
+    \begin{abstract}
+        \noindent \blindtext
+    \end{abstract}
+
+
+    \section{Einführung}
+
+    \blindtext[2]
+
+
+    \section{Hauptteil}
+
+    \subsection{Hallo}
+
+    \blindtext
+
+    \subsection{Welt}
+
+    \blindtext
+
+
+    \section{Fazit}
+
+    \subsection{Foo}
+
+    \blindtext
+
+    \subsection{Bar}
+
+    \blindtext
+
+\end{document}
