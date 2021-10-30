@@ -16,11 +16,13 @@
 \definecolor{nicered}{rgb}{.647,.129,.149}
 
 \titleclass{\chapter}{top}
-
+\usepackage{graphicx}
 \titleformat{\chapter}[display]
 {\filleft\bfseries\color{nicered}}
 {%\fontsize{72}{75}\selectfont\color{nicered}\thechapter
     \flushright
+    % \fontsize{size}{baselineskip}
+    \rotatebox{90}{\fontsize{15}{24}\selectfont CHAPTER}
     \begin{tikzpicture}
       \draw[fill,color=nicered] (0,0) rectangle (3cm,3cm);
       \draw[color=white] (1.5cm,1.5cm) node { \fontsize{72}{75}\selectfont\color{white}\thechapter };
