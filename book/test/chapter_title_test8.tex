@@ -6,6 +6,7 @@
 \usepackage{blindtext}
 
 \usepackage{xcolor}
+\usepackage{tikz}
 \usepackage{titlesec}
 %\usepackage{hyperref}
 
@@ -17,12 +18,18 @@
 \titleclass{\chapter}{top}
 
 \titleformat{\chapter}[display]
-{\filleft\bfseries\color{blue}}
-{\fontsize{72}{75}\selectfont\color{nicered}\thechapter}
-{8ex}
+{\filleft\bfseries\color{nicered}}
+{%\fontsize{72}{75}\selectfont\color{nicered}\thechapter
+    \flushright
+    \begin{tikzpicture}
+      \draw[fill,color=nicered] (0,0) rectangle (3cm,3cm);
+      \draw[color=white] (1.5cm,1.5cm) node { \fontsize{72}{75}\selectfont\color{white}\thechapter };
+    \end{tikzpicture}
+}
+{10pt} % space bewteen chapter # and title
 {\LARGE}%
 
-%\titlespacing*{\chapter}{0pt}{-8ex}{12ex}
+%\titlespacing*{\chapter}{5pt}{-8ex}{12ex}
 
 
 
