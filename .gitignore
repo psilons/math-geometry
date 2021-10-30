@@ -7,3 +7,9 @@
 /problem_solution/out/_minted-source_code_test
 /problem_solution/out/*.toc
 /out/_minted-source_code_test
+/book/out/*.toc
+/book/out/*.mtc
+/book/out/*.mtc0
+/book/out/*.mtc1
+/book/out/*.mtc2
+/book/out/*.maf

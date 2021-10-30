@@ -1,19 +1,38 @@
 \documentclass[a4paper,12pt]{book}
 \usepackage[english]{babel}
 \usepackage[a4paper, inner=2cm, outer=3cm, top=3cm, bottom=3cm, bindingoffset=0.5cm]{geometry}
+\usepackage{minitoc}
 \usepackage{graphicx}
 \usepackage{eso-pic}
 \usepackage{xcolor}
+\usepackage{xcolor-material}
 \usepackage{tikz}
 \usepackage{hyperref}
+\hypersetup{ % it doesn't work near toc, has to be global in here.
+    colorlinks=true,
+    linkcolor=MaterialPink700,
+    urlcolor=MaterialPink700,
+    filecolor=MaterialGreen,
+    pdfborder={0 0 0},
+}
 
 \RequirePackage{fancyhdr}
 \RequirePackage{lastpage}
 \pagestyle{fancy} % these 3 lines set the footer to the middle with total page #.
 
+
+
 \usepackage{blindtext}
 
 \definecolor{bannercolor}{rgb}{0.3922,0.5843,0.9294}
+
+\linespread{1.2} % make lines less crowded
+
+% headers
+\fancyhf{}
+\fancyhead[LO]{\nouppercase{\rightmark}}
+\fancyhead[RE]{\nouppercase{\leftmark}}
+\fancyhead[LE,RO]{\thepage}
 
 \begin{document}
 %----------------------------------------------------------------------------------------
@@ -77,6 +96,8 @@
 %----------------------------------------------------------------------------------------
     \pagestyle{empty} % Disable headers and footers for the following pages
 
+    % https://texblog.org/2008/09/15/create-small-tocslofslots-using-minitoc/
+    \dominitoc % mini toc for chapters
     \tableofcontents % Print the table of contents itself
 
     % Forces the first chapter to start on an odd page so it's on the right side of the book
