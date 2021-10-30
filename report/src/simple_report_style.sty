@@ -18,12 +18,13 @@
 \RequirePackage{graphicx} % load image
 
 \RequirePackage{titlesec} % titleformat needs this
+% this needs to be before parskip, otherwise a warning is generated.
+\RequirePackage{tocloft} % move down Contents,
 \RequirePackage{parskip} % adjust title/subtitle/etc
 
 \RequirePackage[absolute]{textpos} % textblock
 \RequirePackage[]{rotating} % text rotation
 
-\RequirePackage{tocloft} % move down Contents
 \setlength{\cftbeforesecskip}{5pt}
 % https://texblog.org/2011/09/09/10-ways-to-customize-tocloflot/
 \RequirePackage{hyperref} % toc is clickable, need to compile twice
@@ -34,6 +35,11 @@
     filecolor=MaterialGreen,
     pdfborder={0 0 0},
 }
+
+%--------------------------------------------------------------------------------------------------
+\RequirePackage{fontspec}
+\RequirePackage[T1]{fontenc}
+\RequirePackage{lmodern}
 
 %--------------------------------------------------------------------------------------------------
 \RequirePackage{xcolor}
@@ -80,8 +86,8 @@
 %--------------------------------------------------------------------------------------------------
 % Section Setting
 %\titleformat*{\section}{\color{DarkBlue}\normalfont\bfseries\LARGE}
-\titleformat*{\section}{\color{Orange}\normalfont\bfseries\Large}
-\titleformat*{\subsection}{\color{Orange}\normalfont\bfseries\large}
+\titleformat*{\section}{\color{MaterialOrange800}\normalfont\bfseries\Large}
+\titleformat*{\subsection}{\color{MaterialOrange800}\normalfont\bfseries\large}
 
 \setcounter{secnumdepth}{0}
 
@@ -99,14 +105,14 @@
 	%\end{tikzpicture}
 }
 \fancyhead[R]{ \rightmark % rightmark has section title
-	\begin{tikzpicture}[remember picture,overlay] \node[anchor=north east, yshift=1.5mm, xshift=1.2mm] at (current page.north east) {\includegraphics[height=25mm]{right_header_corner}};
+	\begin{tikzpicture}[remember picture,overlay] \node[anchor=north east, yshift=1.5mm, xshift=1.2mm] at (current page.north east) {\includegraphics[height=25mm]{images/right_header_corner}};
 	\end{tikzpicture}
 }
 \fancyfoot[C]{
-	\begin{tikzpicture}[remember picture,overlay] \node[anchor=south east, yshift=-7mm, xshift=1.5mm] at (current page.south east) {\includegraphics[height=29mm]{banner}};
+	\begin{tikzpicture}[remember picture,overlay] \node[anchor=south east, yshift=-7mm, xshift=1.5mm] at (current page.south east) {\includegraphics[height=29mm]{images/banner}};
 	\end{tikzpicture}
 	%\fancyfoot[C]{Page \thepage\ of~\pageref{LastPage}}
-	\textcolor{Orange}{Page \thepage\ of\ \pageref*{LastPage}} % * removes the hyperlink
+	\textcolor{MaterialPink700}{Page \thepage\ of\ \pageref*{LastPage}} % * removes the hyperlink
 }
 
 %--------------------------------------------------------------------------------------------------
@@ -152,13 +158,14 @@
 % this is used inside the above simplefrontpage
 \newenvironment{simpletitle}[3]
     {\begin{textblock}{150}(30,30) %, length, x-coord, y-coord of upper left corner
-            {\includegraphics[height=20mm]{#3}} \medskip
+            %{\includegraphics[height=20mm]{#3}} \medskip
+        {\IfFileExists{#3}{\includegraphics[height=30mm]{#3}}{}}  \medskip
 
-            {\huge\bfseries #1 }\medskip %title
+            {\huge\bfseries #1 }\smallskip %title
 
-            {\Large\bfseries #2 }\medskip % description
+            {\Large\bfseries #2 }\smallskip % description
 
-            {\large\today}\medskip\medskip\medskip
+            {\large\today}\medskip\medskip
 
             % authors
     }
