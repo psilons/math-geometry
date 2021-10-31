@@ -7,7 +7,7 @@
 % Packages
 \usepackage{exercise}
 \usepackage{tikz}
-\usepackage{parskip}
+
 % see test/geometry/fractal_triangle_test2.tex
 % https://github.com/pgf-tikz/pgf/blob/master/doc/generic/pgf/text-en/pgfmanual-en-library-lsystems.tex
 % https://latex.org/forum/viewtopic.php?t=17902
@@ -17,7 +17,7 @@
 \begin{document}
     \exerheader{Geometry}{Fractal}{\today}{ctbBlueDark}
 
-    \begin{cbpink}{Problem}
+    \begin{cbstripe}{Problem}{ctbPinkDark}{ctbPinkLight}
         We begin with an equilateral triangle with side length 1.
         We divide each side into 3 segments of equal length, and add an equilateral triangle to
         each side using the middle third as a base.
@@ -63,7 +63,7 @@
         \end{tikzpicture}
         \end{minipage}%
 
-    \end{cbpink}
+    \end{cbstripe}
 
     The shape is called Koch Snowflake, check section 4.9 in the book
     "The Beauty of Fractals Six Different Views", which is in google books.

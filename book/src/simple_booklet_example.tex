@@ -4,12 +4,16 @@
 
 \usepackage{blindtext}
 
-\definecolor{bannercolor}{rgb}{0.3922,0.5843,0.9294}
-\definecolor{nicered}{rgb}{.647,.129,.149}
+%\definecolor{bannercolor}{rgb}{0.3922,0.5843,0.9294}
+%\definecolor{nicered}{rgb}{.647,.129,.149}
 
 % may use default color or overwrite it
 \colorlet{chaptercolor}{MaterialGreen800}
 \colorlet{toccolor}{MaterialPurple800}
+
+\setlength{\headheight}{15pt}
+
+\linespread{1.2} % make lines less crowded
 
 \begin{document}
 
@@ -19,7 +23,7 @@
     % image name, stirp color, strip opacity
     \begin{simplefrontpage}{cat1}{MaterialBlue400}{0.3}
         \par\normalfont\fontsize{35}{35}\sffamily\selectfont
-        \textbf{Do Cats Always Land on Their Feet?}\\
+        \textbf{Do Cats Always Land on Their Feet?}\par
         {\LARGE That's how they have 9 lives!}\par % Book title
         \vspace*{1cm}
         {\Huge Flying Cats}\par % Author name
@@ -56,10 +60,9 @@
 
     \tableofcontents % Print the table of contents itself
 
-    % Forces the first chapter to start on an odd page so it's on the right side of the book
+    % chapter start page won't be on right side, cut blank pages.
     %\cleardoublepage % not working
     \let\cleardoublepage\clearpage  % don't do this for paper books
-
 
 %----------------------------------------------------------------------------------------
 %	Chapters

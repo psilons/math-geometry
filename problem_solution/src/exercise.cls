@@ -29,8 +29,10 @@
 
 \linespread{1.2} % make lines less crowded
 
-\setlength{\headheight}{25pt}
+\setlength{\headheight}{25pt} % diff docs may have different settings
 
-\renewcommand{\familydefault}{\sfdefault} % font
+% if \usepackage{helvet}, then Helvetica
+% if \usepackage{avant}, then Avant-Garde
+\renewcommand{\familydefault}{\sfdefault} % font default to sans-serif
 
 \setlength{\jot}{10pt} % set spacing between formulae

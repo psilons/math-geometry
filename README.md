@@ -68,18 +68,9 @@ When writing or almost doing anything, we need to think about:
 - https://awesomeopensource.com/project/hantang/awesome-latex-templates
 - https://www.latextypesetting.com/showcase
 - https://www.latextemplates.com/
-- report template: https://www.overleaf.com/articles/cpsc-542f-notes/cvptzcpvsrpn
-- book template: https://www.overleaf.com/latex/templates/the-legrand-orange-book-template-english/jtctyfmnpppc
 
-
-### Full Size Book Templates
-
-- https://www.overleaf.com/articles/modele-lineaire-a-effets-mixtes/dbxztcmqxpkd
-- blue: https://www.overleaf.com/latex/templates/fancybook-designeditorial/cxbxbgnghpfm
-- orange: https://www.overleaf.com/latex/templates/the-legrand-orange-book-template-english/jtctyfmnpppc
 ### Others
 
-- https://anneurai.net/2017/10/18/thesis-formatting-in-latex/
 - https://medium.com/@primogodec/how-did-i-design-my-cv-in-latex-bb4e5cc9f5fd
 - flow chart: https://tex.stackexchange.com/questions/513658/changing-shapes-and-colors-of-blocks-also-redirecting-arrows-properly
-- https://bitbucket.org/amiede/classicthesis/src/master/
+
