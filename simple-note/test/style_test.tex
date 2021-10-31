@@ -1,0 +1,46 @@
+%! Author = Wonderland
+%! Date = 10/23/2021
+
+% Preamble
+\documentclass[11pt, letterpaper]{../src/simple_doc.cls}
+
+% Packages
+\usepackage{../src/simple_note}
+\usepackage{xcolor} % define header line color
+
+%\usepackage{tcolorbox}
+\tcbuselibrary{most}
+%\usepackage{amsmath, amssymb}
+%
+%\newtcbtheorem{problem}{Problem}{% https://tex.stackexchange.com/questions/198820/create-newshadetheorem-without-numbering
+%    theorem name,%
+%    colback=green!5,%
+%    colframe=green!35!black,%
+%    fonttitle=\bfseries,title after break={Problem  -- \raggedleft Continued}%
+%}{problem}
+
+
+\begin{document}
+    \definecolor{headercolor}{RGB}{100, 130, 220}
+    \exerheader{Math}{Geometry}{\today}{headercolor}
+
+
+
+    \begin{cbredproblem}{Algorithm}{}
+    Let's see
+    \end{cbredproblem}
+
+    \begin{cbhoney}{Fermats Last Theorem}{thm:FermatsLastTheorem}
+    No three positive integers \(a\), \(b\) and \(c\) satisfy the equation
+        \(a^{n} + b^{n} = c^{n}\) for any integer greater than two.
+    \end{cbhoney}
+
+    \begin{cbstrip}{Algorithm}{}
+    Let's see
+    \end{cbstrip}
+
+    \begin{cbhoney}{Fermats Last Theorem}%{my_label}
+    Let's see
+    \end{cbhoney}
+    Here we refer Item~\ref{cbstrip:my_label}% need to compile twice
+\end{document}

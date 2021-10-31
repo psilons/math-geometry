@@ -13,3 +13,7 @@
 /book/out/*.mtc1
 /book/out/*.mtc2
 /book/out/*.maf
+/simple-booklet/out/chapter1
+/simple-booklet/out/chapter2
+/auxil
+/out

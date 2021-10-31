@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="LATEX_MODULE_TYPE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/simple-booklet">
+      <sourceFolder url="file://$MODULE_DIR$/simple-booklet/src" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/simple-booklet/out" />
+      <excludeFolder url="file://$MODULE_DIR$/simple-booklet/auxil" />
+    </content>
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

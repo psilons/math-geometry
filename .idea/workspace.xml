@@ -4,7 +4,323 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f65338dd-1206-4d34-b4d7-0552c263f82f" name="Changes" comment="1" />
+    <list default="true" id="7eeea94d-a4da-497b-bafd-b960b5e8f757" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/simple-booklet.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/simple-note.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-booklet/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-booklet/docs/Writing a technical book with Manning in 2020 by Milan Curcic Modern Fortran Medium.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-booklet/out/chapter_title_test1.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-booklet/out/chapter_title_test2.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-booklet/out/chapter_title_test3.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-booklet/out/chapter_title_test4.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-booklet/out/chapter_title_test5.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-booklet/out/chapter_title_test6.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-booklet/out/chapter_title_test7.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-booklet/out/chapter_title_test8.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-booklet/out/chapter_title_test9.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-booklet/out/main.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-booklet/out/simple_booklet_example.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-booklet/src/cat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-booklet/src/cat1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-booklet/src/chapter1/cat-leaping.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-booklet/src/chapter1/cat-leaping2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-booklet/src/chapter1/cat3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-booklet/src/chapter1/chapter1.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-booklet/src/chapter1/husky.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-booklet/src/chapter2/akhal_teke_horse.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-booklet/src/chapter2/chapter2.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-booklet/src/simple_booklet.sty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-booklet/src/simple_booklet_example.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-booklet/test/chapter_title_standard.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-booklet/test/chapter_title_test1.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-booklet/test/chapter_title_test2.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-booklet/test/chapter_title_test3.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-booklet/test/chapter_title_test4.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-booklet/test/chapter_title_test5.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-booklet/test/chapter_title_test6.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-booklet/test/chapter_title_test7.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-booklet/test/chapter_title_test8.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-booklet/test/chapter_title_test9.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-booklet/test/ctan-lion.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-booklet/test/ctan_lion.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-booklet/web-template/fancybook/fancybook-designeditorial.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-booklet/web-template/fancybook/url.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/book.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/problem_solution.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/report.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/simple-report.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/book/docs/Writing a technical book with Manning in 2020 by Milan Curcic Modern Fortran Medium.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/book/out/chapter_title_test1.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/book/out/chapter_title_test2.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/book/out/chapter_title_test3.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/book/out/chapter_title_test4.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/book/out/chapter_title_test5.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/book/out/chapter_title_test6.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/book/out/chapter_title_test7.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/book/out/chapter_title_test8.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/book/out/chapter_title_test9.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/book/out/main.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/book/out/simple_booklet_example.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/book/src/cat.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/book/src/cat1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/book/src/chapter1/cat-leaping.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/book/src/chapter1/cat-leaping2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/book/src/chapter1/cat3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/book/src/chapter1/chapter1.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/book/src/chapter1/husky.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/book/src/chapter2/akhal_teke_horse.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/book/src/chapter2/chapter2.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/book/src/main.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/book/src/simple_booklet_example.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/book/src/simple_booklet_style.sty" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/book/test/chapter_title_standard.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/book/test/chapter_title_test1.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/book/test/chapter_title_test2.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/book/test/chapter_title_test3.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/book/test/chapter_title_test4.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/book/test/chapter_title_test5.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/book/test/chapter_title_test6.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/book/test/chapter_title_test7.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/book/test/chapter_title_test8.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/book/test/chapter_title_test9.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/book/test/ctan-lion.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/book/test/ctan_lion.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/book/web-template/fancybook/fancybook-designeditorial.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/book/web-template/fancybook/url.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex-playgroud/src/main.tex" beforeDir="false" afterPath="$PROJECT_DIR$/latex-playgroud/src/main.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/Linear algebra/Design_And_Implementation.dvi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/Linear algebra/Design_And_Implementation.maf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/Linear algebra/Design_And_Implementation.mtc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/Linear algebra/Design_And_Implementation.mtc0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/Linear algebra/Design_And_Implementation.mtc1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/Linear algebra/Design_And_Implementation.mtc2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/Linear algebra/Design_And_Implementation.mtc3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/Linear algebra/Design_And_Implementation.mtc4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/Linear algebra/Design_And_Implementation.mtc5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/Linear algebra/Design_And_Implementation.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/Linear algebra/Design_And_Implementation.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/Linear algebra/Design_And_Implementation.tex.undo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/Linear algebra/Design_And_Implementation.toc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/Linear algebra/Linear algebra.lpr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/Linear algebra/chap1/chap1.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/Linear algebra/chap1/chap1.tex.undo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/Linear algebra/chap2/chap2.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/Linear algebra/chap2/chap2.tex.undo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/Linear algebra/chap3/chap3.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/Linear algebra/chap3/chap3.tex.undo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/Linear algebra/chap4/chap4.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/Linear algebra/chap4/chap4.tex.undo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/Linear algebra/chap4/projection1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/Linear algebra/chap4/projection2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/Linear algebra/chap4/projection3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/Linear algebra/chap4/reflection.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/epstest1/epstest1.lpr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/epstest1/figure.eps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/epstest1/refs.bib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/epstest1/simpleConference.sty" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/epstest1/templateEPS.dvi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/epstest1/templateEPS.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/epstest1/templateEPS.ps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/epstest1/templateEPS.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/functions/Copy of build.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/functions/build.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/functions/chap1/chap1.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/functions/chap1/chap1.tex.undo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/functions/chap2/chap2.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/functions/chap2/chap2.tex.undo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/functions/chap2/erf.eps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/functions/chap2/error_function.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/functions/chap2/errorcfunction.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/functions/chap2/errorfunction.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/functions/chap3/chap3.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/functions/chap3/chap3.tex.undo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/functions/chap3/gamma.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/functions/chap3/gammap.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/functions/chap3/gammaq.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/functions/chap3/loggamma.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/functions/chap4/beta.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/functions/chap4/chap4.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/functions/chap4/chap4.tex.undo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/functions/chap4/inbeta.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/functions/functions.dvi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/functions/functions.lpr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/functions/functions.maf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/functions/functions.mtc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/functions/functions.mtc0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/functions/functions.mtc1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/functions/functions.mtc2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/functions/functions.mtc3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/functions/functions.mtc4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/functions/functions.mtc5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/functions/functions.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/functions/functions.ps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/functions/functions.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/functions/functions.tex.undo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/functions/functions.toc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/term structure/build.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/term structure/chap1/chap1.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/term structure/chap1/chap1.tex.undo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/term structure/chap2/chap2.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/term structure/chap2/chap2.tex.undo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/term structure/chap2/erf.eps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/term structure/chap2/error_function.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/term structure/chap2/errorcfunction.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/term structure/chap2/errorfunction.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/term structure/chap3/chap3.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/term structure/chap3/chap3.tex.undo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/term structure/chap3/gamma.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/term structure/chap3/gammap.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/term structure/chap3/gammaq.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/term structure/chap3/loggamma.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/term structure/chap4/beta.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/term structure/chap4/chap4.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/term structure/chap4/chap4.tex.undo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/term structure/chap4/inbeta.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/term structure/term_structure.dvi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/term structure/term_structure.lpr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/term structure/term_structure.maf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/term structure/term_structure.mtc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/term structure/term_structure.mtc0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/term structure/term_structure.mtc1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/term structure/term_structure.mtc2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/term structure/term_structure.mtc3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/term structure/term_structure.mtc4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/term structure/term_structure.mtc5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/term structure/term_structure.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-math-book/term structure/term_structure.toc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem_solution/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem_solution/docs/How to draw these (closed contours) diagrams using TikZ or PSTricks - SagoDEV.com.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/docs/How to draw these (closed contours) diagrams using TikZ or PSTricks - SagoDEV.com.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem_solution/docs/WeChat Image_20211012223824.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/docs/WeChat Image_20211012223824.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem_solution/docs/cross referencing - How to reference a boxed theorem.png" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/docs/cross referencing - How to reference a boxed theorem.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem_solution/docs/morelull-sample.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/docs/morelull-sample.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem_solution/docs/top_bar_t2.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/docs/top_bar_t2.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem_solution/docs/top_bar_t2.tex" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/docs/top_bar_t2.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem_solution/docs/top_bar_template.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/docs/top_bar_template.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem_solution/docs/top_bar_template.tex" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/docs/top_bar_template.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem_solution/out/curved_title_test.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/out/curved_title_test.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem_solution/out/curved_title_test1.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/out/curved_title_test1.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem_solution/out/example_fractal.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/out/example_fractal.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem_solution/out/example_geometry.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/out/example_geometry.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem_solution/out/fractal_line_test.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/out/fractal_line_test.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem_solution/out/fractal_line_test1.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/out/fractal_line_test1.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem_solution/out/fractal_triangle_test1.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/out/fractal_triangle_test1.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem_solution/out/fractal_triangle_test2.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/out/fractal_triangle_test2.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem_solution/out/full_title.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/out/full_title.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem_solution/out/pic_box_test1.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/out/pic_box_test1.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem_solution/out/pic_box_test2.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/out/pic_box_test2.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem_solution/out/pic_box_test3.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/out/pic_box_test3.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem_solution/out/pic_box_test4.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/out/pic_box_test4.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem_solution/out/pic_box_test5.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/out/pic_box_test5.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem_solution/out/problem_template.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/out/problem_template.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem_solution/out/reference_test.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/out/reference_test.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem_solution/out/simple_box_test.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/out/simple_box_test.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem_solution/out/source_code_test.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/out/source_code_test.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem_solution/out/style_test.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/out/style_test.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem_solution/out/text_color_box_test.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/out/text_color_box_test.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem_solution/out/title_centered_test.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/out/title_centered_test.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem_solution/out/triangle_fractal_test.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/out/triangle_fractal_test.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem_solution/src/example_fractal.tex" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/src/example_fractal.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem_solution/src/example_geometry.tex" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/src/example_geometry.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem_solution/src/exercise.cls" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/src/simple_doc.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem_solution/src/exercise.sty" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/src/simple_note.sty" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem_solution/test/box_pic_title/pic_box_test1.tex" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/test/box_pic_title/pic_box_test1.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem_solution/test/box_pic_title/pic_box_test2.tex" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/test/box_pic_title/pic_box_test2.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem_solution/test/box_pic_title/pic_box_test3.tex" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/test/box_pic_title/pic_box_test3.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem_solution/test/box_pic_title/pic_box_test4.tex" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/test/box_pic_title/pic_box_test4.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem_solution/test/box_pic_title/pic_box_test5.tex" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/test/box_pic_title/pic_box_test5.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem_solution/test/curved_title_test.tex" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/test/curved_title_test.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem_solution/test/curved_title_test1.tex" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/test/curved_title_test1.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem_solution/test/full_title.tex" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/test/full_title.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem_solution/test/geometry/fractal_line_test.tex" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/test/geometry/fractal_line_test.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem_solution/test/geometry/fractal_line_test1.tex" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/test/geometry/fractal_line_test1.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem_solution/test/geometry/fractal_triangle_test1.tex" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/test/geometry/fractal_triangle_test1.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem_solution/test/geometry/fractal_triangle_test2.tex" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/test/geometry/fractal_triangle_test2.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem_solution/test/geometry/triangle_fractal_test.tex" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/test/geometry/triangle_fractal_test.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem_solution/test/panda.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/test/panda.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem_solution/test/problem_template.tex" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/test/problem_template.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem_solution/test/reference_test.tex" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/test/reference_test.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem_solution/test/simple_box_test.tex" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/test/simple_box_test.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem_solution/test/source_code_test.tex" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/test/source_code_test.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem_solution/test/style_test.tex" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/test/style_test.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem_solution/test/tables/period_alignment.tex" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/test/tables/period_alignment.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem_solution/test/text_color_box_test.tex" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/test/text_color_box_test.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem_solution/test/title_centered_test.tex" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/test/title_centered_test.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/docs/5308.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/docs/5308.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/docs/clustering the interstellar medium/8512.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/docs/clustering the interstellar medium/8512.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/docs/clustering the interstellar medium/Pictures/Histogram-halpha1.png" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/docs/clustering the interstellar medium/Pictures/Histogram-halpha1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/docs/clustering the interstellar medium/Pictures/Histogram-iband3.png" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/docs/clustering the interstellar medium/Pictures/Histogram-iband3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/docs/clustering the interstellar medium/Pictures/Histogram-uvwide-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/docs/clustering the interstellar medium/Pictures/Histogram-uvwide-2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/docs/clustering the interstellar medium/Pictures/Histogram_train2.png" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/docs/clustering the interstellar medium/Pictures/Histogram_train2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/docs/clustering the interstellar medium/Pictures/Screenshot.png" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/docs/clustering the interstellar medium/Pictures/Screenshot.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/docs/clustering the interstellar medium/Pictures/Small-train2.png" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/docs/clustering the interstellar medium/Pictures/Small-train2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/docs/clustering the interstellar medium/Pictures/Small-train3-matrix.png" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/docs/clustering the interstellar medium/Pictures/Small-train3-matrix.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/docs/clustering the interstellar medium/Pictures/Small-train3.png" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/docs/clustering the interstellar medium/Pictures/Small-train3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/docs/clustering the interstellar medium/Pictures/Small-train6.png" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/docs/clustering the interstellar medium/Pictures/Small-train6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/docs/clustering the interstellar medium/Pictures/band1.png" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/docs/clustering the interstellar medium/Pictures/band1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/docs/clustering the interstellar medium/Pictures/boat.png" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/docs/clustering the interstellar medium/Pictures/boat.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/docs/clustering the interstellar medium/Pictures/combo.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/docs/clustering the interstellar medium/Pictures/combo.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/docs/clustering the interstellar medium/Pictures/conv.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/docs/clustering the interstellar medium/Pictures/conv.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/docs/clustering the interstellar medium/Pictures/data.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/docs/clustering the interstellar medium/Pictures/data.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/docs/clustering the interstellar medium/Pictures/esahubble.png" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/docs/clustering the interstellar medium/Pictures/esahubble.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/docs/clustering the interstellar medium/Pictures/fig_PCA.png" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/docs/clustering the interstellar medium/Pictures/fig_PCA.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/docs/clustering the interstellar medium/Pictures/ha-gray-conv-crp.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/docs/clustering the interstellar medium/Pictures/ha-gray-conv-crp.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/docs/clustering the interstellar medium/Pictures/head1.png" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/docs/clustering the interstellar medium/Pictures/head1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/docs/clustering the interstellar medium/Pictures/head2.png" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/docs/clustering the interstellar medium/Pictures/head2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/docs/clustering the interstellar medium/Pictures/matri6-01.png" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/docs/clustering the interstellar medium/Pictures/matri6-01.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/docs/clustering the interstellar medium/Pictures/matrix2-01.png" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/docs/clustering the interstellar medium/Pictures/matrix2-01.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/docs/clustering the interstellar medium/Pictures/nine.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/docs/clustering the interstellar medium/Pictures/nine.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/docs/clustering the interstellar medium/Pictures/nphoton.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/docs/clustering the interstellar medium/Pictures/nphoton.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/docs/clustering the interstellar medium/Pictures/small_ex.png" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/docs/clustering the interstellar medium/Pictures/small_ex.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/docs/clustering the interstellar medium/Pictures/uno.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/docs/clustering the interstellar medium/Pictures/uno.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/docs/clustering the interstellar medium/StyleInd.ist" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/docs/clustering the interstellar medium/StyleInd.ist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/docs/clustering the interstellar medium/bibliography.bib" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/docs/clustering the interstellar medium/bibliography.bib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/docs/clustering the interstellar medium/main.tex" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/docs/clustering the interstellar medium/main.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/docs/clustering the interstellar medium/structure.tex" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/docs/clustering the interstellar medium/structure.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/docs/clustering the interstellar medium/url.txt" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/docs/clustering the interstellar medium/url.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/docs/fancy-analysis-report/analysis-orax.sty" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/docs/fancy-analysis-report/analysis-orax.sty" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/docs/fancy-analysis-report/fancy-analysis-report.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/docs/fancy-analysis-report/fancy-analysis-report.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/docs/fancy-analysis-report/figures/banner.png" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/docs/fancy-analysis-report/figures/banner.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/docs/fancy-analysis-report/figures/figure1.png" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/docs/fancy-analysis-report/figures/figure1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/docs/fancy-analysis-report/figures/header_corner.png" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/docs/fancy-analysis-report/figures/header_corner.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/docs/fancy-analysis-report/main.tex" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/docs/fancy-analysis-report/main.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/docs/fancy-analysis-report/url.txt" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/docs/fancy-analysis-report/url.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/docs/template-centralesupelec-stage.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/docs/template-centralesupelec-stage.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/out/bar_test.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/out/bar_test.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/out/bar_test1.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/out/bar_test1.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/out/bar_test2.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/out/bar_test2.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/out/bar_test3.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/out/bar_test3.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/out/example_report.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/out/example_report.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/out/report_test.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/out/report_test.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/out/report_test1.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/out/report_test1.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/out/simple_report_test.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/out/simple_report_test.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/src/images/banner.png" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/src/images/banner.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/src/images/esahubble.png" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/src/images/esahubble.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/src/images/figure1.png" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/src/images/figure1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/src/images/header_corner.png" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/src/images/header_corner.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/src/images/left_header_corner.png" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/src/images/left_header_corner.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/src/images/moon_deer.png" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/src/images/moon_deer.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/src/images/moon_deer1.png" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/src/images/moon_deer1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/src/images/panda.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/src/images/panda.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/src/images/right_header_corner.png" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/src/images/right_header_corner.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/src/simple_report_style.sty" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/src/simple_report.sty" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/src/simple_report_test.tex" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/src/simple_report_test.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/test/bar_test.tex" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/test/bar_test.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/test/bar_test1.tex" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/test/bar_test1.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/test/bar_test2.tex" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/test/bar_test2.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/test/bar_test3.tex" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/test/bar_test3.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/test/report_style.sty" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/test/report_style.sty" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/test/report_template.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/test/report_template.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/test/report_template.tex" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/test/report_template.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walkthrough/images/mesh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/walkthrough/images/universe.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/walkthrough/overleaf_30min.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/walkthrough/overleaf_30min.tex" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,7 +335,7 @@
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
   </component>
-  <component name="ProjectId" id="1ztN6eiFZAX0fQuBG1Tc3uMxpZP" />
+  <component name="ProjectId" id="20HApyYhLNZjEetw1aAka7EvhW3" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="autoscrollToSource" value="true" />
@@ -30,28 +346,14 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/problem_solution/src/block_test" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/latex-playgroud" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.33448276" />
-    <property name="settings.editor.selected.configurable" value="TexifyConfigurable" />
+    <property name="scala_project_settings_configurable.last_selected_tab_index" value="0" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.folding" />
     <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\00dev\math\math-latex-templates\problem_solution\src\block_test" />
-      <recent name="D:\00dev\math\math-latex-templates\report\src\images" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\00dev\math\math-latex-templates\report\test" />
-      <recent name="D:\00dev\math\math-latex-templates\problem_solution\test" />
-      <recent name="D:\00dev\math\math-latex-templates\problem_solution\test\box_pic_title" />
-      <recent name="D:\00dev\math\math-latex-templates\report\src\style_test" />
-      <recent name="D:\00dev\math\math-latex-templates\problem_solution\src\block_test" />
-    </key>
   </component>
   <component name="RunManager" selected="LaTeX.simple_booklet_example">
     <configuration default="true" type="Applet" factoryName="Applet">
@@ -88,7 +390,7 @@
         <envs />
         <main-file />
         <output-path>{projectDir}/out</output-path>
-        <auxil-path>{projectDir}/auxil</auxil-path>
+        <auxil-path>{projectDir}/out</auxil-path>
         <compile-twice>false</compile-twice>
         <output-format>PDF</output-format>
         <latex-distribution>PROJECT_SDK</latex-distribution>
@@ -107,9 +409,9 @@
         <viewer-command />
         <compiler-arguments />
         <envs />
-        <main-file>$PROJECT_DIR$/problem_solution/src/example_fractal.tex</main-file>
-        <output-path>$PROJECT_DIR$/problem_solution/out</output-path>
-        <auxil-path>{projectDir}/auxil</auxil-path>
+        <main-file>$PROJECT_DIR$/simple-note/src/example_fractal.tex</main-file>
+        <output-path>$PROJECT_DIR$/simple-note/out</output-path>
+        <auxil-path>{projectDir}/out</auxil-path>
         <compile-twice>false</compile-twice>
         <output-format>PDF</output-format>
         <latex-distribution>PROJECT_SDK</latex-distribution>
@@ -128,9 +430,9 @@
         <viewer-command />
         <compiler-arguments />
         <envs />
-        <main-file>$PROJECT_DIR$/problem_solution/src/example_geometry.tex</main-file>
-        <output-path>$PROJECT_DIR$/problem_solution/out</output-path>
-        <auxil-path>{projectDir}/auxil</auxil-path>
+        <main-file>$PROJECT_DIR$/simple-note/src/example_geometry.tex</main-file>
+        <output-path>$PROJECT_DIR$/simple-note/out</output-path>
+        <auxil-path>{projectDir}/out</auxil-path>
         <compile-twice>false</compile-twice>
         <output-format>PDF</output-format>
         <latex-distribution>PROJECT_SDK</latex-distribution>
@@ -149,9 +451,9 @@
         <viewer-command />
         <compiler-arguments />
         <envs />
-        <main-file>$PROJECT_DIR$/book/src/simple_booklet_example.tex</main-file>
-        <output-path>$PROJECT_DIR$/book/out</output-path>
-        <auxil-path>{projectDir}/auxil</auxil-path>
+        <main-file>$PROJECT_DIR$/simple-booklet/src/simple_booklet_example.tex</main-file>
+        <output-path>$PROJECT_DIR$/simple-booklet/out</output-path>
+        <auxil-path>{projectDir}/out</auxil-path>
         <compile-twice>false</compile-twice>
         <output-format>PDF</output-format>
         <latex-distribution>PROJECT_SDK</latex-distribution>
@@ -170,9 +472,9 @@
         <viewer-command />
         <compiler-arguments />
         <envs />
-        <main-file>$PROJECT_DIR$/report/src/simple_report_test.tex</main-file>
-        <output-path>$PROJECT_DIR$/report/out</output-path>
-        <auxil-path>{projectDir}/auxil</auxil-path>
+        <main-file>$PROJECT_DIR$/simple-report/src/simple_report_test.tex</main-file>
+        <output-path>$PROJECT_DIR$/simple-report/out</output-path>
+        <auxil-path>{projectDir}/out</auxil-path>
         <compile-twice>false</compile-twice>
         <output-format>PDF</output-format>
         <latex-distribution>PROJECT_SDK</latex-distribution>
@@ -191,9 +493,9 @@
         <viewer-command />
         <compiler-arguments />
         <envs />
-        <main-file>$PROJECT_DIR$/problem_solution/test/text_color_box_test.tex</main-file>
-        <output-path>$PROJECT_DIR$/problem_solution/out</output-path>
-        <auxil-path>{projectDir}/auxil</auxil-path>
+        <main-file>$PROJECT_DIR$/simple-note/test/text_color_box_test.tex</main-file>
+        <output-path>$PROJECT_DIR$/simple-note/out</output-path>
+        <auxil-path>{projectDir}/out</auxil-path>
         <compile-twice>false</compile-twice>
         <output-format>PDF</output-format>
         <latex-distribution>PROJECT_SDK</latex-distribution>
@@ -212,13 +514,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <list>
-      <item itemvalue="LaTeX.simple_booklet_example" />
-      <item itemvalue="LaTeX.example_fractal" />
-      <item itemvalue="LaTeX.example_geometry" />
-      <item itemvalue="LaTeX.text_color_box_test" />
-      <item itemvalue="LaTeX.simple_report_test" />
-    </list>
     <recent_temporary>
       <list>
         <item itemvalue="LaTeX.simple_booklet_example" />
@@ -232,33 +527,13 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="f65338dd-1206-4d34-b4d7-0552c263f82f" name="Changes" comment="" />
-      <created>1634963262910</created>
+      <changelist id="7eeea94d-a4da-497b-bafd-b960b5e8f757" name="Changes" comment="" />
+      <created>1635691327296</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1634963262910</updated>
-      <workItem from="1634963267514" duration="1671000" />
-      <workItem from="1634966631840" duration="984000" />
-      <workItem from="1634967747221" duration="1621000" />
-      <workItem from="1634969698030" duration="170978000" />
-      <workItem from="1635485038098" duration="2057000" />
-      <workItem from="1635521269517" duration="83752000" />
+      <updated>1635691327296</updated>
+      <workItem from="1635691329275" duration="2732000" />
     </task>
-    <task id="LOCAL-00001" summary="1.1">
-      <created>1635624171373</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1635624171373</updated>
-    </task>
-    <task id="LOCAL-00002" summary="working now">
-      <created>1635624984990</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1635624984990</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -266,9 +541,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="1.1" />
-    <MESSAGE value="working now" />
-    <option name="LAST_COMMIT_MESSAGE" value="working now" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/book.iml" filepath="$PROJECT_DIR$/.idea/book.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/latex-playgroud.iml" filepath="$PROJECT_DIR$/.idea/latex-playgroud.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/problem_solution.iml" filepath="$PROJECT_DIR$/.idea/problem_solution.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/report.iml" filepath="$PROJECT_DIR$/.idea/report.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/math-latex-templates.iml" filepath="$PROJECT_DIR$/.idea/math-latex-templates.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/simple-booklet.iml" filepath="$PROJECT_DIR$/.idea/simple-booklet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/simple-note.iml" filepath="$PROJECT_DIR$/.idea/simple-note.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/simple-report.iml" filepath="$PROJECT_DIR$/.idea/simple-report.iml" />
     </modules>
   </component>
 </project>
