@@ -14,3 +14,5 @@ The template has the following:
     - card style
     - picture title
     - no need for source code block changes, use it as is.
+
+Examples are [geometry](out/example_geometry.pdf) and [fractal](out/example_fractal.pdf).

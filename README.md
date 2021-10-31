@@ -2,18 +2,19 @@
 
 Most publishers, journals, and academies have their own templates. The 
 templates here are mainly for casual usages outside those scopes.
-- a problem-solving template. Given a problem, spill out the solution.
+- a note template. Mainly used for problem-solution cases.
 - a report template. This is a little lengthy article/report for school 
-  projects, and others. Usually, it spills over several sections. I think more
-  than 5 sections is too much. Break it up if it's the case. 20 pages or less
-  is good.
+  projects, technical notes, and others. Usually, it spills over several 
+  sections. I think more than 5 sections is too much. Break it up if it's 
+  the case. 20 pages or fewer is good.
 - a booklet template. It has chapters and sections. 60 pages or fewer are good.
 
 Other options are Markdown, MS Word. But TeX is the king.
 
-Concentrate on content with minimal formatting.
+The goal is to balance the convenience between content writing and style
+formatting.
 
-Suitable for nonstandard cases, such as:
+Suitable for quick write-ups, such as:
 - ad hoc questions
 - very specific tasks, such as a particular algorithm, e.g., KMP
 - homework
@@ -27,6 +28,20 @@ When writing or almost doing anything, we need to think about:
 - Are we doing it in the right place?
 - Are we doing it in the most efficient way?
 
+Templates:
+- [simple note](simple-note/README.md)
+- [simple report](simple-report/README.md)
+- [simple booklet](simple-booklet/README.md)
+
+Implementation Consideration:
+- Minimal entanglement between content and formatting
+- tag formatting with purpose, not implementation details
+- pass in parameters if there could be more instances, use global for singleton 
+  instance. For example, front page is singleton and text boxes are not. So we
+  could use globals for front page color customization and use pass-in 
+  parameters for text box color customization.
+
+Interesting links are listed below.
 
 ### Fancy widgets
 

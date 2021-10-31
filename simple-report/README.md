@@ -21,6 +21,9 @@ some test
 \section{SE 1}
 some test 2.
 ```
+
+[Example](out/simple_report_example.pdf) shows the usage.
+
 For more colors see: https://material.io/design/color/the-color-system.html#tools-for-picking-colors
 
 

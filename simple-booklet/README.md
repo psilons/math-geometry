@@ -1,6 +1,14 @@
 # Booklet
 
-For full size book templates, check these 
+The booklet is a scale-down version of the book template. It has the following 
+features, showed in [pdf](out/simple_booklet_example.pdf)
+- a front page with a picture, a stripe in the middle for the book title and
+  author(s)
+- chapters can start on the left side and remove empty pages.
+- customized chapter headers
+
+
+### Full Size Book Templates 
 - https://www.overleaf.com/articles/modele-lineaire-a-effets-mixtes/dbxztcmqxpkd
 - blue: https://www.overleaf.com/latex/templates/fancybook-designeditorial/cxbxbgnghpfm
 - https://www.overleaf.com/articles/cpsc-542f-notes/cvptzcpvsrpn
@@ -10,7 +18,6 @@ For full size book templates, check these
 - thesis template: https://bitbucket.org/amiede/classicthesis/src/master/
 
 ### References
-
 - https://tex.stackexchange.com/questions/23477/fancy-chapter-headings
 
 
