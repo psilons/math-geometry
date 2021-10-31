@@ -23,12 +23,7 @@
 % document class, you can base your class on an existing document class.
 \LoadClass{article}%
 
-\RequirePackage{geometry}
-\newgeometry{vmargin={25mm, 30mm}, hmargin={15mm,15mm}}   % set page margins
-
-\RequirePackage{fancyhdr}
-\RequirePackage{lastpage}
-\pagestyle{fancy} % these 3 lines set the footer to the middle with total page #.
+\RequirePackage[left=2.5cm,right=2.5cm,top=3cm,bottom=3cm]{geometry}   % set page margins
 
 \setlength\parindent{0pt} % no indent for paragraphs
 

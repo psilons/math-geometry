@@ -72,6 +72,11 @@ When writing or almost doing anything, we need to think about:
 - book template: https://www.overleaf.com/latex/templates/the-legrand-orange-book-template-english/jtctyfmnpppc
 
 
+### Full Size Book Templates
+
+- https://www.overleaf.com/articles/modele-lineaire-a-effets-mixtes/dbxztcmqxpkd
+- blue: https://www.overleaf.com/latex/templates/fancybook-designeditorial/cxbxbgnghpfm
+- orange: https://www.overleaf.com/latex/templates/the-legrand-orange-book-template-english/jtctyfmnpppc
 ### Others
 
 - https://anneurai.net/2017/10/18/thesis-formatting-in-latex/
