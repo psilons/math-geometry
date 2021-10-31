@@ -75,3 +75,5 @@ When writing or almost doing anything, we need to think about:
 
 https://anneurai.net/2017/10/18/thesis-formatting-in-latex/
 https://medium.com/@primogodec/how-did-i-design-my-cv-in-latex-bb4e5cc9f5fd
+flow chart: https://tex.stackexchange.com/questions/513658/changing-shapes-and-colors-of-blocks-also-redirecting-arrows-properly
+

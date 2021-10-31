@@ -7,37 +7,23 @@
 \definecolor{bannercolor}{rgb}{0.3922,0.5843,0.9294}
 \definecolor{nicered}{rgb}{.647,.129,.149}
 
-\linespread{1.2} % make lines less crowded
+% may use default color or overwrite it
+\colorlet{chaptercolor}{MaterialGreen800}
+\colorlet{toccolor}{MaterialPurple800}
 
 \begin{document}
 
 %----------------------------------------------------------------------------------------
 %	TITLE PAGE
 %----------------------------------------------------------------------------------------
-    \title{Clustering the interstellar medium}
-
-    \begingroup
-    \thispagestyle{empty}
-	\AddToShipoutPicture*{\put(0,0){\includegraphics[scale=3]{cat1}}} % Image background
-
-    \vspace*{9.75cm} % height above strip
-	\hspace*{-3.5cm} % left starting for strip
-	%\put(0 mm, 142 mm) % copied from https://www.overleaf.com/latex/templates/matnat-compendium/xbfgbfgzpcxz
-	%{ % Given a picture, we overlay a banner, rather than modifying the picture itself
-		\begin{tikzpicture}%[scale = 1mm]
-			\filldraw[bannercolor, opacity = 0.3]
-			(0, 0) rectangle (\paperwidth + 10, 9.5); % length and width of strip
-		\end{tikzpicture}
-	%}
-	\centering
-	\vspace*{-9cm} % go back to the top of strip to write
-	\par\normalfont\fontsize{35}{35}\sffamily\selectfont
-	\textbf{Do Cats Always Land on Their Feet?}\\
-	{\LARGE That's how they have 9 lives!}\par % Book title
-	\vspace*{1cm}
-	{\Huge Flying Cats}\par % Author name
-    \endgroup
-
+    % image name, stirp color, strip opacity
+    \begin{simplefrontpage}{cat1}{MaterialBlue400}{0.3}
+        \par\normalfont\fontsize{35}{35}\sffamily\selectfont
+        \textbf{Do Cats Always Land on Their Feet?}\\
+        {\LARGE That's how they have 9 lives!}\par % Book title
+        \vspace*{1cm}
+        {\Huge Flying Cats}\par % Author name
+    \end{simplefrontpage}
 %----------------------------------------------------------------------------------------
 %	COPYRIGHT PAGE
 %----------------------------------------------------------------------------------------
@@ -81,7 +67,9 @@
     \pagestyle{fancy} % Enable headers and footers again
 
     \include{chapter1/chapter1}
+    \let\cleardoublepage\clearpage
 
     \include{chapter2/chapter2}
+    \let\cleardoublepage\clearpage
 
 \end{document}
