@@ -20,21 +20,17 @@
     \thispagestyle{empty}
 	\AddToShipoutPicture*{\put(0,0){\includegraphics[scale=3]{cat1}}} % Image background
 
-    \vspace*{3.75cm}
-	\hspace*{-4cm}
+    \vspace*{9.75cm} % height above strip
+	\hspace*{-3.5cm} % left starting for strip
 	%\put(0 mm, 142 mm) % copied from https://www.overleaf.com/latex/templates/matnat-compendium/xbfgbfgzpcxz
 	%{ % Given a picture, we overlay a banner, rather than modifying the picture itself
-		\begin{tikzpicture}[scale = 1mm]
-			%\filldraw[white, opacity = 0.8]
-			%(0, 2.5) rectangle (\paperwidth, 3.73);
-			%\filldraw[white, opacity = 0.6]
-			%(0, 0) rectangle (\paperwidth, 2.5);
+		\begin{tikzpicture}%[scale = 1mm]
 			\filldraw[bannercolor, opacity = 0.3]
-			(0, 0) rectangle (\paperwidth, 3.5);
+			(0, 0) rectangle (\paperwidth + 10, 9.5); % length and width of strip
 		\end{tikzpicture}
 	%}
 	\centering
-	\vspace*{-9cm}
+	\vspace*{-9cm} % go back to the top of strip to write
 	\par\normalfont\fontsize{35}{35}\sffamily\selectfont
 	\textbf{Do Cats Always Land on Their Feet?}\\
 	{\LARGE That's how they have 9 lives!}\par % Book title
