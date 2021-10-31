@@ -1,0 +1,70 @@
+%! Package = PACKAGE_NAME
+%! Author = Wonderland
+%! Date = 10/30/2021
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{simple_booklet_style}[simple booklet Package]
+
+
+
+% set page
+\RequirePackage[a4paper, inner=2cm, outer=3cm, top=3cm, bottom=3cm, bindingoffset=0.5cm]{geometry}
+\RequirePackage[english]{babel} % language
+
+\RequirePackage{graphicx} % load image etc
+\RequirePackage{tikz} % drawing
+\RequirePackage{eso-pic} % front page
+
+\RequirePackage{xcolor}
+\RequirePackage{xcolor-material}
+
+
+
+\RequirePackage{hyperref} % toc has hyperlinks
+\hypersetup{ % it doesn't work near toc, has to be global in here.
+    colorlinks=true,
+    linkcolor=MaterialPink700,
+    urlcolor=MaterialPink700,
+    filecolor=MaterialGreen,
+    pdfborder={0 0 0},
+}
+
+\RequirePackage{etoc}
+
+\RequirePackage{fancyhdr} % headers and foots
+\pagestyle{fancy} %
+
+\RequirePackage{titlesec}
+
+\usepackage[T1]{fontenc}
+
+
+%--------------------------------------------------------------------------------------------------
+% headers
+%--------------------------------------------------------------------------------------------------
+\fancyhf{}
+\fancyhead[LO]{\nouppercase{\rightmark}}
+\fancyhead[RE]{\nouppercase{\leftmark}}
+\fancyhead[LE,RO]{\thepage}
+
+%--------------------------------------------------------------------------------------------------
+% Chapter Titles
+%--------------------------------------------------------------------------------------------------
+\titleclass{\chapter}{top}
+
+% https://blog.csdn.net/wkd22775/article/details/51784770
+% https://www.jianshu.com/p/d7848f815e5f
+% https://www.cnblogs.com/Arago/p/5974181.html
+\titleformat{\chapter}[display]
+{\filleft\bfseries\color{nicered}}
+{%\fontsize{72}{75}\selectfont\color{nicered}\thechapter
+    \flushright
+    \rotatebox{90}{\fontsize{15}{24}\selectfont CHAPTER}
+    \begin{tikzpicture}
+      \draw[fill,color=nicered] (0,0) rectangle (3cm,3cm);
+      \draw[color=white] (1.5cm,1.5cm) node { \fontsize{72}{75}\selectfont\color{white}\thechapter };
+    \end{tikzpicture}
+}
+{10pt} % space bewteen chapter # and title
+{\LARGE}%
+
