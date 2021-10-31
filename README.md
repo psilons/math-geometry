@@ -29,6 +29,7 @@ When writing or almost doing anything, we need to think about:
 
 
 ### Fancy widgets
+
 - https://newbedev.com/counter-for-tcolorbox
 - fancy headers: https://latex-ninja.com/2018/12/11/fancy-headers-and-final-footers-in-latex/
 - https://www.overleaf.com/latex/templates/morelull-sample/sfrmdxnrnbbn
@@ -73,7 +74,7 @@ When writing or almost doing anything, we need to think about:
 
 ### Others
 
-https://anneurai.net/2017/10/18/thesis-formatting-in-latex/
-https://medium.com/@primogodec/how-did-i-design-my-cv-in-latex-bb4e5cc9f5fd
-flow chart: https://tex.stackexchange.com/questions/513658/changing-shapes-and-colors-of-blocks-also-redirecting-arrows-properly
-
+- https://anneurai.net/2017/10/18/thesis-formatting-in-latex/
+- https://medium.com/@primogodec/how-did-i-design-my-cv-in-latex-bb4e5cc9f5fd
+- flow chart: https://tex.stackexchange.com/questions/513658/changing-shapes-and-colors-of-blocks-also-redirecting-arrows-properly
+- https://bitbucket.org/amiede/classicthesis/src/master/
