@@ -27,5 +27,10 @@ some test 2.
 For more colors see: https://material.io/design/color/the-color-system.html#tools-for-picking-colors
 
 
+### References
 
+- http://www.uweziegenhagen.de/?p=2224
+- https://tex.stackexchange.com/questions/40034/giving-headlines-a-background-color-spanning-across-the-entire-typearea
+- https://texblog.org/2013/07/16/how-to-add-extra-space-to-the-table-of-contents-list-of-figures-and-tables/
+- https://tex.stackexchange.com/questions/123952/increasing-spacing-between-section-number-and-title-in-the-table-of-contents
 

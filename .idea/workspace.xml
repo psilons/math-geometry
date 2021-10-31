@@ -7,54 +7,11 @@
     <list default="true" id="7eeea94d-a4da-497b-bafd-b960b5e8f757" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex-playgroud/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/latex-playgroud/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/simple-booklet/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/simple-booklet/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-booklet/out/chapter_title_test1.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-booklet/out/chapter_title_test2.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-booklet/out/chapter_title_test3.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-booklet/out/chapter_title_test4.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-booklet/out/chapter_title_test5.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-booklet/out/chapter_title_test6.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-booklet/out/chapter_title_test7.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-booklet/out/chapter_title_test8.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-booklet/out/chapter_title_test9.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-booklet/out/main.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-booklet/out/simple_booklet_example.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-booklet/out/simple_booklet_example.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-booklet/test/chapter_title_standard.tex" beforeDir="false" afterPath="$PROJECT_DIR$/simple-booklet/test/chapter_title_standard.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/simple-note/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-note/out/curved_title_test.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-note/out/curved_title_test1.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-note/out/example_fractal.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/out/example_fractal.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-note/out/example_geometry.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/out/example_geometry.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-note/out/fractal_line_test.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-note/out/fractal_line_test1.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-note/out/fractal_triangle_test1.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-note/out/fractal_triangle_test2.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-note/out/full_title.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-note/out/pic_box_test1.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-note/out/pic_box_test2.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-note/out/pic_box_test3.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-note/out/pic_box_test4.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-note/out/pic_box_test5.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-note/out/problem_template.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-note/out/reference_test.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-note/out/simple_box_test.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-note/out/source_code_test.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-note/out/style_test.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-note/out/text_color_box_test.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/out/text_color_box_test.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-note/out/title_centered_test.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-note/out/triangle_fractal_test.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-note/src/example_fractal.tex" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/src/example_fractal.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-note/src/example_geometry.tex" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/src/example_geometry.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-note/test/text_color_box_test.tex" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/test/text_color_box_test.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/simple-report/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-report/out/bar_test.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-report/out/bar_test1.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-report/out/bar_test2.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-report/out/bar_test3.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-report/out/example_report.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-report/out/report_test.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-report/out/report_test1.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-report/out/simple_report_test.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-report/src/simple_report_test.tex" beforeDir="false" afterPath="$PROJECT_DIR$/simple-report/src/simple_report_example.tex" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -268,6 +225,7 @@
       <option name="presentableId" value="Default" />
       <updated>1635691327296</updated>
       <workItem from="1635691329275" duration="6056000" />
+      <workItem from="1635715069125" duration="3922000" />
     </task>
     <servers />
   </component>

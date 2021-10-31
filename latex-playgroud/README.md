@@ -27,6 +27,7 @@ Best editor:
 - know the main entry to run
 
 Eventually, I settle down with IntelliJ + Latex Plugin. 
+https://github.com/Hannah-Sten/TeXiFy-IDEA/wiki
 
 Latex generates DVI, PDF and other files. Here are some details:
 [Here](https://www.dickimaw-books.com/latex/novices/html/auxiliary.html) has a 
