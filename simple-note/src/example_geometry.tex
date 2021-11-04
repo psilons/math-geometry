@@ -82,24 +82,27 @@
 		\item set intersection of $CK$ and $BJ$ to $X$
 		\item draw line pass $X$ and parallel to $BC$, intersect with $AB$ at $G$, with $AC$ at $F$
 		\item draw perpendicular lines down from $G$ and $F$ to get $D$ and $E$
-	\end{enumerate}
+	\end{enumerate}\smallskip
 
 	To prove $DEFG$ is a square, since $\triangle BCX \sim \triangle BJK$,
 	\begin{equation}
 		\frac{CX}{JK} = \frac{BC}{BJ}
 		\quad \textrm{or} \quad \frac{EF}{AH} = \frac{BC}{BC + AH}
-		\quad \textrm{or} \quad EF = \frac{BC * AH}{BC + AH}
+		\quad \textrm{or} \quad EF = \frac{BC \cdot AH}{BC + AH}
 	\end{equation}
+
 	Since $\triangle ABC \sim \triangle AGF$,
 	\begin{equation}
 		\frac{GF}{BC} = \frac{AL}{AH} = \frac{AH - EF}{AH}
 	\end{equation}
+
 	Then we just need to verify that $GF = EF$. From $(2)$,
 	\begin{equation}
 		\begin{aligned}
-		GF &= BC * \frac{AH - EF}{AH} = \frac{BC}{AH} *(AH - EF)\\
-		   &= \frac{BC}{AH} * (AH - \frac{BC * AH}{BC + AH}), \quad from (1)\\
-		   &= \frac{BC}{AH} * \frac{AH^2}{BC + AH} = \frac{BC * AH}{BC + AH} = EF
+		GF &= BC \cdot \frac{AH - EF}{AH} = \frac{BC}{AH} \cdot (AH - EF)\\
+		   &= \frac{BC}{AH} \cdot (AH - \frac{BC * AH}{BC + AH}), \quad from (1)\\
+		   &= \frac{BC}{AH} \cdot \frac{AH^2}{BC + AH}\\
+		   &= \frac{BC \cdot AH}{BC + AH} = EF
 		\end{aligned}
 	\end{equation}
 

@@ -47,9 +47,10 @@ Interesting links are listed below.
 
 - https://aces.nmsu.edu/pubs/_c/C316/welcome.html
 - https://en.wikibooks.org/wiki/LaTeX/Colors
-- 
 
+### Fonts
 - https://www.ctan.org/pkg/fontawesome
+- 
 ### tkz euclid package
 
 - https://ctan.org/pkg/tkz-euclide?lang=en
@@ -85,6 +86,7 @@ Interesting links are listed below.
 - https://www.latextemplates.com/
 - Samiliar ideas: https://github.com/ElegantLaTeX/ElegantNote
 - https://awesomeopensource.com/project/MatNoble/LaTeX-Document
+- https://github.com/MartinThoma/LaTeX-examples/tree/master/documents
 
 ### Others
 
