@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7eeea94d-a4da-497b-bafd-b960b5e8f757" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/simple-note/src/example_geometry2.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-note/out/example_geometry.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/out/example_geometry.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-note/src/example_geometry.tex" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/src/example_geometry.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-note/out/example_geometry2.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/out/example_geometry2.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-note/src/example_geometry2.tex" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/src/example_geometry2.tex" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -225,7 +223,7 @@
       <workItem from="1635715069125" duration="3922000" />
       <workItem from="1635973685434" duration="969000" />
       <workItem from="1635992271208" duration="417000" />
-      <workItem from="1636162361454" duration="9182000" />
+      <workItem from="1636162361454" duration="9859000" />
     </task>
     <servers />
   </component>

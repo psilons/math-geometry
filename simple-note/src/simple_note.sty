@@ -25,7 +25,7 @@
         \renewcommand{\headrule}{\hbox to\headwidth{%
                 \color{#4}\leaders\hrule height \headrulewidth\hfill}}
 
-        \fancyfoot[C]{Page \thepage\ of~\pageref{LastPage}}
+        \fancyfoot[C]{Page \thepage\ of~\pageref*{LastPage}} % otherwise, hyperref kicks in
         \renewcommand{\footrulewidth}{0pt}% No footer rule
     }
 
