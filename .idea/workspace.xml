@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7eeea94d-a4da-497b-bafd-b960b5e8f757" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/simple-note/src/example_geometry2.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/simple-note/out/example_geometry.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/out/example_geometry.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/simple-note/src/example_geometry.tex" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/src/example_geometry.tex" afterDir="false" />
     </list>
@@ -44,7 +44,7 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.folding" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected="LaTeX.example_geometry">
+  <component name="RunManager" selected="LaTeX.example_geometry2">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -131,6 +131,27 @@
       </texify>
       <method v="2" />
     </configuration>
+    <configuration name="example_geometry2" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
+      <texify>
+        <compiler>LUALATEX</compiler>
+        <compiler-path />
+        <sumatra-path />
+        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
+        <viewer-command />
+        <compiler-arguments />
+        <envs />
+        <main-file>$PROJECT_DIR$/simple-note/src/example_geometry2.tex</main-file>
+        <output-path>$PROJECT_DIR$/simple-note/out</output-path>
+        <auxil-path>{projectDir}/out</auxil-path>
+        <compile-twice>false</compile-twice>
+        <output-format>PDF</output-format>
+        <latex-distribution>PROJECT_SDK</latex-distribution>
+        <has-been-run>true</has-been-run>
+        <bib-run-config>[]</bib-run-config>
+        <makeindex-run-config>[]</makeindex-run-config>
+      </texify>
+      <method v="2" />
+    </configuration>
     <configuration name="simple_booklet_example" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
       <texify>
         <compiler>LUALATEX</compiler>
@@ -142,27 +163,6 @@
         <envs />
         <main-file>$PROJECT_DIR$/simple-booklet/src/simple_booklet_example.tex</main-file>
         <output-path>$PROJECT_DIR$/simple-booklet/out</output-path>
-        <auxil-path>{projectDir}/out</auxil-path>
-        <compile-twice>false</compile-twice>
-        <output-format>PDF</output-format>
-        <latex-distribution>PROJECT_SDK</latex-distribution>
-        <has-been-run>true</has-been-run>
-        <bib-run-config>[]</bib-run-config>
-        <makeindex-run-config>[]</makeindex-run-config>
-      </texify>
-      <method v="2" />
-    </configuration>
-    <configuration name="simple_report_test" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
-      <texify>
-        <compiler>LUALATEX</compiler>
-        <compiler-path />
-        <sumatra-path />
-        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
-        <viewer-command />
-        <compiler-arguments />
-        <envs />
-        <main-file>$PROJECT_DIR$/simple-report/src/simple_report_example.tex</main-file>
-        <output-path>$PROJECT_DIR$/simple-report/out</output-path>
         <auxil-path>{projectDir}/out</auxil-path>
         <compile-twice>false</compile-twice>
         <output-format>PDF</output-format>
@@ -205,11 +205,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="LaTeX.example_geometry2" />
         <item itemvalue="LaTeX.example_geometry" />
         <item itemvalue="LaTeX.text_color_box_test" />
         <item itemvalue="LaTeX.simple_booklet_example" />
         <item itemvalue="LaTeX.example_fractal" />
-        <item itemvalue="LaTeX.simple_report_test" />
       </list>
     </recent_temporary>
   </component>
@@ -225,6 +225,7 @@
       <workItem from="1635715069125" duration="3922000" />
       <workItem from="1635973685434" duration="969000" />
       <workItem from="1635992271208" duration="417000" />
+      <workItem from="1636162361454" duration="9182000" />
     </task>
     <servers />
   </component>
