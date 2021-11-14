@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7eeea94d-a4da-497b-bafd-b960b5e8f757" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-note/out/example_geometry.pdf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/simple-note/out/example_geometry2.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/out/example_geometry2.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/simple-note/src/example_geometry2.tex" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/src/example_geometry2.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-note/src/simple_note.sty" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/src/simple_note.sty" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +143,7 @@
         <envs />
         <main-file>$PROJECT_DIR$/simple-note/src/example_geometry2.tex</main-file>
         <output-path>$PROJECT_DIR$/simple-note/out</output-path>
-        <auxil-path>{projectDir}/out</auxil-path>
+        <auxil-path>$PROJECT_DIR$/simple-note/out</auxil-path>
         <compile-twice>false</compile-twice>
         <output-format>PDF</output-format>
         <latex-distribution>PROJECT_SDK</latex-distribution>
@@ -224,11 +227,23 @@
       <workItem from="1635973685434" duration="969000" />
       <workItem from="1635992271208" duration="417000" />
       <workItem from="1636162361454" duration="9859000" />
+      <workItem from="1636822492940" duration="5885000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
