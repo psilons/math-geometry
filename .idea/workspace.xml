@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7eeea94d-a4da-497b-bafd-b960b5e8f757" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-note/out/example_geometry.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-note/out/example_geometry2.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/out/example_geometry2.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-note/src/example_geometry2.tex" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/src/example_geometry2.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/simple-note/src/simple_note.sty" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/src/simple_note.sty" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -228,6 +226,8 @@
       <workItem from="1635992271208" duration="417000" />
       <workItem from="1636162361454" duration="9859000" />
       <workItem from="1636822492940" duration="5885000" />
+      <workItem from="1637289730033" duration="1508000" />
+      <workItem from="1637557920298" duration="1315000" />
     </task>
     <servers />
   </component>

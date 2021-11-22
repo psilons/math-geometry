@@ -50,7 +50,20 @@ Interesting links are listed below.
 
 ### Fonts
 - https://www.ctan.org/pkg/fontawesome
-- 
+- https://tex.stackexchange.com/questions/59702/suggest-a-nice-font-family-for-my-basic-latex-template-text-and-math/59706
+- https://12000.org/my_notes/faq/LATEX/math_fonts/index.htm#x1-5600010
+- https://r2src.github.io/top10fonts/
+- https://tug.org/FontCatalogue/
+- https://tug.org/FontCatalogue/charterbt/
+- https://ramshankar.org/blog/posts/2021/a-new-year-a-new-font/
+
+\usepackage[T1]{fontenc}
+\usepackage{sourceserifpro}
+or
+\usepackage{XCharter}
+
+
+
 ### tkz euclid package
 
 - https://ctan.org/pkg/tkz-euclide?lang=en
@@ -93,4 +106,4 @@ Interesting links are listed below.
 - https://medium.com/@primogodec/how-did-i-design-my-cv-in-latex-bb4e5cc9f5fd
 - flow chart: https://tex.stackexchange.com/questions/513658/changing-shapes-and-colors-of-blocks-also-redirecting-arrows-properly
 - work with publishers: https://medium.com/modern-fortran/writing-a-technical-book-with-manning-in-2020-6ac3497500c9
-
+- https://filipbiljecki.com/latex.html
