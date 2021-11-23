@@ -5,9 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7eeea94d-a4da-497b-bafd-b960b5e8f757" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/docs/font_family.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-note/out/example_art.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-note/out/example_geometry.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-note/out/example_geometry3.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-note/src/example_art.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-note/src/example_geometry3.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-note/tkz-euclid.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-note/src/simple_note.sty" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/src/simple_note.sty" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,14 +42,19 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/latex-playgroud" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/docs" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="scala_project_settings_configurable.last_selected_tab_index" value="0" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.folding" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected="LaTeX.example_geometry2">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\00dev\math\math-latex-templates\docs" />
+    </key>
+  </component>
+  <component name="RunManager" selected="LaTeX.example_art">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -88,7 +99,7 @@
       </texify>
       <method v="2" />
     </configuration>
-    <configuration name="example_fractal" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
+    <configuration name="example_art" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
       <texify>
         <compiler>LUALATEX</compiler>
         <compiler-path />
@@ -97,7 +108,7 @@
         <viewer-command />
         <compiler-arguments />
         <envs />
-        <main-file>$PROJECT_DIR$/simple-note/src/example_fractal.tex</main-file>
+        <main-file>$PROJECT_DIR$/simple-note/src/example_art.tex</main-file>
         <output-path>$PROJECT_DIR$/simple-note/out</output-path>
         <auxil-path>{projectDir}/out</auxil-path>
         <compile-twice>false</compile-twice>
@@ -151,7 +162,7 @@
       </texify>
       <method v="2" />
     </configuration>
-    <configuration name="simple_booklet_example" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
+    <configuration name="example_geometry3" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
       <texify>
         <compiler>LUALATEX</compiler>
         <compiler-path />
@@ -160,8 +171,8 @@
         <viewer-command />
         <compiler-arguments />
         <envs />
-        <main-file>$PROJECT_DIR$/simple-booklet/src/simple_booklet_example.tex</main-file>
-        <output-path>$PROJECT_DIR$/simple-booklet/out</output-path>
+        <main-file>$PROJECT_DIR$/simple-note/src/example_geometry3.tex</main-file>
+        <output-path>$PROJECT_DIR$/simple-note/out</output-path>
         <auxil-path>{projectDir}/out</auxil-path>
         <compile-twice>false</compile-twice>
         <output-format>PDF</output-format>
@@ -204,11 +215,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="LaTeX.example_geometry2" />
+        <item itemvalue="LaTeX.example_art" />
+        <item itemvalue="LaTeX.example_geometry3" />
         <item itemvalue="LaTeX.example_geometry" />
+        <item itemvalue="LaTeX.example_geometry2" />
         <item itemvalue="LaTeX.text_color_box_test" />
-        <item itemvalue="LaTeX.simple_booklet_example" />
-        <item itemvalue="LaTeX.example_fractal" />
       </list>
     </recent_temporary>
   </component>
@@ -227,7 +238,8 @@
       <workItem from="1636162361454" duration="9859000" />
       <workItem from="1636822492940" duration="5885000" />
       <workItem from="1637289730033" duration="1508000" />
-      <workItem from="1637557920298" duration="1315000" />
+      <workItem from="1637557920298" duration="1353000" />
+      <workItem from="1637686171291" duration="12780000" />
     </task>
     <servers />
   </component>

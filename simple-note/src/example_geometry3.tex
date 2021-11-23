@@ -1,0 +1,83 @@
+% Preamble
+\documentclass[12pt]{simple_doc}
+
+% Packages
+\usepackage{simple_note}
+\usepackage{tkz-euclide}
+\usepackage{fourier} % for arc/frown over letters
+\usepackage{gensymb} % for 90 degree symbol
+
+\usepackage{amsmath} % to remove equation numbers
+\usepackage{amssymb}
+
+\usepackage[default,regular,semibold,t1]{sourceserifpro}
+\usepackage[T1]{fontenc}
+
+% Document
+\begin{document}
+    \exerheader{Math}{Geometry}{\today}{ctbHoneyDark}
+
+    \begin{cbstripe}{Problem}{ctbPurpleDark}{ctbPurpleLight}
+        Let H and O denote the orthocenter and circumcenter of acute triangle
+        ABC, respectively. $\overline{AH}$ meets $\overline{BC}$ at P and
+        $\overline{AO}$ meets $BC$ at Q. Prove
+        that $\angle BAP = \angle CAQ$.
+    \end{cbstripe}
+
+    \begin{center}
+    \begin{tikzpicture}[scale=1]
+%        \tkzDefPoint (2.5, 4){A}
+%        \tkzDefPoint (0, 0){B}
+%        \tkzDefPoint (7, 0){C}
+
+        \coordinate (B) at (0, 0);
+        \coordinate (C) at (7, 0);
+        \coordinate (A) at (2.5, 4);
+        \tkzLabelPoints[above](A)
+        \tkzLabelPoints[left](B)
+        \tkzLabelPoints[right](C)
+
+        \tkzDrawPolygon[thick](A, B, C);
+        \tkzDefTriangleCenter[ortho](A,B,C) \tkzGetPoint{H}
+        \tkzDrawPoint(H);
+        \tkzLabelPoints[left](H)
+
+        \tkzDefCircle[circum](A,B,C) \tkzGetPoint{O} \tkzGetLength{rad}; % length in points
+        \tkzDrawPoint(O);
+        \tkzLabelPoints[right](O)
+        \tkzDrawCircle(O,A);
+
+        \tkzDrawLine[altitude](B,A,C) \tkzGetPoint{P}; % from A to BC
+        \tkzLabelPoints[below left](P)
+        \tkzInterLL(B,C)(A,O) \tkzGetPoint{Q};
+        \tkzLabelPoints[below left](Q)
+        \draw (A) -- (Q);
+
+        \tkzInterLC[R](A,P)(O,\rad pt) \tkzGetFirstPoint{S}
+        \tkzLabelPoints[below](S)
+        \tkzInterLC[R](A,Q)(O,\rad pt) \tkzGetSecondPoint{T}
+        \tkzLabelPoints[below](T)
+        \draw[dashed, red!80] (P) -- (S);
+        \draw[dashed, red!80] (Q) -- (T);
+        \draw[dashed, red!80] (B) -- (T);
+
+        \tkzInterLL(B,T)(A,S) \tkzGetPoint{W};
+        \tkzLabelPoints[below left](W)
+
+        \tkzMarkRightAngle(A,B,T)
+        \tkzMarkRightAngle(A,P,B)
+        \tkzMarkAngle[size=5mm,color=red,mark=|](B,A,P);
+        \tkzMarkAngle[size=5mm,color=red,mark=|](Q,A,C);
+        \tkzMarkAngle[size=5mm,color=red,mark=none](T,B,C);
+    \end{tikzpicture}
+    \end{center}
+
+    First, $\angle TAC = \angle TBC = \widearc{TC}$ and so we just need to prove
+    $\angle TBC = \angle BAP$.
+
+    Next, $\angle TBA = 90\degree$ because $AT$ is a diameter of the circle, and with
+    $\angle APB = 90\degree$ we conclude that $\angle TBC = \angle BAP$ because both
+    adds $\angle PWB$ to $90\degree$.
+
+    Therefore, $\angle BAP = \angle TBC = \angle TAC$.
+\end{document}

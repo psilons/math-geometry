@@ -67,7 +67,6 @@ or
 ### tkz euclid package
 
 - https://ctan.org/pkg/tkz-euclide?lang=en
-- https://gist.github.com/kpym/f08d1a326884e11dddb7d272359eb2bd
 - http://mirrors.ctan.org/macros/latex/contrib/tkz/tkz-euclide/doc/TKZdoc-euclide.pdf
 - https://tex.stackexchange.com/questions/532176/how-can-i-mark-right-angles-in-tkz-euclide-on-extended-line
 - https://tex.stackexchange.com/questions/410998/triangle-changing-vertices-draw-the-height-of-the-triangle
