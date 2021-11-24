@@ -5,15 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7eeea94d-a4da-497b-bafd-b960b5e8f757" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/font_family.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simple-note/out/example_art.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simple-note/out/example_geometry.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simple-note/out/example_geometry3.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simple-note/src/example_art.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simple-note/src/example_geometry3.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simple-note/tkz-euclid.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-note/out/example_art.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/out/example_art.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-note/src/example_art.tex" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/src/example_art.tex" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +104,7 @@
         <envs />
         <main-file>$PROJECT_DIR$/simple-note/src/example_art.tex</main-file>
         <output-path>$PROJECT_DIR$/simple-note/out</output-path>
-        <auxil-path>{projectDir}/out</auxil-path>
+        <auxil-path>$PROJECT_DIR$/simple-note/out</auxil-path>
         <compile-twice>false</compile-twice>
         <output-format>PDF</output-format>
         <latex-distribution>PROJECT_SDK</latex-distribution>
@@ -240,6 +234,7 @@
       <workItem from="1637289730033" duration="1508000" />
       <workItem from="1637557920298" duration="1353000" />
       <workItem from="1637686171291" duration="12780000" />
+      <workItem from="1637712480174" duration="620000" />
     </task>
     <servers />
   </component>
