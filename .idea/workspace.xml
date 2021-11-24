@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7eeea94d-a4da-497b-bafd-b960b5e8f757" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/simple-note/out/example_geometry4.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-note/src/example_geometry4.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-note/out/example_art.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/out/example_art.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-note/src/example_art.tex" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/src/example_art.tex" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +48,7 @@
       <recent name="D:\00dev\math\math-latex-templates\docs" />
     </key>
   </component>
-  <component name="RunManager" selected="LaTeX.example_art">
+  <component name="RunManager" selected="LaTeX.example_geometry4">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -177,7 +177,7 @@
       </texify>
       <method v="2" />
     </configuration>
-    <configuration name="text_color_box_test" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
+    <configuration name="example_geometry4" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
       <texify>
         <compiler>LUALATEX</compiler>
         <compiler-path />
@@ -186,7 +186,7 @@
         <viewer-command />
         <compiler-arguments />
         <envs />
-        <main-file>$PROJECT_DIR$/simple-note/test/text_color_box_test.tex</main-file>
+        <main-file>$PROJECT_DIR$/simple-note/src/example_geometry4.tex</main-file>
         <output-path>$PROJECT_DIR$/simple-note/out</output-path>
         <auxil-path>{projectDir}/out</auxil-path>
         <compile-twice>false</compile-twice>
@@ -209,11 +209,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="LaTeX.example_geometry4" />
         <item itemvalue="LaTeX.example_art" />
         <item itemvalue="LaTeX.example_geometry3" />
         <item itemvalue="LaTeX.example_geometry" />
         <item itemvalue="LaTeX.example_geometry2" />
-        <item itemvalue="LaTeX.text_color_box_test" />
       </list>
     </recent_temporary>
   </component>
@@ -235,6 +235,7 @@
       <workItem from="1637557920298" duration="1353000" />
       <workItem from="1637686171291" duration="12780000" />
       <workItem from="1637712480174" duration="620000" />
+      <workItem from="1637724885869" duration="11895000" />
     </task>
     <servers />
   </component>

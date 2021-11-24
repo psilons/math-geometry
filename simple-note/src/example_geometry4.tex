@@ -1,0 +1,230 @@
+% Preamble
+\documentclass[12pt]{simple_doc}
+
+% Packages
+\usepackage{simple_note}
+\usepackage{tkz-euclide}
+
+\usepackage{gensymb} % for 90 degree symbol
+
+\usepackage{amsmath} % to remove equation numbers
+\usepackage{amssymb}
+
+\usepackage[default,regular,semibold,t1]{sourceserifpro}
+\usepackage[T1]{fontenc}
+
+\usepackage{enumitem}
+
+% Document
+\begin{document}
+    \exerheader{Math}{Geometry}{\today}{ctbRedDark}
+
+    \pgfmathsetlengthmacro{\b}{-17/24} % see end for these numbers
+    \pgfmathsetlengthmacro{\h}{sqrt(8*8-\b * \b)}
+
+    \begin{cbstripe}{Problem}{ctbGreenDark}{ctbGreenLight}
+        $BE$ and $CF$ are angle bisectors that meet at I as shown below.
+        $CE = 4$, $AE = 6$, and $AB = 8$.
+        \begin{enumerate}[label={(\alph*)}]
+            \item Prove that $\angle EIC = 90\degree - \displaystyle\frac{\angle A}{2}$
+            \item Find $BC$
+            \item Find $BF$
+        \end{enumerate}
+
+        \begin{center}
+        \begin{tikzpicture}[scale=1]
+            \coordinate (A) at (20*\b,20*\h);
+            \coordinate (B) at (0, 0);
+            \coordinate (C) at (16/3*20 pt , 0);
+            \tkzDrawPolygon[thick](A, B, C);
+            \tkzLabelPoints[above](A)
+            \tkzLabelPoints[left](B)
+            \tkzLabelPoints[right](C)
+
+            \tkzDefLine[bisector](A,B,C) \tkzGetPoint{X};
+            \tkzInterLL(B,X)(A,C) \tkzGetPoint{E};
+            \tkzLabelPoints[above right](E)
+            \draw (B) -- (E);
+
+            \tkzDefLine[bisector](A,C,B) \tkzGetPoint{Y};
+            \tkzInterLL(C,Y)(A,B) \tkzGetPoint{F};
+            \tkzLabelPoints[left](F)
+            \draw (C) -- (F);
+
+            \tkzInterLL(C,F)(B,E) \tkzGetPoint{I};
+            \tkzLabelPoints[above](I)
+
+        \end{tikzpicture}
+        \end{center}
+    \end{cbstripe}
+
+    (a) Because $\angle EIC$ is an external angle of the triangle $\triangle EIC$,
+    \begin{equation*}
+		\begin{aligned}
+            \angle EIC &= \angle IBC + \angle ICB\\
+                       &= \frac{\angle B}{2} + \frac{\angle C}{2}\\
+        \end{aligned}
+	\end{equation*}
+    Hence,
+    \begin{equation*}
+		\begin{aligned}
+            \frac{\angle A}{2} + \angle EIC
+                &= \frac{\angle A}{2} + \frac{\angle B}{2} + \frac{\angle C}{2}\\
+                &= \frac{\angle A + \angle B + \angle C}{2}\\
+                &= \frac{180\degree}{2}\\
+                &= 90\degree
+        \end{aligned}
+	\end{equation*}
+    \medskip
+
+    (b) Draw a line passing E and parallel to BC, intersect with $AB$ at $M$.
+    \begin{center}
+        \begin{tikzpicture}[scale=1]
+            \coordinate (A) at (20*\b,20*\h);
+            \coordinate (B) at (0, 0);
+            \coordinate (C) at (16/3*20 pt , 0);
+            \tkzDrawPolygon[thick](A, B, C);
+            \tkzLabelPoints[above](A)
+            \tkzLabelPoints[left](B)
+            \tkzLabelPoints[right](C)
+
+            \tkzDefLine[bisector](A,B,C) \tkzGetPoint{X};
+            \tkzInterLL(B,X)(A,C) \tkzGetPoint{E};
+            \tkzLabelPoints[above right](E)
+            \draw (B) -- (E);
+
+%            \tkzDefLine[bisector](A,C,B) \tkzGetPoint{Y};
+%            \tkzInterLL(C,Y)(A,B) \tkzGetPoint{F};
+%            \tkzLabelPoints[left](F)
+%            \draw (C) -- (F);
+
+            \tkzDefLine[parallel=through E](B,C) \tkzGetPoint{Z};
+            \tkzInterLL(E,Z)(A,B) \tkzGetPoint{M};
+            \tkzLabelPoints[left](M)
+            \draw[dashed,red] (M) -- (E);
+            \tkzMarkAngle[size=5mm,color=red,mark=|](E,B,M);
+            \tkzMarkAngle[size=5mm,color=red,mark=|](C,B,E);
+            \tkzMarkAngle[size=5mm,color=red,mark=|](M,E,B);
+
+            \tkzLabelSegment[above](M,E){$x$}
+            \tkzLabelSegment[right](M,B){$x$}
+            \tkzLabelSegment[below](B,C){$y$}
+            \tkzLabelSegment[above right](A,E){$6$}
+            \tkzLabelSegment[above right](E,C){$4$}
+        \end{tikzpicture}
+    \end{center}
+    Because $\angle MBE = \angle EBC = \angle MEB$, $ME = MB$. Because
+    $\triangle AME \sim \triangle ABC$,
+    \begin{equation*}
+        \begin{aligned}
+            \frac{AM}{AB} &= \frac{AE}{AC} \\
+            \frac{8 - x}{8} &= \frac{6}{10} \\
+            10x &= 32\\
+            x &= 3.2
+        \end{aligned}
+	\end{equation*}
+    Then
+    \begin{equation*}
+        \begin{aligned}
+            \frac{ME}{BC} &= \frac{AE}{AC} \\
+            \frac{x}{y} &= \frac{6}{10} \\
+            6y &= 32\\
+            y &= \frac{16}{3}
+        \end{aligned}
+	\end{equation*}
+    \medskip
+
+    (c) Draw a line through F and parallel to BC, intersect with AC at N.
+    \begin{center}
+        \begin{tikzpicture}[scale=1]
+            \coordinate (A) at (20*\b,20*\h);
+            \coordinate (B) at (0, 0);
+            \coordinate (C) at (16/3*20 pt , 0);
+            \tkzDrawPolygon[thick](A, B, C);
+            \tkzLabelPoints[above](A)
+            \tkzLabelPoints[left](B)
+            \tkzLabelPoints[right](C)
+
+%            \tkzDefLine[bisector](A,B,C) \tkzGetPoint{X};
+%            \tkzInterLL(B,X)(A,C) \tkzGetPoint{E};
+%            \tkzLabelPoints[above right](E)
+%            \draw (B) -- (E);
+
+            \tkzDefLine[bisector](A,C,B) \tkzGetPoint{Y};
+            \tkzInterLL(C,Y)(A,B) \tkzGetPoint{F};
+            \tkzLabelPoints[left](F)
+            \draw (C) -- (F);
+
+            \tkzDefLine[parallel=through F](B,C) \tkzGetPoint{Z};
+            \tkzInterLL(F,Z)(A,C) \tkzGetPoint{N};
+            \tkzLabelPoints[above right](N)
+            \draw[dashed,red] (N) -- (F);
+            \tkzMarkAngle[size=5mm,color=red,mark=|](N,C,F);
+            \tkzMarkAngle[size=5mm,color=red,mark=|](F,C,B);
+            \tkzMarkAngle[size=5mm,color=red,mark=|](C,F,N);
+
+            \tkzLabelSegment[above](N,F){$u$}
+            \tkzLabelSegment[right](N,C){$u$}
+            \tkzLabelSegment[left](F,B){$v$}
+            \tkzLabelSegment[left](A,B){$8$}
+            \tkzLabelSegment[below](B,C){$\displaystyle\frac{16}{3}$}
+        \end{tikzpicture}
+    \end{center}
+    Because $\angle NCF = \angle FCB = \angle NFC$, $FN = NC$. Because
+    $\triangle AFN \sim \triangle ABC$,
+    \begin{equation*}
+        \begin{aligned}
+            \frac{AN}{AC} &= \frac{FN}{BC} \\
+            \frac{10 - u}{10} &= \frac{u}{\frac{16}{3}} = \frac{3u}{16} \\
+            46u &= 160\\
+            u &= \frac{80}{23}
+        \end{aligned}
+	\end{equation*}
+    Then
+    \begin{equation*}
+        \begin{aligned}
+            \frac{AF}{AB} &= \frac{FN}{BC} \\
+            \frac{8-v}{8} &= \frac{u}{\frac{16}{3}} = \frac{3u}{16} = \frac{15}{23} \\
+            v &= \frac{64}{23}
+        \end{aligned}
+	\end{equation*}
+    \medskip
+
+    (d) To draw the triangle, we need to figure out the coordinate of A
+    \begin{center}
+        \begin{tikzpicture}[scale=1]
+            \coordinate (A) at (20*\b,20*\h);
+            \coordinate (B) at (0, 0);
+            \coordinate (C) at (16/3*20 pt , 0);
+            \tkzDrawPolygon[thick](A, B, C);
+            \tkzLabelPoints[above](A)
+            \tkzLabelPoints[above right](B)
+            \tkzLabelPoints[right](C)
+
+            \tkzDrawLine[altitude,dashed,red](B,A,C) \tkzGetPoint{P}; % from A to BC
+            \tkzLabelPoints[left](P);
+            \draw[dashed,red] (P) -- (B);
+
+            \tkzLabelSegment[left](A,P){$h$}
+            \tkzLabelSegment[below](P,B){$w$}
+            \tkzLabelSegment[above right](A,B){$8$}
+            \tkzLabelSegment[above right](A,C){$10$}
+            \tkzLabelSegment[below](B,C){$\displaystyle\frac{16}{3}$}
+        \end{tikzpicture}
+    \end{center}
+    With the 2 right triangles $\triangle APB$ and $\triangle APC$, the followings are true
+    \begin{equation*}
+        \begin{aligned}
+            h^2 + w^2 &= 8^2 = 64 \\
+            h^2 + (\frac{16}{3} + w)^2 &= 10^2 = 100\\
+        \end{aligned}
+	\end{equation*}
+    Subtracting these 2 equations,
+    \begin{equation*}
+        \begin{aligned}
+            (\frac{16}{3} + w)^2 - w^2 &= 10^2 = 36\\
+            w &= - \frac{17}{24} = 0.62963\\
+            h &= \sqrt{64 - w^2} = 7.96858
+        \end{aligned}
+	\end{equation*}
+\end{document}
