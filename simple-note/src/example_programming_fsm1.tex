@@ -1,0 +1,103 @@
+% https://bln364.com/finite-state-machine-with-latex/
+% https://www3.nd.edu/~kogge/courses/cse30151-fa17/Public/other/tikz_tutorial.pdf
+
+% Preamble
+\documentclass[12pt]{simple_doc}
+
+% Packages
+\usepackage{amsmath}
+\usepackage{simple_note}
+
+\usepackage{tikz}
+\usetikzlibrary{automata, positioning, arrows}
+\tikzset{
+    ->, % makes the edges directed
+    >=stealth, % makes the arrow heads bold
+    node distance=3cm, % specifies the minimum distance between two nodes. Change if necessary.
+    every state/.style={thick, fill=gray!10}, % sets the properties for each ’state’ node
+    initial text=$\ Start\ $, % sets the text that appears on the start arrow
+}
+
+\definecolor{bln_blue}{HTML}{00A8FF}
+\definecolor{bln_red}{HTML}{c23616}
+\definecolor{bln_green}{HTML}{16A085}
+\definecolor{bln_magenta}{HTML}{9B59B6}
+
+\usepackage[outputdir=../out]{minted} % this is tricky, relative to current file.
+\usemintedstyle[python]{monokai} % rather than for all language
+\definecolor{bgcolor}{RGB}{16, 31, 62}
+
+\usepackage{fontspec}
+\setmonofont{Inconsolata} % change source code font
+
+% Document
+\begin{document}
+    \exerheader{Programming}{FSM}{\today}{ctbBlueDark}
+
+    \begin{cbstripe}{Problem}{ctbGreenDark}{ctbGreenLight}
+        \textit{Consider the following deterministic automation:}
+
+        \begin{center}
+        \begin{tikzpicture}
+            \node[state, fill=ctbHoneyLight, initial, initial where=left] (n1) {$1$};
+            \node[state, right of=n1] (n2) {$2$};
+            \node[state, fill=ctbPinkLight, accepting, right of=n2] (n3) {$3$};
+
+            \draw (n1) edge[loop above] node{a} (n1)
+                  (n2) edge[loop above] node{a} (n2)
+                  (n3) edge[loop above] node{a} (n3)
+                  (n1) edge[above] node{b} (n2)
+                  (n2) edge[above] node{b} (n3)
+                  (n3) edge[bend left, below] node{b} (n1);
+
+        \end{tikzpicture}
+        \end{center}
+
+        \textit{Write a program that accepts a string of characters on a single line and,
+            processing characters of that string left to right, determines whether that
+            string is accepted by that deterministic automation(In which case it prints
+            "accept") or rejected(in which case it prints "reject") } \medskip
+
+        Sample input: $abab$\\
+        Expected output: $accept$
+
+        Sample input: $ab$\\
+        Expected output: $reject$
+
+    \end{cbstripe}
+
+    \renewcommand{\theFancyVerbLine}{\sffamily \textcolor[rgb]{1.0,0.8,0.0}{\large \oldstylenums{\arabic{FancyVerbLine}}}}
+
+
+    First, we create the transitions from the graph
+    % set line # to be inside frame, not on margins
+    \begin{minted}[xleftmargin=20pt, linenos, bgcolor=bgcolor]{python}
+transitions = {
+    1: {'a': 1, 'b': 2},
+    2: {'a': 2, 'b': 3},
+    3: {'a': 3, 'b': 1},
+}
+    \end{minted}
+
+    Then we collect the terminal states
+    \begin{minted}[xleftmargin=20pt, linenos, bgcolor=bgcolor]{python}
+terminals = {3}
+    \end{minted}
+
+    The automation in fact works with any transitions, it starts with the initial state
+    and then traverse the graph.
+    \begin{minted}[xleftmargin=20pt, linenos, bgcolor=bgcolor]{python}
+def process(s: str, init_state, transitions: dict, terminals: set):
+    state = init_state
+    for c in s:
+        state = transitions[state][c]
+
+    return state in terminals
+    \end{minted}
+
+    This return $true$ or $false$, so we need an extra step to get sample outputs
+    \begin{minted}[xleftmargin=20pt, linenos, bgcolor=bgcolor]{python}
+print("accept" if process('abab', 1, tr, tm) else "reject")
+print("accept" if process('ab', 1, tr, tm) else "reject")
+    \end{minted}
+\end{document}

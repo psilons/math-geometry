@@ -20,3 +20,5 @@
 *.mtc4
 *.mtc5
 *.undo
+/simple-note/out/_minted-source_code_test
+/simple-note/out/_minted-example_programming_fsm1

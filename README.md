@@ -62,6 +62,9 @@ Interesting links are listed below.
 or
 \usepackage{XCharter}
 
+### Units
+
+- unit conversion: https://tex.stackexchange.com/questions/8260/what-are-the-various-units-ex-em-in-pt-bp-dd-pc-expressed-in-mm
 
 
 ### tkz euclid package
