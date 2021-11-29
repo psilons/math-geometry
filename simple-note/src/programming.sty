@@ -1,0 +1,40 @@
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{programming}[2021/11/28 programming's Package]
+
+% for finite state transition diagrams
+%--------------------------------------------------------------------------------------------------
+\RequirePackage{tikz}
+\usetikzlibrary{automata, positioning, arrows}
+\tikzset{
+    ->, % makes the edges directed
+    >=stealth, % makes the arrow heads bold
+    node distance=3cm, % specifies the minimum distance between two nodes. Change if necessary.
+    every state/.style={thick, fill=gray!10}, % sets the properties for each ’state’ node
+    initial text=$\ Start\ $, % sets the text that appears on the start arrow
+}
+%--------------------------------------------------------------------------------------------------
+
+% for source code
+%--------------------------------------------------------------------------------------------------
+\RequirePackage[outputdir=../out]{minted} % this is tricky, relative to current file.
+\usemintedstyle[python]{manni} % rather than for all language
+\setminted {
+    framesep=3mm, % this works only when next line is defined
+    frame=leftline,
+    xleftmargin=20pt,
+    linenos,
+    bgcolor=bgcolor,
+    fontsize=\small,
+    escapeinside=||, % run latex commands in between
+}
+
+\RequirePackage{xcolor}
+%\definecolor{bgcolor}{RGB}{16, 31, 62}
+\definecolor{bgcolor}{HTML}{f0f0f0}
+
+% minted: source code line number - change font color
+% https://tex.stackexchange.com/questions/525570/minted-line-numbers-outside-frame-and-outside-margin
+% https://tex.stackexchange.com/questions/132849/how-can-i-change-the-font-size-of-the-number-in-minted-environment
+\renewcommand{\theFancyVerbLine}{\sffamily \textcolor[rgb]{0.35,0.6,0.0}{\footnotesize \arabic{FancyVerbLine}}}
+%--------------------------------------------------------------------------------------------------
