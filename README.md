@@ -80,6 +80,9 @@ or
 - https://tex.stackexchange.com/questions/571088/tkz-euclide-drawing-compass-mark-like-for-arc-construction
 
 ### tikz package
+https://project-awesome.org/xiaohanyu/awesome-tikz#books
+https://sites.google.com/site/kochiuyu/Tikz
+
 - Examples: https://github.com/walmes/Tikz
 - [PGF](https://github.com/pgf-tikz/pgf)
 - https://texample.net/tikz/examples/
@@ -89,7 +92,9 @@ or
 - https://texblog.net/latex-archive/uncategorized/fancy-chapter-tikz/
 - https://tex.stackexchange.com/questions/569976/projectile-motion-change-an-old-code-and-make-it-more-beautiful
 - https://getreuer.info/tutorials/tikz-for-high-quality-latex-pictures/index.html
-- 
+
+Galleries
+https://github.com/androgynyjoe/SomeTikzExamples
 ### Templates
 
 - https://www.authorea.com/featured-templates, interact with Javascripts too.

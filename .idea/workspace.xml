@@ -5,14 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7eeea94d-a4da-497b-bafd-b960b5e8f757" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/simple-note/out/example_programming_fsm2.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simple-note/src/example_programming_fsm2.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simple-note/src/programming.sty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-note/out/example_art_yingyang.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-note/out/example_art_yingyang2.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-note/src/example_art_yingyang.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-note/src/example_art_yingyang2.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-note/out/example_programming_fsm1.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/out/example_programming_fsm1.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-note/out/text_color_box_test.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/out/text_color_box_test.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-note/src/example_programming_fsm1.tex" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/src/example_programming_fsm1.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-note/src/simple_note.sty" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/src/simple_note.sty" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +51,7 @@
       <recent name="D:\00dev\math\math-latex-templates\docs" />
     </key>
   </component>
-  <component name="RunManager" selected="LaTeX.example_programming_fsm1">
+  <component name="RunManager" selected="LaTeX.example_art_yingyang2">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -98,7 +96,7 @@
       </texify>
       <method v="2" />
     </configuration>
-    <configuration name="example_geometry4" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
+    <configuration name="example_art_yingyang" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
       <texify>
         <compiler>LUALATEX</compiler>
         <compiler-path />
@@ -107,7 +105,28 @@
         <viewer-command />
         <compiler-arguments />
         <envs />
-        <main-file>$PROJECT_DIR$/simple-note/src/example_geometry4.tex</main-file>
+        <main-file>$PROJECT_DIR$/simple-note/src/example_art_yingyang.tex</main-file>
+        <output-path>$PROJECT_DIR$/simple-note/out</output-path>
+        <auxil-path>{projectDir}/out</auxil-path>
+        <compile-twice>false</compile-twice>
+        <output-format>PDF</output-format>
+        <latex-distribution>PROJECT_SDK</latex-distribution>
+        <has-been-run>true</has-been-run>
+        <bib-run-config>[]</bib-run-config>
+        <makeindex-run-config>[]</makeindex-run-config>
+      </texify>
+      <method v="2" />
+    </configuration>
+    <configuration name="example_art_yingyang2" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
+      <texify>
+        <compiler>LUALATEX</compiler>
+        <compiler-path />
+        <sumatra-path />
+        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
+        <viewer-command />
+        <compiler-arguments />
+        <envs />
+        <main-file>$PROJECT_DIR$/simple-note/src/example_art_yingyang2.tex</main-file>
         <output-path>$PROJECT_DIR$/simple-note/out</output-path>
         <auxil-path>{projectDir}/out</auxil-path>
         <compile-twice>false</compile-twice>
@@ -161,27 +180,6 @@
       </texify>
       <method v="2" />
     </configuration>
-    <configuration name="source_code_test" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
-      <texify>
-        <compiler>LUALATEX</compiler>
-        <compiler-path />
-        <sumatra-path />
-        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
-        <viewer-command />
-        <compiler-arguments>-shell-escape</compiler-arguments>
-        <envs />
-        <main-file>$PROJECT_DIR$/simple-note/test/source_code_test.tex</main-file>
-        <output-path>$PROJECT_DIR$/simple-note/out</output-path>
-        <auxil-path>{projectDir}/out</auxil-path>
-        <compile-twice>false</compile-twice>
-        <output-format>PDF</output-format>
-        <latex-distribution>PROJECT_SDK</latex-distribution>
-        <has-been-run>true</has-been-run>
-        <bib-run-config>[]</bib-run-config>
-        <makeindex-run-config>[]</makeindex-run-config>
-      </texify>
-      <method v="2" />
-    </configuration>
     <configuration name="text_color_box_test" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
       <texify>
         <compiler>LUALATEX</compiler>
@@ -213,19 +211,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="LaTeX.example_geometry4" />
       <item itemvalue="LaTeX.example_programming_fsm1" />
-      <item itemvalue="LaTeX.source_code_test" />
       <item itemvalue="LaTeX.example_programming_fsm2" />
       <item itemvalue="LaTeX.text_color_box_test" />
+      <item itemvalue="LaTeX.example_art_yingyang" />
+      <item itemvalue="LaTeX.example_art_yingyang2" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="LaTeX.example_art_yingyang2" />
+        <item itemvalue="LaTeX.example_art_yingyang" />
         <item itemvalue="LaTeX.example_programming_fsm1" />
         <item itemvalue="LaTeX.example_programming_fsm2" />
         <item itemvalue="LaTeX.text_color_box_test" />
-        <item itemvalue="LaTeX.source_code_test" />
-        <item itemvalue="LaTeX.example_geometry4" />
       </list>
     </recent_temporary>
   </component>
@@ -250,7 +248,8 @@
       <workItem from="1637724885869" duration="11895000" />
       <workItem from="1637812496943" duration="720000" />
       <workItem from="1637968604202" duration="6766000" />
-      <workItem from="1638120192846" duration="26969000" />
+      <workItem from="1638120192846" duration="27320000" />
+      <workItem from="1638247360275" duration="7124000" />
     </task>
     <servers />
   </component>
