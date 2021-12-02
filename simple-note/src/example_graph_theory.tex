@@ -1,0 +1,51 @@
+% Preamble
+\documentclass[12pt]{simple_doc}
+
+% Packages
+\usepackage{simple_note}
+\usepackage[UTF8]{ctex} % use chinese
+\usepackage{amsmath}
+\usepackage{enumitem}
+
+% Document
+\begin{document}
+    \exerheader{山东大学计算机科学系}{图算法考试}{\today}{ctbBlueDark}
+
+    \begin{cbstripe}{问题一【30分】}{ctbGreenDark}{ctbGreenLight}
+        试证明下述命题：
+        \begin{enumerate}
+            \item 设$n$阶完全图$G=(V, E),\ V_1 \subset V,\ \big | V_1 \big | = n_1$, 且
+                $T_1=(V_1, E_1)$是以$V_1$为顶点集的树，
+                则在图$G=(V, E)$中以$T_1$为其子树的生成树数目为$n_1\cdot n^{n-n_1 -1}$。
+            \item 假设$G=(V, E)$是不可分离的平面图，且每个面都不是三角形，则图$G$的顶点连通性
+                $C(G) < 4$。
+        \end{enumerate}
+    \end{cbstripe}
+
+    \begin{cbstripe}{问题二【30分】}{ctbPurpleDark}{ctbPurpleLight}
+        试回答下述问题：
+        \begin{enumerate}
+            \item 求解图上最短路问题的狄克斯特拉（Dijkstra）算法，对有向图弧的权函数之值有什么要求？
+                试举例说明这种要求的必要性？最小生成树算法也有这样要求吗？为什么？
+            \item 假设$G=(V, E)$为二分图，其中$V=X \cup Y, X \cap Y = \emptyset$。若$G$中无关
+                于顶点集$X$的完全匹配，试找出一顶点子集$A \subset X$，满足$|A| > \big |N(A)\big |$，
+                其中$N(A)$为顶点子集的邻域。并举例说明之。
+        \end{enumerate}
+    \end{cbstripe}
+
+    \begin{cbstripe}{问题三【20分】}{ctbPinkDark}{ctbPinkLight}
+        试构造前缀三元$(0, 1, 2)$优化代码，使其代码字具有概率为:
+        \begin{equation*}
+            \{0.2,\ 0.18,\ 0.12,\ 0.1,\ 0.1,\ 0.08,\ 0.06,\ 0.06,\ 0.06,\ 0.04\}。
+        \end{equation*}
+    \end{cbstripe}
+
+    \begin{cbstripe}{问题四【20分】}{ctbHoneyDark}{ctbHoneyLight}
+        设$G=(V, E)$不是完全图，对任意俩顶点$u, v \in V$，$P(u, v)$表示图$G$中连接顶点$u$和$v$且
+        内部顶点互不相交的通路的最大条数。试证明：$P(u, v)$的最小值在$G$中两个不邻接顶点上达到，即
+        \begin{equation*}
+            \min_{u, v \in G} P(u, v) = \min_{u\ \textit{nadj}\ v} P(u, v)。
+        \end{equation*}
+
+    \end{cbstripe}
+\end{document}
