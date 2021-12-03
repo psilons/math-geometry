@@ -5,40 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7eeea94d-a4da-497b-bafd-b960b5e8f757" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/simple-note/out/curved_title_test.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simple-note/out/curved_title_test1.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simple-note/out/example_graph_theory.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simple-note/out/fractal_line_test.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simple-note/out/fractal_line_test1.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simple-note/out/fractal_triangle_test1.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simple-note/out/fractal_triangle_test2.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simple-note/out/full_title.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simple-note/out/pic_box_test1.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simple-note/out/pic_box_test2.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simple-note/out/pic_box_test3.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simple-note/out/pic_box_test4.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simple-note/out/problem_template.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simple-note/out/reference_test.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simple-note/out/simple_box_test.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simple-note/out/title_centered_test.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simple-note/out/triangle_fractal_test.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simple-note/src/example_graph_theory.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-note/out/example_art.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/out/example_art.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-note/out/example_art_yingyang.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/out/example_art_yingyang.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-note/out/example_art_yingyang2.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/out/example_art_yingyang2.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-note/out/example_fractal.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/out/example_fractal.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-note/out/example_geometry.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/out/example_geometry.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-note/out/example_geometry2.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/out/example_geometry2.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-note/out/example_geometry3.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/out/example_geometry3.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-note/out/example_geometry4.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/out/example_geometry4.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-note/out/example_programming_fsm1.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/out/example_programming_fsm1.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-note/out/example_programming_fsm2.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/out/example_programming_fsm2.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-note/out/source_code_test.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/out/source_code_test.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-note/out/text_color_box_test.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/out/text_color_box_test.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-note/src/example_geometry2.tex" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/src/example_geometry2.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-note/src/simple_note.sty" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/src/simple_note.sty" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-note/test/style_test.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-note/src/example_graph_theory.tex" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/src/example_graph_theory.tex" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -493,7 +462,7 @@
         <viewer-command />
         <compiler-arguments>-shell-escape</compiler-arguments>
         <envs />
-        <main-file>$PROJECT_DIR$/simple-note/test/style_test.tex</main-file>
+        <main-file />
         <output-path>$PROJECT_DIR$/simple-note/out</output-path>
         <auxil-path>{projectDir}/out</auxil-path>
         <compile-twice>false</compile-twice>
@@ -651,6 +620,7 @@
       <workItem from="1638247360275" duration="7124000" />
       <workItem from="1638412567089" duration="1599000" />
       <workItem from="1638414194267" duration="7603000" />
+      <workItem from="1638494852228" duration="842000" />
     </task>
     <servers />
   </component>
@@ -670,6 +640,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

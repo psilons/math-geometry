@@ -41,14 +41,41 @@ Implementation Consideration:
   could use globals for front page color customization and use pass-in 
   parameters for text box color customization.
 
+### Text Spacing
+For better text reading, we don't want all letters squeezed into piles or too far apart.
+- http://practicalseries.com/1001-webdevelopment/03-02-grid.html
+- https://totallytype.com/line-spacing.php
+- https://www.creativebloq.com/advice/ui-design-rules
+- https://material.io/
+
+#### Letter Spacing
+This is usually done by fonts, but there are several exceptions:
+- All upper case text needs extra space.
+- small fonts need extra space.
+
+For more info, see
+- https://www.webdesignerdepot.com/2020/07/the-designers-guide-to-letter-spacing/
+- https://www.kevinpowell.co/article/letter-spacing-dos-and-donts/
+
+#### Line Spacing
+In general, keep the line spacing to 130 ~ 150% of the font size (i.e., leave 30 ~ 50% space between lines).
+It's called "leading".
+
+Keep line length between 70-80 characters.
+
+#### Paragraph Spacing
+Keep 1.6 ~ 2 X line space apart.
+https://webaim.org/techniques/fonts/
+
+
 Interesting links are listed below.
 
-### Colors
+## Colors
 
 - https://aces.nmsu.edu/pubs/_c/C316/welcome.html
 - https://en.wikibooks.org/wiki/LaTeX/Colors
 
-### Fonts
+## Fonts
 - https://www.ctan.org/pkg/fontawesome
 - https://tex.stackexchange.com/questions/59702/suggest-a-nice-font-family-for-my-basic-latex-template-text-and-math/59706
 - https://12000.org/my_notes/faq/LATEX/math_fonts/index.htm#x1-5600010
@@ -62,12 +89,12 @@ Interesting links are listed below.
 or
 \usepackage{XCharter}
 
-### Units
+## Units
 
 - unit conversion: https://tex.stackexchange.com/questions/8260/what-are-the-various-units-ex-em-in-pt-bp-dd-pc-expressed-in-mm
 
 
-### tkz euclid package
+## tkz euclid package
 
 - https://ctan.org/pkg/tkz-euclide?lang=en
 - http://mirrors.ctan.org/macros/latex/contrib/tkz/tkz-euclide/doc/TKZdoc-euclide.pdf
@@ -79,7 +106,7 @@ or
 - https://newbedev.com/draw-with-tikz-a-pythagorean-triangle-with-the-squares-of-its-sides-and-labels
 - https://tex.stackexchange.com/questions/571088/tkz-euclide-drawing-compass-mark-like-for-arc-construction
 
-### tikz package
+## tikz package
 https://project-awesome.org/xiaohanyu/awesome-tikz#books
 https://sites.google.com/site/kochiuyu/Tikz
 
@@ -95,7 +122,7 @@ https://sites.google.com/site/kochiuyu/Tikz
 
 Galleries
 https://github.com/androgynyjoe/SomeTikzExamples
-### Templates
+## Templates
 
 - https://www.authorea.com/featured-templates, interact with Javascripts too.
 - https://www.overleaf.com/latex/templates
@@ -108,7 +135,7 @@ https://github.com/androgynyjoe/SomeTikzExamples
 - https://awesomeopensource.com/project/MatNoble/LaTeX-Document
 - https://github.com/MartinThoma/LaTeX-examples/tree/master/documents
 
-### Others
+## Others
 
 - https://medium.com/@primogodec/how-did-i-design-my-cv-in-latex-bb4e5cc9f5fd
 - flow chart: https://tex.stackexchange.com/questions/513658/changing-shapes-and-colors-of-blocks-also-redirecting-arrows-properly
