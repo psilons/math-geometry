@@ -39,7 +39,7 @@
 		\tkzDefLine[parallel=through A](B,C) \tkzGetPoint{X2};
 		\tkzInterLL(A,X2)(C,X1) \tkzGetPoint{X3};
 		\draw [dashed] (A) -- (X3) node [orange, right, above] {$I$};
-		\draw [orange, dashed] (C) -- (X3);
+		%\draw [orange, dashed] (C) -- (X3);
 
 		\tkzCalcLength(C,X3) \tkzGetLength{height};
 		\tkzDefShiftPoint[C](\height pt,0){J};
