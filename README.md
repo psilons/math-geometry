@@ -74,6 +74,10 @@ Interesting links are listed below.
 
 - https://aces.nmsu.edu/pubs/_c/C316/welcome.html
 - https://en.wikibooks.org/wiki/LaTeX/Colors
+- https://gist.github.com/alistairstead/67796ce1fb537e24c83abf1c481c8ef8
+- https://material.io/archive/guidelines/style/color.html#color-color-palette
+
+
 
 ## Fonts
 - https://www.ctan.org/pkg/fontawesome
@@ -84,10 +88,15 @@ Interesting links are listed below.
 - https://tug.org/FontCatalogue/charterbt/
 - https://ramshankar.org/blog/posts/2021/a-new-year-a-new-font/
 
+```
 \usepackage[T1]{fontenc}
 \usepackage{sourceserifpro}
+```
 or
-\usepackage{XCharter}
+
+```\usepackage{XCharter}```
+
+Font size calculators: https://www.makeuseof.com/font-size-calculators/
 
 ## Units
 
@@ -105,6 +114,7 @@ or
 - https://tex.stackexchange.com/questions/538319/drawing-complicated-geometry-figures-in-tikz
 - https://newbedev.com/draw-with-tikz-a-pythagorean-triangle-with-the-squares-of-its-sides-and-labels
 - https://tex.stackexchange.com/questions/571088/tkz-euclide-drawing-compass-mark-like-for-arc-construction
+- cheat sheet: https://gist.github.com/kpym/f08d1a326884e11dddb7d272359eb2bd
 
 ## tikz package
 https://project-awesome.org/xiaohanyu/awesome-tikz#books

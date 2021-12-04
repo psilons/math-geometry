@@ -1,0 +1,29 @@
+% https://tex.stackexchange.com/questions/223694/how-to-draw-a-text-box-with-shadow-borders-in-latex
+% https://tex.stackexchange.com/questions/472914/environment-with-argument-and-optional-argument
+% Preamble
+\documentclass[11pt]{article}
+
+% Packages
+\usepackage{amsmath}
+\usepackage[skins]{tcolorbox}
+\usepackage{xcolor}
+\usepackage{xcolor-material}
+
+% Document
+\begin{document}
+    \begin{tcolorbox}[enhanced,
+        %width=5in,
+        center upper,
+        fontupper=\large\bfseries,
+        drop fuzzy shadow southeast,
+        %colframe=red!50!black,
+        toprule=0pt, % no frame on 4 sides
+        bottomrule=0pt,
+        leftrule=0pt,
+        rightrule=0pt,
+        colback=MaterialGrey100]
+        Text inside the box
+    \end{tcolorbox}
+
+
+\end{document}

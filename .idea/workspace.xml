@@ -5,9 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7eeea94d-a4da-497b-bafd-b960b5e8f757" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/simple-note/test/shadow_box_test.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-note/out/example_geometry.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/out/example_geometry.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-note/src/example_geometry.tex" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/src/example_geometry.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-note/out/text_color_box_test.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/out/text_color_box_test.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-note/src/example_programming_fsm1.tex" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/src/example_programming_fsm1.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-note/src/simple_note.sty" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/src/simple_note.sty" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-note/test/text_color_box_test.tex" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/test/text_color_box_test.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-note/tkz-euclid.md" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +56,7 @@
       <recent name="D:\00dev\math\math-latex-templates\docs" />
     </key>
   </component>
-  <component name="RunManager" selected="LaTeX.example_geometry">
+  <component name="RunManager" selected="LaTeX.text_color_box_test">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -432,6 +437,27 @@
       </texify>
       <method v="2" />
     </configuration>
+    <configuration name="shadow_box_test" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
+      <texify>
+        <compiler>LUALATEX</compiler>
+        <compiler-path />
+        <sumatra-path />
+        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
+        <viewer-command />
+        <compiler-arguments>-shell-escape</compiler-arguments>
+        <envs />
+        <main-file>$PROJECT_DIR$/simple-note/test/shadow_box_test.tex</main-file>
+        <output-path>$PROJECT_DIR$/simple-note/out</output-path>
+        <auxil-path>{projectDir}/out</auxil-path>
+        <compile-twice>false</compile-twice>
+        <output-format>PDF</output-format>
+        <latex-distribution>PROJECT_SDK</latex-distribution>
+        <has-been-run>true</has-been-run>
+        <bib-run-config>[]</bib-run-config>
+        <makeindex-run-config>[]</makeindex-run-config>
+      </texify>
+      <method v="2" />
+    </configuration>
     <configuration name="simple_box_test" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
       <texify>
         <compiler>LUALATEX</compiler>
@@ -506,7 +532,7 @@
         <envs />
         <main-file>$PROJECT_DIR$/simple-note/test/text_color_box_test.tex</main-file>
         <output-path>$PROJECT_DIR$/simple-note/out</output-path>
-        <auxil-path>{projectDir}/out</auxil-path>
+        <auxil-path>$PROJECT_DIR$/simple-note/out</auxil-path>
         <compile-twice>false</compile-twice>
         <output-format>PDF</output-format>
         <latex-distribution>PROJECT_SDK</latex-distribution>
@@ -590,12 +616,14 @@
       <item itemvalue="LaTeX.title_centered_test" />
       <item itemvalue="LaTeX.text_color_box_test" />
       <item itemvalue="LaTeX.example_geometry" />
+      <item itemvalue="LaTeX.shadow_box_test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="LaTeX.text_color_box_test" />
+        <item itemvalue="LaTeX.shadow_box_test" />
         <item itemvalue="LaTeX.example_geometry" />
         <item itemvalue="LaTeX.style_test" />
-        <item itemvalue="LaTeX.text_color_box_test" />
         <item itemvalue="LaTeX.title_centered_test" />
         <item itemvalue="LaTeX.source_code_test" />
         <item itemvalue="LaTeX.simple_box_test" />
@@ -645,6 +673,8 @@
       <workItem from="1638414194267" duration="7603000" />
       <workItem from="1638494852228" duration="842000" />
       <workItem from="1638586616825" duration="312000" />
+      <workItem from="1638631455838" duration="3776000" />
+      <workItem from="1638637264608" duration="28000" />
     </task>
     <servers />
   </component>

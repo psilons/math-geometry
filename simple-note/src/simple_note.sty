@@ -8,6 +8,7 @@
 \RequirePackage[bookmarks=true]{hyperref} % without this, total page in footer broke because of *
 
 \RequirePackage{xcolor}
+\RequirePackage{xcolor-material}
 \RequirePackage{graphicx}
 
 \RequirePackage[breakable]{tcolorbox}
@@ -137,7 +138,7 @@
   skin=empty,
   top=0pt,
   bottom=0pt,
-  toprule=0pt,
+  toprule=0pt, % no frame on 4 sides
   bottomrule=0pt,
   leftrule=0pt,
   rightrule=0pt,
@@ -215,6 +216,30 @@
 \newenvironment{cbcurvedtitle}[3]
     {\begin{cbcurvedbox}{#1}{#2}{#3} }
     {\end{cbcurvedbox}}
+
+%--------------------------------------------------------------------------------------------------
+% Shadow area
+%--------------------------------------------------------------------------------------------------
+%
+\newtcolorbox{cbshadowbox}[1]{
+    enhanced,
+    breakable,
+    drop fuzzy shadow southeast,
+    top=8pt, % top margin
+    bottom=4pt, % bottom margin
+    toprule=0pt,
+    bottomrule=0pt,
+    leftrule=0pt,
+    rightrule=0pt,
+    %left=4mm, % left margin
+    colback={#1},
+}
+
+% pass in title, such as Problem, Fermats Last Theorem
+\newenvironment{cbshadow}[1][MaterialGrey100]
+    {\begin{cbshadowbox}{#1} }
+    {\end{cbshadowbox}}
+
 %--------------------------------------------------------------------------------------------------
 % Source code listings
 %--------------------------------------------------------------------------------------------------
