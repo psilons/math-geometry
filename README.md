@@ -80,6 +80,7 @@ Interesting links are listed below.
 
 
 ## Fonts
+General font suggestion: https://en.wikibooks.org/wiki/Basic_Book_Design/Font
 - https://www.ctan.org/pkg/fontawesome
 - https://tex.stackexchange.com/questions/59702/suggest-a-nice-font-family-for-my-basic-latex-template-text-and-math/59706
 - https://12000.org/my_notes/faq/LATEX/math_fonts/index.htm#x1-5600010

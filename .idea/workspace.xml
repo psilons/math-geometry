@@ -5,14 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7eeea94d-a4da-497b-bafd-b960b5e8f757" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/simple-note/test/shadow_box_test.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-note/out/text_color_box_test.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/out/text_color_box_test.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-note/src/example_programming_fsm1.tex" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/src/example_programming_fsm1.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-note/src/simple_note.sty" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/src/simple_note.sty" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-note/test/text_color_box_test.tex" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/test/text_color_box_test.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-note/tkz-euclid.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex-playgroud/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/latex-playgroud/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex-playgroud/out/unicode_test.pdf" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -675,6 +671,9 @@
       <workItem from="1638586616825" duration="312000" />
       <workItem from="1638631455838" duration="3776000" />
       <workItem from="1638637264608" duration="28000" />
+      <workItem from="1638645716028" duration="43000" />
+      <workItem from="1638666948807" duration="29000" />
+      <workItem from="1638669996290" duration="1221000" />
     </task>
     <servers />
   </component>

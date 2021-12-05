@@ -50,15 +50,7 @@ layout, style vs content
     - images
     - lists
     - tables: 
-        - https://tex.stackexchange.com/questions/112343/beautiful-table-samples
-        - https://nhigham.com/2019/11/19/better-latex-tables-with-booktabs/
-        - https://jdhao.github.io/2019/08/27/latex_table_with_booktabs/
-        - https://jdhao.github.io/2019/08/27/latex_table_with_booktabs/
-        - https://people.inf.ethz.ch/markusp/teaching/guides/guide-tables.pdf
-        - https://tex.stackexchange.com/questions/401566/making-a-booktabs-table
-        - https://tex.stackexchange.com/questions/28087/example-of-fancy-table-using-tikz-package
-        - https://tex.stackexchange.com/questions/112343/beautiful-table-samples
-        - https://blog.modelworks.ch/automatic-line-breaks-in-latex-tables/
+        
       Interact with csv or excel files:
         - https://www.ctan.org/pkg/excel2latex
         - https://pypi.org/project/tabulate/
@@ -87,7 +79,24 @@ layout, style vs content
 - variables and debug & tracing:
   https://tex.stackexchange.com/questions/60491/latex-tracing-commands-list
 
-### Common Packages
+## Tables
+
+- striped rows: 
+    - https://en.wikibooks.org/wiki/LaTeX/Tables, 
+    - https://www.overleaf.com/learn/latex/Tables
+- Align numbers at decimal point
+- cell grouping: https://latex-tutorial.com/tutorials/tables/
+- cell alignment
+
+- https://tex.stackexchange.com/questions/112343/beautiful-table-samples
+- https://nhigham.com/2019/11/19/better-latex-tables-with-booktabs/
+- https://jdhao.github.io/2019/08/27/latex_table_with_booktabs/
+- https://people.inf.ethz.ch/markusp/teaching/guides/guide-tables.pdf
+- https://tex.stackexchange.com/questions/401566/making-a-booktabs-table
+- https://tex.stackexchange.com/questions/28087/example-of-fancy-table-using-tikz-package
+- https://blog.modelworks.ch/automatic-line-breaks-in-latex-tables/
+
+## Common Packages
 
 Here are commonly used packages. Like in Python or R, it requires > 100 libs
 to get to the fluent level for practical purpose.
@@ -120,7 +129,7 @@ package entries on [CTAN](https://ctan.org/pkg/).
 - https://www.reddit.com/r/LaTeX/comments/fl7d4f/the_most_useful_packages/
 - https://nhigham.com/2020/06/18/six-useful-latex-packages/
 
-### Tutorials
+## Tutorials
 - Overleaf tutorial: https://www.overleaf.com/learn/latex/Tutorials
 - Tutorial: https://www1.cmc.edu/pages/faculty/aaksoy/latex/latextutorialmain.html
 - https://guides.libraries.psu.edu/latex/create
@@ -128,7 +137,7 @@ package entries on [CTAN](https://ctan.org/pkg/).
 - http://www-h.eng.cam.ac.uk/help/tpl/textprocessing/LaTeX_intro.html
 - https://www.flutterbys.com.au/stats/tut/tut17.1.html
 
-### References
+## References
 - https://user.math.uni-bremen.de/~grimpen/LaTeX.html
 - https://brushingupscience.com/2016/02/13/four-effortless-latex-packages-you-should-use/
 - https://www.semipol.de/posts/2018/06/latex-best-practices-lessons-learned-from-writing-a-phd-thesis/
