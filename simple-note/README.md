@@ -1,4 +1,4 @@
-# Problem-Solution Template
+# Simple Note Template
 
 The template has the following:
 - Header:
@@ -24,6 +24,8 @@ Source code formatting: listing or minted(which uses https://pygments.org/demo/)
 - https://www.overleaf.com/learn/latex/Code_Highlighting_with_minted
 - https://www.overleaf.com/learn/latex/Code_listing
 - https://tex.stackexchange.com/questions/8851/how-can-i-highlight-some-lines-from-source-code
+
+### Resume
 
 ### References
 
