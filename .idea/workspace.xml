@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7eeea94d-a4da-497b-bafd-b960b5e8f757" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/simple-note/test/yingyang/yingyang_symbol.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-note/test/yingyang/yingyangtu.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-note/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +51,7 @@
       <recent name="D:\00dev\math\math-latex-templates\docs" />
     </key>
   </component>
-  <component name="RunManager" selected="LaTeX.text_color_box_test">
+  <component name="RunManager" selected="LaTeX.yingyang_symbol">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -579,6 +579,48 @@
       </texify>
       <method v="2" />
     </configuration>
+    <configuration name="yingyang_symbol" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
+      <texify>
+        <compiler>LUALATEX</compiler>
+        <compiler-path />
+        <sumatra-path />
+        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
+        <viewer-command />
+        <compiler-arguments>-shell-escape</compiler-arguments>
+        <envs />
+        <main-file>$PROJECT_DIR$/simple-note/test/yingyang/yingyang_symbol.tex</main-file>
+        <output-path>$PROJECT_DIR$/simple-note/out</output-path>
+        <auxil-path>{projectDir}/out</auxil-path>
+        <compile-twice>false</compile-twice>
+        <output-format>PDF</output-format>
+        <latex-distribution>PROJECT_SDK</latex-distribution>
+        <has-been-run>true</has-been-run>
+        <bib-run-config>[]</bib-run-config>
+        <makeindex-run-config>[]</makeindex-run-config>
+      </texify>
+      <method v="2" />
+    </configuration>
+    <configuration name="yingyangtu" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
+      <texify>
+        <compiler>LUALATEX</compiler>
+        <compiler-path />
+        <sumatra-path />
+        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
+        <viewer-command />
+        <compiler-arguments>-shell-escape</compiler-arguments>
+        <envs />
+        <main-file>$PROJECT_DIR$/simple-note/test/yingyang/yingyangtu.tex</main-file>
+        <output-path>$PROJECT_DIR$/simple-note/out</output-path>
+        <auxil-path>{projectDir}/out</auxil-path>
+        <compile-twice>false</compile-twice>
+        <output-format>PDF</output-format>
+        <latex-distribution>PROJECT_SDK</latex-distribution>
+        <has-been-run>true</has-been-run>
+        <bib-run-config>[]</bib-run-config>
+        <makeindex-run-config>[]</makeindex-run-config>
+      </texify>
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="TestNG">
       <option name="TEST_OBJECT" value="CLASS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -612,9 +654,13 @@
       <item itemvalue="LaTeX.text_color_box_test" />
       <item itemvalue="LaTeX.example_geometry" />
       <item itemvalue="LaTeX.shadow_box_test" />
+      <item itemvalue="LaTeX.yingyangtu" />
+      <item itemvalue="LaTeX.yingyang_symbol" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="LaTeX.yingyang_symbol" />
+        <item itemvalue="LaTeX.yingyangtu" />
         <item itemvalue="LaTeX.text_color_box_test" />
         <item itemvalue="LaTeX.shadow_box_test" />
         <item itemvalue="LaTeX.example_geometry" />
@@ -674,6 +720,7 @@
       <workItem from="1638666948807" duration="29000" />
       <workItem from="1638669996290" duration="1221000" />
       <workItem from="1638720951825" duration="1050000" />
+      <workItem from="1638927597380" duration="1971000" />
     </task>
     <servers />
   </component>
