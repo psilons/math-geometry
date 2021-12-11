@@ -1,0 +1,22 @@
+% This generates images without running batch scripts.
+% It generates multiple pictures as well.
+% https://tex.stackexchange.com/questions/287481/using-latex-to-generate-png-images-of-an-equation
+\documentclass[
+  multi={mymath},
+  border=2pt,
+  convert={convertexe={D:/0dev/tools/imagemagick/convert},density=300,outext=.png}
+  ]{standalone}
+
+\newenvironment{mymath}{$\displaystyle}{$}
+
+\begin{document}
+
+\begin{mymath}
+  \frac{1}{2}=0.5
+\end{mymath}
+
+\begin{mymath}
+  a^2 + b^2 = c^2
+\end{mymath}
+
+\end{document}

@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7eeea94d-a4da-497b-bafd-b960b5e8f757" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/simple-note/test/yingyang/yingyang_symbol.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simple-note/test/yingyang/yingyangtu.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/latex-playgroud/src/imagemagick/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/latex-playgroud/src/imagemagick/latex2image_test1.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/latex-playgroud/src/imagemagick/latex2image_test1.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/latex-playgroud/src/imagemagick/latext2image_test2.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/latex-playgroud/src/web-html/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,7 +46,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="scala_project_settings_configurable.last_selected_tab_index" value="0" />
-    <property name="settings.editor.selected.configurable" value="advanced.settings" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -51,7 +54,7 @@
       <recent name="D:\00dev\math\math-latex-templates\docs" />
     </key>
   </component>
-  <component name="RunManager" selected="LaTeX.yingyang_symbol">
+  <component name="RunManager" selected="LaTeX.latext2image_test2">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -296,6 +299,48 @@
         <envs />
         <main-file>$PROJECT_DIR$/simple-note/test/full_title.tex</main-file>
         <output-path>$PROJECT_DIR$/simple-note/out</output-path>
+        <auxil-path>{projectDir}/out</auxil-path>
+        <compile-twice>false</compile-twice>
+        <output-format>PDF</output-format>
+        <latex-distribution>PROJECT_SDK</latex-distribution>
+        <has-been-run>true</has-been-run>
+        <bib-run-config>[]</bib-run-config>
+        <makeindex-run-config>[]</makeindex-run-config>
+      </texify>
+      <method v="2" />
+    </configuration>
+    <configuration name="latex2image_test1" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
+      <texify>
+        <compiler>LUALATEX</compiler>
+        <compiler-path />
+        <sumatra-path />
+        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
+        <viewer-command />
+        <compiler-arguments>-shell-escape</compiler-arguments>
+        <envs />
+        <main-file>$PROJECT_DIR$/latex-playgroud/src/imagemagick/latex2image_test1.tex</main-file>
+        <output-path>$PROJECT_DIR$/latex-playgroud/out</output-path>
+        <auxil-path>{projectDir}/out</auxil-path>
+        <compile-twice>false</compile-twice>
+        <output-format>PDF</output-format>
+        <latex-distribution>PROJECT_SDK</latex-distribution>
+        <has-been-run>true</has-been-run>
+        <bib-run-config>[]</bib-run-config>
+        <makeindex-run-config>[]</makeindex-run-config>
+      </texify>
+      <method v="2" />
+    </configuration>
+    <configuration name="latext2image_test2" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
+      <texify>
+        <compiler>LUALATEX</compiler>
+        <compiler-path />
+        <sumatra-path />
+        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
+        <viewer-command />
+        <compiler-arguments>-shell-escape</compiler-arguments>
+        <envs />
+        <main-file>$PROJECT_DIR$/latex-playgroud/src/imagemagick/latext2image_test2.tex</main-file>
+        <output-path>$PROJECT_DIR$/latex-playgroud/out</output-path>
         <auxil-path>{projectDir}/out</auxil-path>
         <compile-twice>false</compile-twice>
         <output-format>PDF</output-format>
@@ -656,9 +701,13 @@
       <item itemvalue="LaTeX.shadow_box_test" />
       <item itemvalue="LaTeX.yingyangtu" />
       <item itemvalue="LaTeX.yingyang_symbol" />
+      <item itemvalue="LaTeX.latex2image_test1" />
+      <item itemvalue="LaTeX.latext2image_test2" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="LaTeX.latext2image_test2" />
+        <item itemvalue="LaTeX.latex2image_test1" />
         <item itemvalue="LaTeX.yingyang_symbol" />
         <item itemvalue="LaTeX.yingyangtu" />
         <item itemvalue="LaTeX.text_color_box_test" />
@@ -721,6 +770,7 @@
       <workItem from="1638669996290" duration="1221000" />
       <workItem from="1638720951825" duration="1050000" />
       <workItem from="1638927597380" duration="1971000" />
+      <workItem from="1639173435647" duration="8315000" />
     </task>
     <servers />
   </component>
