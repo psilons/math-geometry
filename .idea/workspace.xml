@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7eeea94d-a4da-497b-bafd-b960b5e8f757" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/latex-playgroud/src/imagemagick/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-playgroud/src/imagemagick/latex2image_test1.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-playgroud/src/imagemagick/latex2image_test1.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-playgroud/src/imagemagick/latext2image_test2.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-playgroud/src/web-html/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -770,7 +766,7 @@
       <workItem from="1638669996290" duration="1221000" />
       <workItem from="1638720951825" duration="1050000" />
       <workItem from="1638927597380" duration="1971000" />
-      <workItem from="1639173435647" duration="8315000" />
+      <workItem from="1639173435647" duration="10188000" />
     </task>
     <servers />
   </component>
