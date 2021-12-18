@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7eeea94d-a4da-497b-bafd-b960b5e8f757" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/simple-note/out/example_geometry5.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-note/src/example_geometry5.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
@@ -50,7 +52,7 @@
       <recent name="D:\00dev\math\math-latex-templates\docs" />
     </key>
   </component>
-  <component name="RunManager" selected="LaTeX.latext2image_test2">
+  <component name="RunManager" selected="LaTeX.example_geometry5">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -189,6 +191,27 @@
         <compiler-arguments>-shell-escape</compiler-arguments>
         <envs />
         <main-file>$PROJECT_DIR$/simple-note/src/example_geometry.tex</main-file>
+        <output-path>$PROJECT_DIR$/simple-note/out</output-path>
+        <auxil-path>{projectDir}/out</auxil-path>
+        <compile-twice>false</compile-twice>
+        <output-format>PDF</output-format>
+        <latex-distribution>PROJECT_SDK</latex-distribution>
+        <has-been-run>true</has-been-run>
+        <bib-run-config>[]</bib-run-config>
+        <makeindex-run-config>[]</makeindex-run-config>
+      </texify>
+      <method v="2" />
+    </configuration>
+    <configuration name="example_geometry5" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
+      <texify>
+        <compiler>LUALATEX</compiler>
+        <compiler-path />
+        <sumatra-path />
+        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
+        <viewer-command />
+        <compiler-arguments>-shell-escape</compiler-arguments>
+        <envs />
+        <main-file>$PROJECT_DIR$/simple-note/src/example_geometry5.tex</main-file>
         <output-path>$PROJECT_DIR$/simple-note/out</output-path>
         <auxil-path>{projectDir}/out</auxil-path>
         <compile-twice>false</compile-twice>
@@ -699,9 +722,11 @@
       <item itemvalue="LaTeX.yingyang_symbol" />
       <item itemvalue="LaTeX.latex2image_test1" />
       <item itemvalue="LaTeX.latext2image_test2" />
+      <item itemvalue="LaTeX.example_geometry5" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="LaTeX.example_geometry5" />
         <item itemvalue="LaTeX.latext2image_test2" />
         <item itemvalue="LaTeX.latex2image_test1" />
         <item itemvalue="LaTeX.yingyang_symbol" />
@@ -767,6 +792,7 @@
       <workItem from="1638720951825" duration="1050000" />
       <workItem from="1638927597380" duration="1971000" />
       <workItem from="1639173435647" duration="10188000" />
+      <workItem from="1639863197712" duration="7324000" />
     </task>
     <servers />
   </component>

@@ -138,6 +138,8 @@ https://sites.google.com/site/kochiuyu/Tikz
 - https://texblog.net/latex-archive/uncategorized/fancy-chapter-tikz/
 - https://tex.stackexchange.com/questions/569976/projectile-motion-change-an-old-code-and-make-it-more-beautiful
 - https://getreuer.info/tutorials/tikz-for-high-quality-latex-pictures/index.html
+- https://tex.stackexchange.com/questions/384734/how-to-xshift-by-2mm-the-5th-label-49-2-in-my-tex-code/384772
+- https://tex.stackexchange.com/questions/502638/move-label-of-an-angle-in-tikz/502648
 
 Galleries
 https://github.com/androgynyjoe/SomeTikzExamples
