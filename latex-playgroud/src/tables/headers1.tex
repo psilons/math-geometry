@@ -1,0 +1,26 @@
+% https://nasa.github.io/nasa-latex-docs/html/examples/table.html
+% Preamble
+\documentclass[11pt]{article}
+
+% Packages
+\usepackage{booktabs}
+
+% Document
+\begin{document}
+\begin{table}[ht]
+   \caption{Example LaTeX Table}
+   \label{tab:example}
+   \small
+   \centering
+   \begin{tabular}{lccr}
+   \toprule\toprule
+   \textbf{Header 1} & \textbf{Header 2} & \textbf{Header 3} & \textbf{Header 4} \\
+   \midrule
+   Item 1 & Item 2 & Item 3 & Item 4 \\
+   Item 1 & Item 2 & Item 3 & Item 4\\
+   \bottomrule
+   \end{tabular}
+\end{table}
+
+
+\end{document}

@@ -1,0 +1,29 @@
+\documentclass[12pt]{article}
+\usepackage{array,tabularx}
+
+\usepackage[table]{xcolor}
+\usepackage[most]{tcolorbox}
+
+\definecolor{tablerow1}{RGB}{225,217,205}
+\definecolor{tablerow2}{RGB}{236,229,221}
+
+\setlength{\tabcolsep}{10pt} % column space
+
+\begin{document}
+
+\rowcolors{2}{tablerow1}{tablerow2}
+\begin{tcolorbox}[enhanced, notitle, clip upper, colframe=white,
+       tabularx*={\renewcommand*{\arraystretch}{1.7}}%
+                 {XXX}% sum of numbers == number of columns
+%                 {>{\raggedright\arraybackslash\hsize=1.0\hsize}X%
+%                  >{\raggedright\arraybackslash\hsize=1.0\hsize}X%
+%                  >{\raggedright\arraybackslash\hsize=1.0\hsize}X}
+                 ]
+    \arrayrulecolor{white}
+    \rowcolor{blue!65}\textbf{\color{white}{Column 1}} & \textbf{\color{white}{Column 2}}
+        & \textbf{\color{white}{Column 3}} \\ \hline
+      Some text. & Some text. & aaa\\ \hline
+      Some text. & Some text. & bbb\\ \hline
+    Some text. & Some text. &
+\end{tcolorbox}
+\end{document}

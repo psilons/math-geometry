@@ -5,8 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7eeea94d-a4da-497b-bafd-b960b5e8f757" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/latex-playgroud/out/script_font_test.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-playgroud/src/script_font_test.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/latex-playgroud/src/tables/color_table.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/latex-playgroud/src/tables/color_table2.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/latex-playgroud/src/tables/header_color.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/latex-playgroud/src/tables/headers.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/latex-playgroud/src/tables/headers1.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/latex-playgroud/src/tables/panda.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/latex-playgroud/src/tables/row_stripes.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/latex-playgroud/src/tables/side_by_side.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/latex-playgroud/src/tables/table_template1.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +46,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/docs" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/latex-playgroud/src/tables" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="scala_project_settings_configurable.last_selected_tab_index" value="0" />
@@ -48,10 +55,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\00dev\math\math-latex-templates\latex-playgroud\src\tables" />
       <recent name="D:\00dev\math\math-latex-templates\docs" />
     </key>
   </component>
-  <component name="RunManager" selected="LaTeX.script_font_test">
+  <component name="RunManager" selected="LaTeX.table_template1">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -91,6 +99,48 @@
         <output-format>PDF</output-format>
         <latex-distribution>PROJECT_SDK</latex-distribution>
         <has-been-run>false</has-been-run>
+        <bib-run-config>[]</bib-run-config>
+        <makeindex-run-config>[]</makeindex-run-config>
+      </texify>
+      <method v="2" />
+    </configuration>
+    <configuration name="color_table" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
+      <texify>
+        <compiler>LUALATEX</compiler>
+        <compiler-path />
+        <sumatra-path />
+        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
+        <viewer-command />
+        <compiler-arguments>-shell-escape</compiler-arguments>
+        <envs />
+        <main-file>$PROJECT_DIR$/latex-playgroud/src/tables/color_table.tex</main-file>
+        <output-path>$PROJECT_DIR$/latex-playgroud/out</output-path>
+        <auxil-path>{projectDir}/out</auxil-path>
+        <compile-twice>false</compile-twice>
+        <output-format>PDF</output-format>
+        <latex-distribution>PROJECT_SDK</latex-distribution>
+        <has-been-run>true</has-been-run>
+        <bib-run-config>[]</bib-run-config>
+        <makeindex-run-config>[]</makeindex-run-config>
+      </texify>
+      <method v="2" />
+    </configuration>
+    <configuration name="color_table2" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
+      <texify>
+        <compiler>LUALATEX</compiler>
+        <compiler-path />
+        <sumatra-path />
+        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
+        <viewer-command />
+        <compiler-arguments>-shell-escape</compiler-arguments>
+        <envs />
+        <main-file>$PROJECT_DIR$/latex-playgroud/src/tables/color_table2.tex</main-file>
+        <output-path>$PROJECT_DIR$/latex-playgroud/out</output-path>
+        <auxil-path>{projectDir}/out</auxil-path>
+        <compile-twice>false</compile-twice>
+        <output-format>PDF</output-format>
+        <latex-distribution>PROJECT_SDK</latex-distribution>
+        <has-been-run>true</has-been-run>
         <bib-run-config>[]</bib-run-config>
         <makeindex-run-config>[]</makeindex-run-config>
       </texify>
@@ -327,6 +377,69 @@
       </texify>
       <method v="2" />
     </configuration>
+    <configuration name="header_color" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
+      <texify>
+        <compiler>LUALATEX</compiler>
+        <compiler-path />
+        <sumatra-path />
+        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
+        <viewer-command />
+        <compiler-arguments>-shell-escape</compiler-arguments>
+        <envs />
+        <main-file>$PROJECT_DIR$/latex-playgroud/src/tables/header_color.tex</main-file>
+        <output-path>$PROJECT_DIR$/latex-playgroud/out</output-path>
+        <auxil-path>{projectDir}/out</auxil-path>
+        <compile-twice>false</compile-twice>
+        <output-format>PDF</output-format>
+        <latex-distribution>PROJECT_SDK</latex-distribution>
+        <has-been-run>true</has-been-run>
+        <bib-run-config>[]</bib-run-config>
+        <makeindex-run-config>[]</makeindex-run-config>
+      </texify>
+      <method v="2" />
+    </configuration>
+    <configuration name="headers" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
+      <texify>
+        <compiler>LUALATEX</compiler>
+        <compiler-path />
+        <sumatra-path />
+        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
+        <viewer-command />
+        <compiler-arguments>-shell-escape</compiler-arguments>
+        <envs />
+        <main-file>$PROJECT_DIR$/latex-playgroud/src/tables/headers.tex</main-file>
+        <output-path>$PROJECT_DIR$/latex-playgroud/out</output-path>
+        <auxil-path>{projectDir}/out</auxil-path>
+        <compile-twice>false</compile-twice>
+        <output-format>PDF</output-format>
+        <latex-distribution>PROJECT_SDK</latex-distribution>
+        <has-been-run>true</has-been-run>
+        <bib-run-config>[]</bib-run-config>
+        <makeindex-run-config>[]</makeindex-run-config>
+      </texify>
+      <method v="2" />
+    </configuration>
+    <configuration name="headers1" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
+      <texify>
+        <compiler>LUALATEX</compiler>
+        <compiler-path />
+        <sumatra-path />
+        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
+        <viewer-command />
+        <compiler-arguments>-shell-escape</compiler-arguments>
+        <envs />
+        <main-file>$PROJECT_DIR$/latex-playgroud/src/tables/headers1.tex</main-file>
+        <output-path>$PROJECT_DIR$/latex-playgroud/out</output-path>
+        <auxil-path>{projectDir}/out</auxil-path>
+        <compile-twice>false</compile-twice>
+        <output-format>PDF</output-format>
+        <latex-distribution>PROJECT_SDK</latex-distribution>
+        <has-been-run>true</has-been-run>
+        <bib-run-config>[]</bib-run-config>
+        <makeindex-run-config>[]</makeindex-run-config>
+      </texify>
+      <method v="2" />
+    </configuration>
     <configuration name="latex2image_test1" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
       <texify>
         <compiler>LUALATEX</compiler>
@@ -495,6 +608,27 @@
       </texify>
       <method v="2" />
     </configuration>
+    <configuration name="row_stripes" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
+      <texify>
+        <compiler>LUALATEX</compiler>
+        <compiler-path />
+        <sumatra-path />
+        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
+        <viewer-command />
+        <compiler-arguments>-shell-escape</compiler-arguments>
+        <envs />
+        <main-file>$PROJECT_DIR$/latex-playgroud/src/tables/row_stripes.tex</main-file>
+        <output-path>$PROJECT_DIR$/latex-playgroud/out</output-path>
+        <auxil-path>{projectDir}/out</auxil-path>
+        <compile-twice>false</compile-twice>
+        <output-format>PDF</output-format>
+        <latex-distribution>PROJECT_SDK</latex-distribution>
+        <has-been-run>true</has-been-run>
+        <bib-run-config>[]</bib-run-config>
+        <makeindex-run-config>[]</makeindex-run-config>
+      </texify>
+      <method v="2" />
+    </configuration>
     <configuration name="script_font_test" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
       <texify>
         <compiler>LUALATEX</compiler>
@@ -527,6 +661,27 @@
         <envs />
         <main-file>$PROJECT_DIR$/simple-note/test/shadow_box_test.tex</main-file>
         <output-path>$PROJECT_DIR$/simple-note/out</output-path>
+        <auxil-path>{projectDir}/out</auxil-path>
+        <compile-twice>false</compile-twice>
+        <output-format>PDF</output-format>
+        <latex-distribution>PROJECT_SDK</latex-distribution>
+        <has-been-run>true</has-been-run>
+        <bib-run-config>[]</bib-run-config>
+        <makeindex-run-config>[]</makeindex-run-config>
+      </texify>
+      <method v="2" />
+    </configuration>
+    <configuration name="side_by_side" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
+      <texify>
+        <compiler>LUALATEX</compiler>
+        <compiler-path />
+        <sumatra-path />
+        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
+        <viewer-command />
+        <compiler-arguments>-shell-escape</compiler-arguments>
+        <envs />
+        <main-file>$PROJECT_DIR$/latex-playgroud/src/tables/side_by_side.tex</main-file>
+        <output-path>$PROJECT_DIR$/latex-playgroud/out</output-path>
         <auxil-path>{projectDir}/out</auxil-path>
         <compile-twice>false</compile-twice>
         <output-format>PDF</output-format>
@@ -590,6 +745,27 @@
         <envs />
         <main-file />
         <output-path>$PROJECT_DIR$/simple-note/out</output-path>
+        <auxil-path>{projectDir}/out</auxil-path>
+        <compile-twice>false</compile-twice>
+        <output-format>PDF</output-format>
+        <latex-distribution>PROJECT_SDK</latex-distribution>
+        <has-been-run>true</has-been-run>
+        <bib-run-config>[]</bib-run-config>
+        <makeindex-run-config>[]</makeindex-run-config>
+      </texify>
+      <method v="2" />
+    </configuration>
+    <configuration name="table_template1" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
+      <texify>
+        <compiler>LUALATEX</compiler>
+        <compiler-path />
+        <sumatra-path />
+        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
+        <viewer-command />
+        <compiler-arguments>-shell-escape</compiler-arguments>
+        <envs />
+        <main-file>$PROJECT_DIR$/latex-playgroud/src/tables/table_template1.tex</main-file>
+        <output-path>$PROJECT_DIR$/latex-playgroud/out</output-path>
         <auxil-path>{projectDir}/out</auxil-path>
         <compile-twice>false</compile-twice>
         <output-format>PDF</output-format>
@@ -744,9 +920,25 @@
       <item itemvalue="LaTeX.latext2image_test2" />
       <item itemvalue="LaTeX.example_geometry5" />
       <item itemvalue="LaTeX.script_font_test" />
+      <item itemvalue="LaTeX.row_stripes" />
+      <item itemvalue="LaTeX.headers" />
+      <item itemvalue="LaTeX.header_color" />
+      <item itemvalue="LaTeX.headers1" />
+      <item itemvalue="LaTeX.side_by_side" />
+      <item itemvalue="LaTeX.table_template1" />
+      <item itemvalue="LaTeX.color_table" />
+      <item itemvalue="LaTeX.color_table2" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="LaTeX.table_template1" />
+        <item itemvalue="LaTeX.color_table2" />
+        <item itemvalue="LaTeX.color_table" />
+        <item itemvalue="LaTeX.side_by_side" />
+        <item itemvalue="LaTeX.header_color" />
+        <item itemvalue="LaTeX.headers1" />
+        <item itemvalue="LaTeX.headers" />
+        <item itemvalue="LaTeX.row_stripes" />
         <item itemvalue="LaTeX.script_font_test" />
         <item itemvalue="LaTeX.example_geometry5" />
         <item itemvalue="LaTeX.latext2image_test2" />
@@ -817,6 +1009,8 @@
       <workItem from="1639863197712" duration="7324000" />
       <workItem from="1639870606387" duration="29000" />
       <workItem from="1639879734808" duration="1518000" />
+      <workItem from="1640190055158" duration="6472000" />
+      <workItem from="1640210763175" duration="15673000" />
     </task>
     <servers />
   </component>

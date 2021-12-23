@@ -1,0 +1,28 @@
+%! Author = Wonderland
+%! Date = 12/22/2021
+
+% Preamble
+\documentclass[11pt]{article}
+
+% Packages
+\usepackage{amsmath}
+\usepackage[table]{xcolor}
+\usepackage{multirow}
+% Document
+\begin{document}
+
+\begin{tabular}{|l|l|}\hline
+	\rowcolor{blue!20}\textsc{\color{white}Release}  &\textsc{\color{white}Codename} \\ \hline
+	\rowcolor{gray!10}Fedora Core 4 &Stentz \\ \hline
+	\rowcolor{gray!40}&Fedora 8 \\
+	\rowcolor{gray!40}\multirow{-2}{*}{Multi-Row} &Werewolf \\ \hline
+\end{tabular}
+
+\begin{tabular}{|l|r@{.}l|l|}
+a & \multicolumn{2}{c|}{b} & c \\
+test & 2 & 8 & test \\
+test & 1 & 45 & test \\
+test & 0 & 5 & test
+\end{tabular}
+
+\end{document}

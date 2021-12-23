@@ -1,0 +1,65 @@
+%! Author = Wonderland
+%! Date = 12/22/2021
+
+% Preamble
+\documentclass[11pt]{article}
+
+% Packages
+\usepackage{amsmath}
+\usepackage{booktabs}
+% Document
+\begin{document}
+
+\begin{minipage}{\textwidth}
+
+\begin{minipage}[t]{0.48\textwidth}
+\makeatletter\def\@captype{table}
+\begin{tabular}{ccc}
+    \toprule
+    Name     & Description     & Size ($\mu$m) \\
+    \midrule
+    Dendrite & Input terminal  & $\sim$100     \\
+    Axon     & Output terminal & $\sim$10      \\
+    Soma     & Cell body       & up to $10^6$  \\
+    \bottomrule
+\end{tabular}
+\caption{Sample table title}
+\label{sample-table}
+\end{minipage}
+\qquad
+
+\begin{minipage}[t]{0.48\textwidth}
+\makeatletter\def\@captype{table}
+\begin{tabular}{ccc}
+    \toprule
+    Name     & Description     & Size ($\mu$m) \\
+    \midrule
+    Dendrite & Input terminal  & $\sim$100     \\
+    Axon     & Output terminal & $\sim$10      \\
+    Soma     & Cell body       & up to $10^6$  \\
+    \bottomrule
+\end{tabular}
+\caption{Sample table title}
+\label{sample-table1}
+\end{minipage}
+\end{minipage}
+
+\begin{table}
+\caption{Caption for total table}
+\centering
+\subtable[Caption for table 1]{
+       \begin{tabular}{ccc}
+        1 & 2 & 3
+       \end{tabular}
+       \label{tab:firsttable}
+}
+\qquad
+\subtable[Caption for table 2]{
+       \begin{tabular}{ccc}
+       a & b & c
+       \end{tabular}
+       \label{tab:secondtable}
+}
+\end{table}
+
+\end{document}
