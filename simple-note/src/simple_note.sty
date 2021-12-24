@@ -7,12 +7,12 @@
 \pagestyle{fancy} % these 3 lines set the footer to the middle with total page #.
 \RequirePackage[bookmarks=true]{hyperref} % without this, total page in footer broke because of *
 
-\RequirePackage{xcolor}
+\RequirePackage[table]{xcolor}
 \RequirePackage{xcolor-material}
 \RequirePackage{graphicx}
 
-\RequirePackage[breakable]{tcolorbox}
-\tcbuselibrary{most}
+\RequirePackage[breakable, most]{tcolorbox}
+%\tcbuselibrary{most}
 
 \newcommand{\exerheader}[4]{
     % https://tex.stackexchange.com/questions/69950/fancyhdr-color-and-width-of-line
@@ -57,9 +57,6 @@
 % This is base function, shouldn't be called by users
 \newtcbtheorem{cbStripeDummy}{Dummy}{%
     breakable,
-    %theorem name,%
-    %colback=green!5,%
-    %colframe=green!35!black,%
     toptitle=3pt, bottomtitle=3pt, left=5pt, right=5pt,
     %boxsep=5pt,
     %fonttitle=\sffamily,
@@ -87,7 +84,6 @@
     {\end{cbStripProblem}}
 
 % similarly we could create other prefix, just like "Problem", with counters
-
 %--------------------------------------------------------------------------------------------------
 % Beveled Titles
 %--------------------------------------------------------------------------------------------------
@@ -95,11 +91,8 @@
 \newtcbtheorem{cbBevelDummy}{Dummy}{
     breakable,
     enhanced, % without this, the title box won't show up
-    %fonttitle=\bfseries,
     boxrule=0.1mm,
     %before upper={\parindent2em}, % no indent
-    %colback=MaterialGreen50,
-%   colframe=MaterialGreen,
     attach boxed title to top left={xshift=12pt, yshift*=-\tcboxedtitleheight/2},
 %   boxed title style={colback=MaterialGreen}
 }{cbBevelDummy}
@@ -132,17 +125,12 @@
 %--------------------------------------------------------------------------------------------------
 % Vertical Bar
 %--------------------------------------------------------------------------------------------------
-%
 \newtcolorbox{cbbarbox}[1]{
-  breakable,
-  skin=empty,
-  top=0pt,
-  bottom=0pt,
-  toprule=0pt, % no frame on 4 sides
-  bottomrule=0pt,
-  leftrule=0pt,
-  rightrule=0pt,
-  borderline west={2pt}{0pt}{#1},
+    breakable,
+    skin=empty,
+    top=0pt, bottom=0pt,
+    toprule=0pt, bottomrule=0pt, leftrule=0pt, rightrule=0pt,% no frame on 4 sides
+    borderline west={2pt}{0pt}{#1},
 }
 
 % pass in title, such as Problem, Fermats Last Theorem
@@ -153,17 +141,11 @@
 %--------------------------------------------------------------------------------------------------
 % Colored area
 %--------------------------------------------------------------------------------------------------
-%
 \newtcolorbox{cbareabox}[1]{
-  breakable,
-  top=0pt,
-  bottom=0pt,
-  toprule=0pt,
-  bottomrule=0pt,
-  leftrule=0pt,
-  rightrule=0pt,
-  left=5mm,
-  colback={#1},
+    breakable,
+    top=0pt, bottom=0pt, left=5mm,
+    toprule=0pt, bottomrule=0pt, leftrule=0pt, rightrule=0pt,
+    colback={#1},
 }
 
 % pass in title, such as Problem, Fermats Last Theorem
@@ -178,12 +160,8 @@
 % see pic_box_test1 and pic_box_test5
 \newtcolorbox{cbpicbox}[2][]{
     breakable,
-    left=5mm,
-    right=5mm,
-    top=5mm,
-    bottom=5mm,
-    colback=white,
-    colframe=#2,
+    left=5mm, right=5mm, top=5mm, bottom=5mm,
+    colback=white, colframe=#2,
 }
 
 % pass in frame color and image file name
@@ -196,7 +174,6 @@
 %--------------------------------------------------------------------------------------------------
 % curved title
 %--------------------------------------------------------------------------------------------------
-%
 \newtcolorbox{cbcurvedbox}[4][]{
     % #1 is the text, #2 title, #3 background colr, #4 foreground color
     breakable,
@@ -220,18 +197,12 @@
 %--------------------------------------------------------------------------------------------------
 % Shadow area
 %--------------------------------------------------------------------------------------------------
-%
 \newtcolorbox{cbshadowbox}[1]{
     enhanced,
     breakable,
     drop fuzzy shadow southeast,
-    top=8pt, % top margin
-    bottom=4pt, % bottom margin
-    toprule=0pt,
-    bottomrule=0pt,
-    leftrule=0pt,
-    rightrule=0pt,
-    %left=4mm, % left margin
+    top=8pt, bottom=4pt, %left=4mm, % left margin
+    toprule=0pt, bottomrule=0pt, leftrule=0pt, rightrule=0pt,
     colback={#1},
 }
 
@@ -245,6 +216,23 @@
 %--------------------------------------------------------------------------------------------------
 % Minted is good to go
 
+%--------------------------------------------------------------------------------------------------
+% Tight text highlights, such as table cells
+%--------------------------------------------------------------------------------------------------
 \newcommand{\monoquote}[1]{
     \texttt{\colorbox{gray!20}{\textquotesingle #1\textquotesingle}}
 }
+
+\newcommand{\hlbtext}[1]{\textcolor{red}{\textbf{#1}}} % highlighted bold
+\newcommand{\hlptext}[1]{\textcolor{red}{#1}} % highlighted plain
+
+\newtcolorbox{hlbkgrdbox}[1]{
+    on line,
+    enhanced,
+    boxsep=4pt,
+    left=0pt,right=0pt,top=0pt,bottom=0pt,
+    toprule=0pt, bottomrule=0pt, leftrule=0pt, rightrule=0pt,
+    colframe={#1}, colback={#1},
+    capture=hbox % minimize area
+}
+\newcommand{\hibgtext}[2] { \begin{hlbkgrdbox}{#1} #2 \end{hlbkgrdbox}}

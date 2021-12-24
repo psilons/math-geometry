@@ -1,0 +1,23 @@
+% https://tex.stackexchange.com/questions/587844/how-to-have-a-coloured-table-inside-a-tcolor-box-with-rounded-corners-and-have-a
+
+\documentclass[12pt, english, french]{article}
+\usepackage{babel}
+\frenchsetup{og=«, fg=»}
+\usepackage{fontspec}
+\setmainfont{Erewhon}
+%\setsansfont[Scale=MatchLowercase]{Cabin}
+\setmonofont[Scale=MatchLowercase,HyphenChar=None]{Inconsolatazi4}
+\usepackage[most]{tcolorbox}
+\usepackage{array, colortbl, fontawesome, multicol, multirow}
+\usepackage{xcolor}
+
+\begin{document}
+
+\tcbox[enhanced,clip upper, left=0ex, right=0ex, top=0ex, bottom=0ex, boxsep=0pt, boxrule=2pt]
+{\begin{tabular}{p{3cm}m{1.5cm}}
+        \multirow{2}{*}{Exercice 17}     & \cellcolor{cyan}\textcolor{white}{1\iere} \\
+%        \cline{2-2}
+        & \cellcolor{black!50!white}\textcolor{white}{\scriptsize \faStar\faStar\faStarO}
+\end{tabular}}
+
+\end{document}

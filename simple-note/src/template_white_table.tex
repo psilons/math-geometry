@@ -1,0 +1,38 @@
+% Preamble
+\documentclass[12pt]{simple_doc}
+
+% Packages
+\usepackage{simple_note}
+\usepackage{amsmath}
+\usepackage{booktabs, multirow}
+
+\usepackage{fontawesome5}
+
+% Document
+\begin{document}
+    abc
+
+    \begin{table}
+        \caption{Here is my good table}
+        \rowcolors{2}{gray!10}{white} % row stripes, \usepackage[table]{xcolor}
+        \setlength{\tabcolsep}{3mm} % column space
+        \renewcommand*{\arraystretch}{1.3}  % increase row space
+        \begin{center}
+        \begin{tabular}{cccclcc} % align decimal point is not working with multirow
+            \toprule
+            \multicolumn{3}{c}{\textbf{Tol=Single}} & \multicolumn{3}{c}{$Tol=Double$} & \multirow{2}{*}{Exercice 17}\\
+            \cmidrule(lr){1-3} \cmidrule(lr){4-6}
+            $mv$ & Rel.~err & Time    & $mv$ & Rel.~err & Time\\
+            \midrule
+            11034 & \hlbtext{1.3e-7} & \hlptext{3.9} & 15846 & 2.7e-11 & 5.6 & \parbox[c]{10mm}{\centering\includegraphics[width=10mm]{panda}}\label{tab:panda}\\
+            21952 & \cellcolor[HTML]{AA0044}1.3e-7 & 6.2 & 31516 & 2.7e-11 & 8.8 & \parbox[l]{10mm}{\color{red} \centering\faIcon{trophy}}\\
+            15883 & \hibgtext{pink!40}{5.2e-8} & 7.1 & 32023 & 11.1e-11 & 1.4e1 &
+               \parbox[c]{21mm}{\color{red} \centering{\faCircle\faCircle\faCircle\faCircle\faCircle[regular]}} \\
+            11180 & 8.0e-9 & 4.3 & 17348 & 1.5e-11 & 6.6 &
+               \parbox[c]{20mm}{ \centering{\color{green}\faArrowCircleUp\color{red}\faArrowCircleDown\color{orange}\faStar\faStar[regular]}}\\
+            \bottomrule
+        \end{tabular}
+        \end{center}\label{tab:table2}
+    \end{table}
+
+\end{document}

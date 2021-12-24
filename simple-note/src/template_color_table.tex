@@ -1,0 +1,40 @@
+%! Author = Wonderland
+%! Date = 12/24/2021
+
+% Preamble
+\documentclass[12pt]{article}
+
+% Packages
+\usepackage{amsmath}
+\usepackage{booktabs}
+
+\usepackage[table]{xcolor} % order is significant!
+\usepackage[most]{tcolorbox}
+
+\definecolor{tablerow1}{RGB}{225,217,205}
+\definecolor{tablerow2}{RGB}{236,229,221}
+
+% Document
+\begin{document}
+
+    \begin{center}
+    \tcbox[enhanced,clip upper, left=-1em, right=0pt, top=0pt, bottom=0pt, boxsep=0pt, boxrule=0pt] {
+%        \begin{table} % don't do this, it breaks.
+            \rowcolors{2}{tablerow1}{tablerow2}
+            \setlength{\tabcolsep}{3mm} % column space
+            \renewcommand*{\arraystretch}{1.3}  % increase row space
+            \arrayrulecolor{white}
+%            \begin{center} % don't do this, it breaks.
+            \begin{tabular}{ccc}
+                \rowcolor{blue!65}\textbf{\color{white}{Column 1}} & \textbf{\color{white}{Column 2}}
+                    & \textbf{\color{white}{Column 3}} \\ \hline
+                Some text. & Some text. & aaa\\ \hline
+                Some text. & Some text. & bbb\\ \hline
+                Some text. & Some text. &
+            \end{tabular}
+%            \end{center}\label{tab:table2}
+%        \end{table}
+    }
+    \end{center}
+
+\end{document}

@@ -5,16 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7eeea94d-a4da-497b-bafd-b960b5e8f757" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/latex-playgroud/src/tables/color_table.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-playgroud/src/tables/color_table2.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-playgroud/src/tables/header_color.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-playgroud/src/tables/headers.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-playgroud/src/tables/headers1.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-playgroud/src/tables/panda.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-playgroud/src/tables/row_stripes.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-playgroud/src/tables/side_by_side.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-playgroud/src/tables/table_template1.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/latex-playgroud/src/awesome_fonts_test.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/latex-playgroud/src/tables/color_table3.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-note/out/template_color_table.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-note/out/template_white_table.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-note/src/panda.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-note/src/template_color_table.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-note/src/template_white_table.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex-playgroud/out/color_table.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/latex-playgroud/out/color_table.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex-playgroud/out/color_table2.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/latex-playgroud/out/color_table2.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex-playgroud/out/header_color.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/latex-playgroud/out/header_color.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex-playgroud/out/headers.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/latex-playgroud/out/headers.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex-playgroud/out/headers1.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/latex-playgroud/out/headers1.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex-playgroud/out/row_stripes.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/latex-playgroud/out/row_stripes.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex-playgroud/out/side_by_side.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/latex-playgroud/out/side_by_side.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex-playgroud/out/table_template1.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/latex-playgroud/out/table_template1.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-note/out/text_color_box_test.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/out/text_color_box_test.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-note/src/simple_doc.cls" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/src/simple_doc.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-note/src/simple_note.sty" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/src/simple_note.sty" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +55,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/latex-playgroud/src/tables" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/simple-note/src" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="scala_project_settings_configurable.last_selected_tab_index" value="0" />
@@ -55,11 +64,12 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\00dev\math\math-latex-templates\simple-note\src" />
       <recent name="D:\00dev\math\math-latex-templates\latex-playgroud\src\tables" />
       <recent name="D:\00dev\math\math-latex-templates\docs" />
     </key>
   </component>
-  <component name="RunManager" selected="LaTeX.table_template1">
+  <component name="RunManager" selected="LaTeX.template_white_table">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -104,6 +114,27 @@
       </texify>
       <method v="2" />
     </configuration>
+    <configuration name="awesome_fonts_test" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
+      <texify>
+        <compiler>LUALATEX</compiler>
+        <compiler-path />
+        <sumatra-path />
+        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
+        <viewer-command />
+        <compiler-arguments>-shell-escape</compiler-arguments>
+        <envs />
+        <main-file>$PROJECT_DIR$/latex-playgroud/src/awesome_fonts_test.tex</main-file>
+        <output-path>$PROJECT_DIR$/latex-playgroud/out</output-path>
+        <auxil-path>{projectDir}/out</auxil-path>
+        <compile-twice>false</compile-twice>
+        <output-format>PDF</output-format>
+        <latex-distribution>PROJECT_SDK</latex-distribution>
+        <has-been-run>true</has-been-run>
+        <bib-run-config>[]</bib-run-config>
+        <makeindex-run-config>[]</makeindex-run-config>
+      </texify>
+      <method v="2" />
+    </configuration>
     <configuration name="color_table" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
       <texify>
         <compiler>LUALATEX</compiler>
@@ -115,7 +146,7 @@
         <envs />
         <main-file>$PROJECT_DIR$/latex-playgroud/src/tables/color_table.tex</main-file>
         <output-path>$PROJECT_DIR$/latex-playgroud/out</output-path>
-        <auxil-path>{projectDir}/out</auxil-path>
+        <auxil-path>$PROJECT_DIR$/latex-playgroud/out</auxil-path>
         <compile-twice>false</compile-twice>
         <output-format>PDF</output-format>
         <latex-distribution>PROJECT_SDK</latex-distribution>
@@ -135,6 +166,27 @@
         <compiler-arguments>-shell-escape</compiler-arguments>
         <envs />
         <main-file>$PROJECT_DIR$/latex-playgroud/src/tables/color_table2.tex</main-file>
+        <output-path>$PROJECT_DIR$/latex-playgroud/out</output-path>
+        <auxil-path>$PROJECT_DIR$/latex-playgroud/out</auxil-path>
+        <compile-twice>false</compile-twice>
+        <output-format>PDF</output-format>
+        <latex-distribution>PROJECT_SDK</latex-distribution>
+        <has-been-run>true</has-been-run>
+        <bib-run-config>[]</bib-run-config>
+        <makeindex-run-config>[]</makeindex-run-config>
+      </texify>
+      <method v="2" />
+    </configuration>
+    <configuration name="color_table3" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
+      <texify>
+        <compiler>LUALATEX</compiler>
+        <compiler-path />
+        <sumatra-path />
+        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
+        <viewer-command />
+        <compiler-arguments>-shell-escape</compiler-arguments>
+        <envs />
+        <main-file>$PROJECT_DIR$/latex-playgroud/src/tables/color_table3.tex</main-file>
         <output-path>$PROJECT_DIR$/latex-playgroud/out</output-path>
         <auxil-path>{projectDir}/out</auxil-path>
         <compile-twice>false</compile-twice>
@@ -388,7 +440,7 @@
         <envs />
         <main-file>$PROJECT_DIR$/latex-playgroud/src/tables/header_color.tex</main-file>
         <output-path>$PROJECT_DIR$/latex-playgroud/out</output-path>
-        <auxil-path>{projectDir}/out</auxil-path>
+        <auxil-path>$PROJECT_DIR$/latex-playgroud/out</auxil-path>
         <compile-twice>false</compile-twice>
         <output-format>PDF</output-format>
         <latex-distribution>PROJECT_SDK</latex-distribution>
@@ -409,7 +461,7 @@
         <envs />
         <main-file>$PROJECT_DIR$/latex-playgroud/src/tables/headers.tex</main-file>
         <output-path>$PROJECT_DIR$/latex-playgroud/out</output-path>
-        <auxil-path>{projectDir}/out</auxil-path>
+        <auxil-path>$PROJECT_DIR$/latex-playgroud/out</auxil-path>
         <compile-twice>false</compile-twice>
         <output-format>PDF</output-format>
         <latex-distribution>PROJECT_SDK</latex-distribution>
@@ -430,7 +482,7 @@
         <envs />
         <main-file>$PROJECT_DIR$/latex-playgroud/src/tables/headers1.tex</main-file>
         <output-path>$PROJECT_DIR$/latex-playgroud/out</output-path>
-        <auxil-path>{projectDir}/out</auxil-path>
+        <auxil-path>$PROJECT_DIR$/latex-playgroud/out</auxil-path>
         <compile-twice>false</compile-twice>
         <output-format>PDF</output-format>
         <latex-distribution>PROJECT_SDK</latex-distribution>
@@ -619,7 +671,7 @@
         <envs />
         <main-file>$PROJECT_DIR$/latex-playgroud/src/tables/row_stripes.tex</main-file>
         <output-path>$PROJECT_DIR$/latex-playgroud/out</output-path>
-        <auxil-path>{projectDir}/out</auxil-path>
+        <auxil-path>$PROJECT_DIR$/latex-playgroud/out</auxil-path>
         <compile-twice>false</compile-twice>
         <output-format>PDF</output-format>
         <latex-distribution>PROJECT_SDK</latex-distribution>
@@ -682,7 +734,7 @@
         <envs />
         <main-file>$PROJECT_DIR$/latex-playgroud/src/tables/side_by_side.tex</main-file>
         <output-path>$PROJECT_DIR$/latex-playgroud/out</output-path>
-        <auxil-path>{projectDir}/out</auxil-path>
+        <auxil-path>$PROJECT_DIR$/latex-playgroud/out</auxil-path>
         <compile-twice>false</compile-twice>
         <output-format>PDF</output-format>
         <latex-distribution>PROJECT_SDK</latex-distribution>
@@ -766,7 +818,49 @@
         <envs />
         <main-file>$PROJECT_DIR$/latex-playgroud/src/tables/table_template1.tex</main-file>
         <output-path>$PROJECT_DIR$/latex-playgroud/out</output-path>
-        <auxil-path>{projectDir}/out</auxil-path>
+        <auxil-path>$PROJECT_DIR$/latex-playgroud/out</auxil-path>
+        <compile-twice>false</compile-twice>
+        <output-format>PDF</output-format>
+        <latex-distribution>PROJECT_SDK</latex-distribution>
+        <has-been-run>true</has-been-run>
+        <bib-run-config>[]</bib-run-config>
+        <makeindex-run-config>[]</makeindex-run-config>
+      </texify>
+      <method v="2" />
+    </configuration>
+    <configuration name="template_color_table" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
+      <texify>
+        <compiler>LUALATEX</compiler>
+        <compiler-path />
+        <sumatra-path />
+        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
+        <viewer-command />
+        <compiler-arguments>-shell-escape</compiler-arguments>
+        <envs />
+        <main-file>$PROJECT_DIR$/simple-note/src/template_color_table.tex</main-file>
+        <output-path>$PROJECT_DIR$/simple-note/out</output-path>
+        <auxil-path>$PROJECT_DIR$/simple-note/out</auxil-path>
+        <compile-twice>false</compile-twice>
+        <output-format>PDF</output-format>
+        <latex-distribution>PROJECT_SDK</latex-distribution>
+        <has-been-run>true</has-been-run>
+        <bib-run-config>[]</bib-run-config>
+        <makeindex-run-config>[]</makeindex-run-config>
+      </texify>
+      <method v="2" />
+    </configuration>
+    <configuration name="template_white_table" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
+      <texify>
+        <compiler>LUALATEX</compiler>
+        <compiler-path />
+        <sumatra-path />
+        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
+        <viewer-command />
+        <compiler-arguments>-shell-escape</compiler-arguments>
+        <envs />
+        <main-file>$PROJECT_DIR$/simple-note/src/template_white_table.tex</main-file>
+        <output-path>$PROJECT_DIR$/simple-note/out</output-path>
+        <auxil-path>$PROJECT_DIR$/simple-note/out</auxil-path>
         <compile-twice>false</compile-twice>
         <output-format>PDF</output-format>
         <latex-distribution>PROJECT_SDK</latex-distribution>
@@ -928,24 +1022,32 @@
       <item itemvalue="LaTeX.table_template1" />
       <item itemvalue="LaTeX.color_table" />
       <item itemvalue="LaTeX.color_table2" />
+      <item itemvalue="LaTeX.color_table3" />
+      <item itemvalue="LaTeX.template_white_table" />
+      <item itemvalue="LaTeX.awesome_fonts_test" />
+      <item itemvalue="LaTeX.template_color_table" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="LaTeX.table_template1" />
+        <item itemvalue="LaTeX.template_white_table" />
+        <item itemvalue="LaTeX.template_color_table" />
         <item itemvalue="LaTeX.color_table2" />
-        <item itemvalue="LaTeX.color_table" />
+        <item itemvalue="LaTeX.awesome_fonts_test" />
+        <item itemvalue="LaTeX.text_color_box_test" />
+        <item itemvalue="LaTeX.table_template1" />
+        <item itemvalue="LaTeX.color_table3" />
         <item itemvalue="LaTeX.side_by_side" />
-        <item itemvalue="LaTeX.header_color" />
+        <item itemvalue="LaTeX.row_stripes" />
         <item itemvalue="LaTeX.headers1" />
         <item itemvalue="LaTeX.headers" />
-        <item itemvalue="LaTeX.row_stripes" />
+        <item itemvalue="LaTeX.header_color" />
+        <item itemvalue="LaTeX.color_table" />
         <item itemvalue="LaTeX.script_font_test" />
         <item itemvalue="LaTeX.example_geometry5" />
         <item itemvalue="LaTeX.latext2image_test2" />
         <item itemvalue="LaTeX.latex2image_test1" />
         <item itemvalue="LaTeX.yingyang_symbol" />
         <item itemvalue="LaTeX.yingyangtu" />
-        <item itemvalue="LaTeX.text_color_box_test" />
         <item itemvalue="LaTeX.shadow_box_test" />
         <item itemvalue="LaTeX.example_geometry" />
         <item itemvalue="LaTeX.style_test" />
@@ -1011,6 +1113,8 @@
       <workItem from="1639879734808" duration="1518000" />
       <workItem from="1640190055158" duration="6472000" />
       <workItem from="1640210763175" duration="15673000" />
+      <workItem from="1640277214594" duration="29349000" />
+      <workItem from="1640361694379" duration="2048000" />
     </task>
     <servers />
   </component>

@@ -9,7 +9,7 @@
 
 % Provide the name of your document class, the date it was last updated, and a
 % comment about what it's used for
-\ProvidesPackage{simple_doc}[Minimal Setting Document Class]
+\ProvidesPackage{simple_doc.cls}[Minimal Setting Document Class]
 
 % We'll pass any document class options along to the underlying class
 \DeclareOption*{%
