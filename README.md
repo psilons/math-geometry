@@ -103,6 +103,7 @@ Font size calculators: https://www.makeuseof.com/font-size-calculators/
 
 ## Icons
 Fontawesome is used in more cases than material icons.
+- https://fontawesome.com/v5.15/icons?d=gallery&p=2
 - https://latexdraw.com/fontawesome-ready-icons-to-use-in-latex/
 - https://stackoverflow.com/questions/50303454/how-to-use-the-new-material-design-icon-themes-outlined-rounded-two-tone-and
 - https://tex.stackexchange.com/questions/596610/how-to-use-luatex-with-large-unicode-codepoint

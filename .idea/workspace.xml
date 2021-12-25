@@ -5,25 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7eeea94d-a4da-497b-bafd-b960b5e8f757" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/latex-playgroud/src/awesome_fonts_test.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-playgroud/src/tables/color_table3.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simple-note/out/template_color_table.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simple-note/out/template_white_table.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simple-note/src/panda.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simple-note/src/template_color_table.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simple-note/src/template_white_table.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/latex-playgroud/out/color_table.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/latex-playgroud/out/color_table.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/latex-playgroud/out/color_table2.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/latex-playgroud/out/color_table2.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/latex-playgroud/out/header_color.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/latex-playgroud/out/header_color.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/latex-playgroud/out/headers.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/latex-playgroud/out/headers.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/latex-playgroud/out/headers1.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/latex-playgroud/out/headers1.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/latex-playgroud/out/row_stripes.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/latex-playgroud/out/row_stripes.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/latex-playgroud/out/side_by_side.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/latex-playgroud/out/side_by_side.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/latex-playgroud/out/table_template1.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/latex-playgroud/out/table_template1.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-note/out/text_color_box_test.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/out/text_color_box_test.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-note/src/simple_doc.cls" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/src/simple_doc.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-note/src/simple_note.sty" beforeDir="false" afterPath="$PROJECT_DIR$/simple-note/src/simple_note.sty" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -1115,6 +1097,7 @@
       <workItem from="1640210763175" duration="15673000" />
       <workItem from="1640277214594" duration="29349000" />
       <workItem from="1640361694379" duration="2048000" />
+      <workItem from="1640405097077" duration="636000" />
     </task>
     <servers />
   </component>
